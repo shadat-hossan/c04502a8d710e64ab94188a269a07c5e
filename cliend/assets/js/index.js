@@ -30,31 +30,48 @@ document.addEventListener("scroll", function () {
   }
 });
 
-//
 
-const storyReadMor = document.querySelector(".storyReadMor");
-const hiddenText = document.querySelector("#hiddenText");
-const dot = document.querySelector("#dot");
-if (storyReadMor) {
-  storyReadMor.addEventListener("click", () => {
-    if (dot.style.display != "none") {
-      hiddenText.style.display = "inline";
-      dot.style.display = "none";
-      storyReadMorImage.style.transform = "rotate(90deg)";
-      storyReadMor.innerHTML = `Read Less <img
-            src="assets/img/logo/arrayUp.svg"
-            alt="Read More Icon"
-            id="storyReadMorImage"
-          />`;
-    } else {
-      hiddenText.style.display = "none";
-      dot.style.display = "inline";
-      storyReadMorImage.style.transform = "rotate(0deg)";
-      storyReadMor.innerHTML = `Read More <img
-            src="assets/img/logo/arrayDown.svg"
-            alt="Read More Icon"
-            id="storyReadMorImage"
-          />`;
+jQuery(".menu_bar").click(function() {  
+    jQuery ('.categorie_dropdown') .slideToggle(400);
+});
+
+ jQuery(document).ready(function(){
+  jQuery(document).on('click', function(e) {
+    if (!$(e.target).closest('.menu_box').length) {
+      $('.categorie_dropdown').slideUp();
     }
   });
-}
+  jQuery('.menu_bar').on('click', function(){
+    jQuery(this).siblings('.categorie_dropdown').slideToggle();
+  });
+});
+
+
+$(document).ready(function(){
+  $(".user_login").click(function() {
+    
+    var docClick = function(ev){
+        if(!$(ev.target).hasClass('user_login')) {
+          closeDropdown();
+        }
+     }
+    var closeDropdown = function() {
+      $(".user_dropdown").removeClass("show-menu");
+      $(document).unbind('click', docClick);
+    }
+    
+    if($(".user_dropdown").hasClass("show-menu")) {
+       closeDropdown();
+    }else{
+      $(document).bind('click', docClick )
+      $(".user_dropdown").addClass("show-menu");
+    }
+    
+    $(".user_dropdown > li").click(function(){
+      closeDropdown();
+    });
+    $(".user_dropdown > li").click(function() {
+      $(".user_login").html($(this).html());
+    });
+  });
+});
