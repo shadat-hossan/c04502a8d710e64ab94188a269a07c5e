@@ -407,8 +407,9 @@ input[placeholder],
 .categorie_dropdown ul > li.drop_child {
   background-image:url('../images/arrow_right.svg');
   background-repeat: no-repeat;
-  background-position: right 20px center;
+  background-position: right 20px top 13px;
 }
+@media screen and (min-width: 768px) {
 .categorie_dropdown ul > li > ul {
   width: 260px;
   left: 100%;
@@ -423,11 +424,11 @@ input[placeholder],
   transform-origin: center top 0;
   transition: all .3s ease;
 }
-
 .categorie_dropdown ul > li.drop_child:hover > ul {
   opacity: 1;
   visibility: visible;
   transform: scaleY(1);
+}
 }
 .navbar {
   padding-left: 30px;
@@ -440,10 +441,23 @@ input[placeholder],
 .navbar ul li {
   font-size: 16px;
   color: #fff;
-  padding: 0 30px;
 }
 .navbar ul li a {
   color: #fff;
+  display: inline-block;
+  padding: 0 30px;
+  position: relative;
+}
+.navbar ul li a.active::after {
+  content: '';
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 5px 5px 0 0;
+  position: absolute;
+  left: 0;
+  bottom: -14px;
+  z-index: 2;
 }
 .nav_small_icon {
   width: 100%;
@@ -515,4 +529,66 @@ input[placeholder],
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+@media screen and (max-width: 1200px) {
+.top_content {
+  flex-wrap: wrap;
+}
+.header_search {
+    width: 325px;
+}
+
+}
+@media screen and (max-width: 767px) {
+.header_search {
+    width: 100%;
+    order: 3;
+    margin-top: 10px;
+}
+.logo {
+    width: 190px;
+}
+.navbar {
+    padding: 15px 20px;
+    background-color: #EC2D2D;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+}
+.navbar ul {
+    justify-content: center;
+}
+.navbar ul li {
+    font-size: 14px;
+    padding: 0 15px;
+}
+.navbar ul li a {
+    text-align: center;
+    display: inline-block;
+}
+.categorie_dropdown {
+    width: 100%;
+}
+.categorie_dropdown ul > li > ul {
+ padding-top: 10px;
+ display: none;
+}
+.categorie_dropdown ul > li.drop_child > a {
+  display: block;
+  width: 100%;
+}
+.slide_item > img {
+  height: 400px;
+  object-fit: cover;
+}
+.slide_info_area h1 {
+    font-size: 28px;
+}
+.slide_info_area {
+  padding: 20px;
+}
+.menu_area { margin-bottom: 20px; }
 }

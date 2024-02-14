@@ -1,35 +1,3 @@
-//menu responsive click
-document.addEventListener("DOMContentLoaded", function () {
-  var menuToggle = document.querySelector(".menu-toggle");
-  var nav = document.querySelector(".navbar-menu");
-
-  menuToggle.addEventListener("click", function () {
-    nav.classList.toggle("active");
-  });
-});
-
-// menu scroll effect
-document.addEventListener("scroll", function () {
-  var navbarContainer = document.querySelector(".navbar-container");
-  var logo = document.querySelector(".slogo");
-  var menuItems = document.querySelectorAll(
-    ".navbar-container .navbar-menu ul li a"
-  );
-  if (document.documentElement.scrollTop > 80) {
-    navbarContainer.classList.add("shrink");
-    logo.classList.add("logoShirnk");
-    menuItems.forEach(function (menuItem) {
-      menuItem.classList.add("menuItemsAllA");
-    });
-  } else {
-    navbarContainer.classList.remove("shrink");
-    logo.classList.remove("logoShirnk");
-    menuItems.forEach(function (menuItem) {
-      menuItem.classList.remove("menuItemsAllA");
-    });
-  }
-});
-
 
 jQuery(".menu_bar").click(function() {  
     jQuery ('.categorie_dropdown') .slideToggle(400);
@@ -75,3 +43,10 @@ $(document).ready(function(){
     });
   });
 });
+
+if (matchMedia('only screen and (max-width: 768px)').matches) {
+  $(".categorie_dropdown ul > li.drop_child > a").click(function() {
+    $(this).toggleClass('active');
+    $(this).next('ul').slideToggle('slow');
+  });
+}
