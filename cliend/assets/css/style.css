@@ -563,11 +563,11 @@ input[placeholder],
 }
 .navbar ul li {
     font-size: 14px;
-    padding: 0 15px;
 }
 .navbar ul li a {
     text-align: center;
     display: inline-block;
+    padding: 0 15px;
 }
 .categorie_dropdown {
     width: 100%;
@@ -591,4 +591,16 @@ input[placeholder],
   padding: 20px;
 }
 .menu_area { margin-bottom: 20px; }
+}
+
+.menu_box {
+    justify-content: space-between;
+}
+.phone_number a {
+  font-size: 16px;
+  color: #fff;
+  display: inline-block;
+  background: url('../images/customer-service-2-fill.svg') no-repeat left center;
+  padding-left: 32px;
+  line-height: 24px;
 }
