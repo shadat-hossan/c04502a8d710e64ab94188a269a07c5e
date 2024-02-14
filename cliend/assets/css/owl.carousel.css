@@ -207,8 +207,8 @@
   width: 16px;
   height: 16px;
   padding: 0;
-  background-color: transparent;
-  border: 3px solid #b92325;
+  background-color: #808080;
+  border: 3px solid transparent;
   border-radius: 50%;
   margin: 0 5px;
   display: block;
@@ -221,10 +221,11 @@
 }
 .owl-carousel button.owl-dot.active {
   background-color: #b92325;
+  border-color: #fff;
 }
 .owl-carousel .owl-dots {
   position: absolute;
-  bottom: -30px;
+  bottom: 15px;
   left: 0;
   right: 0;
 }
