@@ -96,3 +96,8 @@ initializeClock("clockdiv", deadline);
 var deadline2 = new Date(Date.parse(new Date()) + 7 * 24 * 60 * 60 * 1000); // Day : hours : minutes : secounds
 initializeClock("clockdiv2", deadline2);
 
+
+
+
+
+
