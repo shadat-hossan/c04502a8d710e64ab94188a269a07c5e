@@ -853,6 +853,9 @@ input[placeholder],
     width: 40px;
     height: 40px;
   }
+  .mainTitle h2 {
+    font-size: 30px;
+  }
 }
 
 @media only screen and (max-width: 680px) {
@@ -1958,4 +1961,12 @@ body {
 .cart_area_right {
   width: 100%;
 }
+}
+
+
+#adobe-dc-view {
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  padding: 0;
 }
