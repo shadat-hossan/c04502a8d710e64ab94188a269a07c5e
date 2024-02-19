@@ -1,18 +1,27 @@
+
+if (matchMedia("only screen and (max-width: 768px)").matches) {
 jQuery(".menu_bar").click(function () {
   jQuery(".categorie_dropdown").slideToggle(400);
 });
 
 jQuery(document).ready(function () {
-  jQuery(document).on("click", function (e) {
-    if (!$(e.target).closest(".menu_box").length) {
-      $(".categorie_dropdown").slideUp();
-    }
-  });
-  jQuery(".menu_bar").on("click", function () {
-    jQuery(this).siblings(".categorie_dropdown").slideToggle();
-  });
-});
+  // jQuery(document).on("click", function (e) {
+  //   if (!$(e.target).closest(".menu_box").length) {
+  //     $(".categorie_dropdown").slideUp();
+  //   }
+  // });
 
+  // jQuery(".menu_bar").on("click", function () {
+  //   jQuery(this).siblings(".categorie_dropdown").slideToggle();
+  // });
+
+  $(".categorie_dropdown ul > li.drop_child > a").click(function () {
+    $(this).toggleClass("active");
+    $(this).next("ul").slideToggle("slow");
+  });
+
+});
+}
 $(document).ready(function () {
   $(".user_login").click(function () {
     var docClick = function (ev) {
@@ -41,12 +50,7 @@ $(document).ready(function () {
   });
 });
 
-if (matchMedia("only screen and (max-width: 768px)").matches) {
-  $(".categorie_dropdown ul > li.drop_child > a").click(function () {
-    $(this).toggleClass("active");
-    $(this).next("ul").slideToggle("slow");
-  });
-}
+
 
 // Flash Sales Time functionality
 

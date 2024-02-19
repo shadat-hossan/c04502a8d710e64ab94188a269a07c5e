@@ -324,7 +324,7 @@ input[placeholder],
 .menu_area {
   padding: 0 20px;
   background-color: #ec2d2d;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   position: relative;
   z-index: 5;
 }
@@ -392,6 +392,35 @@ input[placeholder],
   left: 0;
   top: 100%;
   display: none;
+}
+.all_categories_item {
+  position: relative;
+  cursor: pointer;
+}
+@media screen and (min-width: 769px) {
+.categorie_dropdown {
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(0);
+  transform-origin: center top 0;
+  transition: all 0.3s ease;
+  margin-top: 23px;
+  display: block;
+}
+.all_categories_item:hover .categorie_dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+  }
+.all_categories_item::after {
+  content: '';
+  width: 100%;
+  height: 25px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 1;
+}
 }
 .categorie_dropdown ul > li {
   padding: 10px 20px;
@@ -561,6 +590,7 @@ input[placeholder],
   }
 }
 @media screen and (max-width: 767px) {
+  .all_categories_item { position: inherit; }
   .header_search {
     width: 100%;
     order: 3;
@@ -637,7 +667,7 @@ input[placeholder],
 
 .mainTitle h4 {
   color: #db4444;
-  padding: 8px 0 8px 40px;
+  padding: 8px 0 8px 30px;
   position: relative;
   margin-bottom: 20px;
   font-size: 16px;
@@ -646,7 +676,7 @@ input[placeholder],
 .mainTitle h4::before {
   content: "";
   position: absolute;
-  width: 25px;
+  width: 15px;
   height: 100%;
   background: #db4444;
   border-radius: 5px;
@@ -1034,6 +1064,9 @@ input[placeholder],
 .latest_offers_box h3 {
   font-size: 36px;
   padding-bottom: 20px;
+}
+.categories_section_box {
+  padding: 50px 0;
 }
 }
 @media screen and (max-width: 767px) {
@@ -1964,9 +1997,347 @@ body {
 }
 
 
-#adobe-dc-view {
+/* ============== Singal Product page Style ================= */
+
+.pathMessage {
   width: 100%;
+  color: #8b8b8b;
+  margin-bottom: 40px;
+  word-spacing: 10px;
+  font-size: 14px;
+}
+
+.SingalproductName {
+  color: #000000;
+  word-spacing: 0px;
+}
+
+/* ======= Singal Product Details Style ======== */
+
+.singalProductDetails {
+  width: 100%;
+  display: flex;
+  margin-bottom: 40px;
+  padding: 10px 0;
+  gap: 30px;
+}
+
+.leftProductOverViewo {
+  flex: 60%;
+  display: flex;
+  gap: 10px;
+}
+
+.productTogolImage {
+  width: 28%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-direction: column;
+}
+
+.productTogolImage .filtaringImageItem {
+  width: 170px;
+  height: 138px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.productTogolImage .filtaringImageItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.productOverViewoFinalImage {
+  width: 72%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  width: 40px;
+  height: 40px;
+}
+
+.img-zoom-result {
+  width: 500px;
   height: 500px;
-  margin: 0 auto;
-  padding: 0;
+  background-color: #3838386b;
+  position: absolute;
+  top: 40%;
+  right: 5%;
+}
+
+.rightProductfullDetails {
+  flex: 40%;
+}
+
+.count-container {
+  padding: 10px;
+  width: 100%;
+}
+
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.rightProductfullDetailsTopContent input,
+.rightProductfullDetailsTopContent textarea {
+  -webkit-appearance: auto;
+  /* -webkit-border-radius: 0; */
+}
+
+.rightProductfullDetails {
+  width: 40%;
+}
+
+.singalProductReviowAndStock {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.singalProductReviowAndStock .stockMessage {
+  padding-left: 10px;
+  border-left: 1px solid #b4b4b4;
+  color: #00ff66;
+}
+
+.singalProductPrice {
+  font-size: 24px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.singalProductPrice input {
+  border: none;
+  outline: none;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.singalProductDesc {
+  padding: 10px 0 25px 0;
+  border-bottom: 1px solid #c5c5c5;
+}
+
+.singalProductColor {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.singalProductColor .singalProductColorTitle {
+  margin-right: 20px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.singalProductColor label {
+  margin-top: 3px;
+}
+.singalProductColor label input {
+  display: none;
+}
+
+.singalProductColor label span {
+  display: inline-block;
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.singalProductColor label .color1 {
+  background-color: #a0bce0;
+}
+
+.singalProductColor label .color2 {
+  background-color: #e07575;
+}
+
+.singalProductColor label input:checked + span {
+  transform: scale(0.7);
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #000;
+}
+/* ======== */
+
+.singalProductSize {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.singalProductSize .singalProductColorTitle {
+  margin-right: 20px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.singalProductSize label input {
+  display: none;
+}
+
+.singalProductSize label span {
+  color: #000;
+  width: 33px;
+  height: 27px;
+  border: 1px solid #888;
+  font-size: 14px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px !important;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.singalProductSize label span:hover {
+  background-color: #c20d0d;
+  color: #fff;
+}
+.singalProductSize label input:checked + span {
+  background-color: #c20d0d;
+  color: #fff;
+}
+.singalProductBaynow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.singalProductCount {
+  display: inline-block;
+  border: 1px solid #999;
+  padding: 8px 0px;
+}
+.singalProductCount #singalProductCountBar {
+  border: none;
+  outline: none;
+  text-align: center;
+  width: 80px;
+  font-size: 17px;
+}
+.singalProductBayNowBtn button {
+  padding: 10px 50px;
+  border: none;
+  background: #ec2d2d;
+  color: #fafafa;
+  border-radius: 3px;
+  font-size: 16px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.singalProductBayNowBtn button:hover {
+  background: #ec2d2dcb;
+}
+
+.singalProductFavaritIcon label input {
+  display: none;
+}
+
+.singalProductFavaritIcon label span {
+  padding: 10px 12px;
+  border: 1px solid #999;
+  color: #333;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.songalProductMessage {
+  margin-top: 30px;
+}
+
+.songalProductMessageAllItem {
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+.songalProductMessageItem {
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid #999;
+  padding: 25px 15px;
+  align-items: center;
+}
+
+.songalProductMessageItem:last-child {
+  border-bottom: none;
+}
+
+.songalProductMessageItemLogo {
+  width: 40px;
+  height: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.songalProductMessageItemContant h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.songalProductMessageItemContant p {
+  color: #000;
+  font-size: 14px;
+}
+.songalProductMessageItemContant p:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 1200px) {
+  .singalProductMainContant {
+    padding: 0 20px;
+  }
+  .singalProductBaynow {
+    gap: 5px;
+  }
+  .singalProductBayNowBtn button {
+    padding: 10px 30px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .singalProductDetails {
+    display: block;
+  }
+  .rightProductfullDetails {
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .leftProductOverViewo {
+    width: 100%;
+  }
+  .singalProductBaynow {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .productTogolImage {
+    width: 20%;
+    gap: 5px;
+  }
+  .productOverViewoFinalImage {
+    width: 80%;
+  }
+  .productTogolImage .filtaringImageItem {
+    width: 80px;
+    height: 80px;
+  }
 }
