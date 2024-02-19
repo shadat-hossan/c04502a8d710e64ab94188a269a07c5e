@@ -324,7 +324,7 @@ input[placeholder],
 .menu_area {
   padding: 0 20px;
   background-color: #ec2d2d;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   position: relative;
   z-index: 5;
 }
@@ -392,6 +392,35 @@ input[placeholder],
   left: 0;
   top: 100%;
   display: none;
+}
+.all_categories_item {
+  position: relative;
+  cursor: pointer;
+}
+@media screen and (min-width: 769px) {
+.categorie_dropdown {
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(0);
+  transform-origin: center top 0;
+  transition: all 0.3s ease;
+  margin-top: 23px;
+  display: block;
+}
+.all_categories_item:hover .categorie_dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+  }
+.all_categories_item::after {
+  content: '';
+  width: 100%;
+  height: 25px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 1;
+}
 }
 .categorie_dropdown ul > li {
   padding: 10px 20px;
@@ -561,6 +590,7 @@ input[placeholder],
   }
 }
 @media screen and (max-width: 767px) {
+  .all_categories_item { position: inherit; }
   .header_search {
     width: 100%;
     order: 3;
@@ -637,7 +667,7 @@ input[placeholder],
 
 .mainTitle h4 {
   color: #db4444;
-  padding: 8px 0 8px 40px;
+  padding: 8px 0 8px 30px;
   position: relative;
   margin-bottom: 20px;
   font-size: 16px;
@@ -646,7 +676,7 @@ input[placeholder],
 .mainTitle h4::before {
   content: "";
   position: absolute;
-  width: 25px;
+  width: 15px;
   height: 100%;
   background: #db4444;
   border-radius: 5px;
@@ -853,6 +883,9 @@ input[placeholder],
     width: 40px;
     height: 40px;
   }
+  .mainTitle h2 {
+    font-size: 30px;
+  }
 }
 
 @media only screen and (max-width: 680px) {
@@ -1031,6 +1064,9 @@ input[placeholder],
 .latest_offers_box h3 {
   font-size: 36px;
   padding-bottom: 20px;
+}
+.categories_section_box {
+  padding: 50px 0;
 }
 }
 @media screen and (max-width: 767px) {
@@ -2050,29 +2086,6 @@ body {
   width: 100%;
 }
 
-.counterManiContant {
-  border: 1px solid #aaaaaa;
-  display: inline-block;
-  border-radius: 4px;
-}
-
-.couterBtn:hover {
-  background-color: #c20d0d;
-  color: #fff;
-}
-
-#numberCount {
-  display: inline;
-  padding: 0 20px;
-}
-
-.couterBtn.dickrement {
-  border-right: 1px solid #aaaaaa;
-}
-
-.couterBtn.increment {
-  border-left: 1px solid #aaaaaa;
-}
 
 .mb-10 {
   margin-bottom: 10px;
@@ -2192,29 +2205,24 @@ body {
   cursor: pointer;
   transition: all 0.2s;
 }
-
 .singalProductSize label span:hover {
   background-color: #c20d0d;
   color: #fff;
 }
-
 .singalProductSize label input:checked + span {
   background-color: #c20d0d;
   color: #fff;
 }
-
 .singalProductBaynow {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .singalProductCount {
   display: inline-block;
   border: 1px solid #999;
   padding: 8px 0px;
 }
-
 .singalProductCount #singalProductCountBar {
   border: none;
   outline: none;
@@ -2222,19 +2230,6 @@ body {
   width: 80px;
   font-size: 17px;
 }
-
-.couterBtn {
-  font-size: 16px;
-  border: none;
-  width: 30px;
-  height: 30px;
-  padding: 8px 12px;
-  background: none;
-  cursor: pointer;
-  transition: all 0.2s;
-  font-weight: 100;
-}
-
 .singalProductBayNowBtn button {
   padding: 10px 50px;
   border: none;
@@ -2245,7 +2240,6 @@ body {
   transition: all 0.2s;
   cursor: pointer;
 }
-
 .singalProductBayNowBtn button:hover {
   background: #ec2d2dcb;
 }
