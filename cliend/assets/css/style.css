@@ -1926,7 +1926,7 @@ body {
   padding: 0 20px;
 }
 .cart_page_box {
-  padding: 40px 0 60px;
+  padding: 20px 0 40px;
   align-items: flex-start;
 }
 .cart_area_left {
@@ -1981,6 +1981,7 @@ body {
 }
 .cart_area_right .checkout_btn { margin-top: 20px; }
 .cart_area_left .cart_list_area { height: auto; }
+.category_filter .pop_close { display: none; }
 @media screen and (max-width: 767px) {
 .cart_page_box {
   padding: 20px 0 30px;
@@ -1994,6 +1995,7 @@ body {
 .cart_area_right {
   width: 100%;
 }
+.category_filter .pop_close { display: block; }
 }
 
 
@@ -2340,4 +2342,243 @@ body {
     width: 80px;
     height: 80px;
   }
+}
+
+/* -------coupon_code_wrap----- */
+.coupon_code_area {
+  padding: 7px 0;
+}
+.coupon_code_area strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.4;
+    padding-bottom: 8px;
+}
+.billing_filed .form-control,
+.coupon_code_wrap .form-control {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px 15px;
+  font-size: 15px;
+  color: #8b8b8b;
+  outline: none;
+}
+.coupon_code_wrap input[type="submit"] {
+  width: 84px;
+  min-width: 84px;
+  height: 45px;
+  border: 1px solid #ddd;
+  outline: none;
+  cursor: pointer;
+  background: #fff;
+  color: #8b8b8b;
+  font-size: 15px;
+  border-radius: 6px;
+  margin-left: 20px;
+}
+.widget_checkbox strong {
+  font-weight: 400;
+  font-size: 14px;
+}
+.widget_checkbox strong a {
+  color:#b50107;
+}
+.terms_conditions {
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+.shipping_address_row {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ddd;
+}
+.shipping_address_row h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+.new_address_add a {
+  border-radius: 6px;
+  height: 40px;
+  padding: 8px 15px;
+  border: 1px solid #b50107;
+  color: #b50107;
+  font-size: 16px;
+  transition: background-color 0.5s ease;
+}
+.new_address_add a:hover {
+  background-color: #b50107;
+  color: #fff;
+}
+.new_address_add a .fa { padding-right: 7px; }
+.address_box_item {
+  gap: 20px;
+  padding: 30px 0;
+}
+.address_box_row {
+  width: calc(calc(100% - 20px) / 2);
+  border: 1px solid #249f58;
+  background-color: #f4f8f9;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 16px;
+  border-radius: 10px;
+  position: relative;
+}
+.address_box_row::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: url('../images/check1.svg') no-repeat center;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  z-index: 1;
+}
+.address_box_line { padding: 4px 0; }
+.address_box_line p {
+  padding-right: 15px;
+  font-size: 14px;
+  color: rgba(0,0,0, 0.8);
+}
+.address_box_line .p-info {
+   color: rgba(0,0,0, 1);
+   font-weight: 500;
+}
+.edit_address {
+  font-size: 15px;
+  color: #b50107;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 2;
+  cursor: pointer;
+  font-weight: 500;
+}
+.cart_area_left .terms_conditions {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.order_note {
+  padding: 25px 0 0 0;
+}
+.order_note h4 {
+  font-size: 16px;
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+.order_note .form-control {
+  width: 100%;
+  height: 200px;
+  resize: none;
+  font-size: 16px;
+  color: rgba(0,0,0, 0.9);
+  border: 1px solid #f4f8f9;
+  background-color: #f4f8f9;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  outline: none;
+}
+.billing_form_area {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  padding: 40px 20px;
+}
+.billing_form {
+  width: 100%;
+  max-width: 800px;
+  padding: 30px 25px;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+.body-fixed { overflow: hidden; }
+.billing_filed_row {
+  width: 100%;
+  gap: 20px;
+}
+.billing_filed {
+  width: calc(calc(100% - 20px)/ 2);
+  padding-bottom: 15px;
+}
+.billing_filed label {
+  font-size: 15px;
+  color: #000;
+  display: block;
+  padding-bottom: 8px;
+}
+.form-popup-bg {
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  z-index: 10000;
+}
+.form-popup-bg.is-visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+  transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+.btnCloseForm {
+  margin-right: 15px;
+}
+.form_submit_box {
+  justify-content: flex-end;
+}
+.save_info,
+.btnCloseForm {
+  cursor: pointer;
+  height: 40px;
+  border-radius: 6px;
+  border: 1px solid #249f58;
+  display: flex;
+  padding: 8px 20px;
+  font-size: 15px;
+  color: #222;
+  font-weight: 500;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.5s ease;
+}
+.btnCloseForm:hover {
+  background-color: #249f58;
+  color: #fff;
+}
+.save_info {
+  background-color: #249f58;
+  color: #fff;
+}
+.save_info:hover {
+  background-color: inherit;
+  color: #222;
+}
+@media only screen and (max-width: 767px) {
+.address_box_row,
+.billing_filed {
+  width: 100%;
+}
+.billing_filed_row { gap: 0; }
+.form-popup-bg {
+  align-items: flex-start;
+}
 }
