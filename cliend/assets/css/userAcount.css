@@ -1,0 +1,261 @@
+.userAcountContainer{
+    width: 100%;
+    display: flex;
+    gap: 1rem ;
+    margin-bottom: 20px;
+}
+
+/* === Start User Acount Sidebar Style === */
+
+.userAcountSidebar{
+    flex: 0 0 25%;
+}
+
+.userAcountSidebarAllMenue{
+    padding: 10px;
+}
+
+.userAcountSidebarMenue{
+    padding: 5px 0;
+    transition: all .2s;
+    color: #555;
+}
+
+.userAcountSidebarMenueMainC{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all .2s;
+}
+
+.userAcountSidebarMenue:hover .userAcountSidebarMenueText{
+    color: #000;
+    
+}
+
+.userAcountSidebarMenueText{
+    font-size: 16px;
+    font-weight: 400;
+    color: #555;
+    transition: all .2s;
+}
+
+.userAcountSidebarSubMenue{
+    margin-left: 35px;
+    margin-top: 10px;
+}
+
+.userAcountSidebarSubMenueItem{
+    padding: 5px 0;
+
+}
+.userAcountSidebarSubMenueItem a {
+    color: #555;
+}
+
+
+
+
+/* ===End User Acount Sidebar Style ==== */
+
+
+/* === Start User Acount Main Contant Style === */
+.userAcountMainContant{
+    flex: 0 0 75%;
+    padding: 10px;
+} 
+
+.userProfile{
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+}
+
+.userProfileLeft{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.userProfileImg{
+    width: 60px;
+    height: 60px;
+}
+.verifiMessage{
+    display: flex;
+    align-items: center;
+}
+.userProfileNmarAndMess h3{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.userProfileNmarAndMess .verifiMessage{
+    font-size: .8rem;
+    color: #001405;
+}
+
+.verifiMessageChickMark{
+    margin-right: 5px;
+}
+
+.userProfileBar{
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+.userAcountInfo{
+    margin: 25px 0;
+}
+
+.userAcountInfo .atAGlance{
+    display: flex;
+    gap: 25px;
+}
+
+.userAcountInfo .atAGlance .glanceItem{
+    width: 23%;
+    height: 120px;
+    background-color: #f4f8f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    transition: all .3s;
+    cursor: pointer;
+}
+.userAcountInfo .atAGlance .glanceItem:hover{
+    background-color: #e2eaec
+}
+
+.userAcountInfo .atAGlance .glanceItem h4{
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.userAcountInfo .atAGlance .glanceItem p{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    gap: 2px;
+}
+
+span.gaterthan {
+    transform: translateY(2px);
+}
+
+.userProfileAllProduct{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.noproductFountMessageText{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f8f9;
+    padding: 25px 10px;
+    font-size: 19px;
+    font-weight: 400;
+    border-radius: 5px;
+}
+
+.noproductFountMessagesvg{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* display: none; */
+}
+
+.noproductFountMessagesvg svg{
+    width: 300px;
+    height: 300px;
+    opacity: .6;
+}
+
+.productImage{
+    background: none;
+}
+
+  
+
+.userProfileAllProductList{
+    border: 1px solid #d8d8d8;
+    display: none;
+}
+
+.userProfileAllProductList{
+    width: 100%;
+    text-align: center;
+}
+
+.userProfileAllProductListItem .productImage{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.userProfileAllProductListItem td{
+    vertical-align: middle;
+    text-align: center;
+}
+
+.userProfileAllProduct table, .userProfileAllProduct table tr, .userProfileAllProduct table tr td {
+    border-spacing: 0px;
+}
+
+.userProfileAllProduct tr{
+    margin-bottom: 10px;
+}
+
+
+.userProfileAllProductListItem:nth-child(even) {
+    background-color: #eff7f7;
+  }
+
+  .userProfileAllProductListHead th{
+    padding: 15px 0;
+    font-weight: 500;
+    border-bottom: 1px solid #d8d8d8;
+  }
+
+.userProfileAllProductListItem .productImage img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+} 
+
+/* === End User Acount Main Contant Style === */
+
+@media screen and (max-width: 798PX) {
+    .userAcountSidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #00000060;
+        width: 100% ;
+        height: 100vh;
+        z-index: 1000;
+        /* display: none; */
+    }
+    .userAcountSidebarAllMenue{
+        background: #fff;
+        height: 100vh;
+        max-width: 250px;
+    }
+    .userAcountMainContant{
+        flex: 0 0 100%;
+        padding: 10px;
+    }
+
+    .userProfileBar {
+        display: block;
+        margin-right: 10px;
+    }
+    
+}
