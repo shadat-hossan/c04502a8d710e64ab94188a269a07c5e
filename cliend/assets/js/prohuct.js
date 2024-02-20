@@ -24,7 +24,7 @@ dickrement.addEventListener("click", function(){
     productContiteCount -= 1;
     productContite.value = productContiteCount
   }
-}) 
+})
 
 
 
@@ -39,7 +39,3 @@ allGogalImage.forEach(function (i) {
     console.log(i.childNodes[1].src);
   });
 });
-
-
-
-

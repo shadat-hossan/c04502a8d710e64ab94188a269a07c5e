@@ -1418,6 +1418,7 @@ span.totalRating {
   display: flex;
   justify-content: flex-end;
   animation: ShoppingCart_fadeOut__tDyhq .4s ease forwards;
+  display: none;
 }
 .cart_pop_area.active {
   animation: ShoppingCart_fadeIn__jVSP9 .6s ease forwards;
@@ -1425,7 +1426,7 @@ span.totalRating {
   transition-duration: 400;
   transition-property: opacity;
   transition-timing-function: cubic-bezier(.4,0,.2,1);
-  z-index: 9999
+  z-index: 9999;
 }
 .cart_pop_area.close {
     animation: ShoppingCart_fadeOut__tDyhq .4s ease forwards;

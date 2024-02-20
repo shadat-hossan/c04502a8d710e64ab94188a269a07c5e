@@ -1,3 +1,7 @@
+input, textarea {
+    -webkit-appearance: auto;
+}
+
 .userAcountContainer{
     width: 100%;
     display: flex;
@@ -9,10 +13,12 @@
 
 .userAcountSidebar{
     flex: 0 0 25%;
+    
 }
 
 .userAcountSidebarAllMenue{
     padding: 10px;
+    position: relative;
 }
 
 .userAcountSidebarMenue{
@@ -53,8 +59,22 @@
     color: #555;
 }
 
+.userAcountSidebar .resDeCrochBtn{
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    padding: 5px;
+    cursor: pointer;
+}
 
+.resDeCrochBtnSVG{
+    fill: #333;
+    display: none;
+}
 
+.userAcountSidebar .resDeCrochBtn:hover .resDeCrochBtnSVG{
+    fill: #e61212;
+}
 
 /* ===End User Acount Sidebar Style ==== */
 
@@ -63,6 +83,7 @@
 .userAcountMainContant{
     flex: 0 0 75%;
     padding: 10px;
+    position: relative;
 } 
 
 .userProfile{
@@ -103,6 +124,9 @@
     font-size: 25px;
     cursor: pointer;
     display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .userAcountInfo{
@@ -111,11 +135,14 @@
 
 .userAcountInfo .atAGlance{
     display: flex;
-    gap: 25px;
+    gap: 22px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .userAcountInfo .atAGlance .glanceItem{
-    width: 23%;
+    width: 190px;
     height: 120px;
     background-color: #f4f8f9;
     display: flex;
@@ -186,7 +213,6 @@ span.gaterthan {
 
 .userProfileAllProductList{
     border: 1px solid #d8d8d8;
-    display: none;
 }
 
 .userProfileAllProductList{
@@ -232,6 +258,187 @@ span.gaterthan {
 
 /* === End User Acount Main Contant Style === */
 
+/* === Start Ourder List Filter Style === */
+.orderListFilterSection h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.orderListFilterAllBtn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.orderListFilterBtnItem{
+    padding: 12px 14px;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+    outline: none;
+    background: none;
+    color: #555;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.orderListFilterBtnItem:hover{
+    background: #e61212;
+    color: #fff;
+}
+
+.orderListFilterAllBtn .olActive{
+    background: #e61212;
+    color: #fff;
+}
+/* === End Ourder List Filter Style === */
+
+
+/* === Start User Profile Section  === */
+
+.userProfileTopSection h3{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.userProfileTopSection .userProfileImage{
+    display: flex;
+    margin-top: 10px;
+    gap: 20px;
+    align-items: center;
+}
+
+.userProfileTopSection .userProfileImage .ProfileImage{
+    width: 60px;
+    height: 60px;
+    border: 50%;
+    overflow: hidden;
+}
+
+.userProfileTopSection .userProfileImage .ProfileImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    
+}
+
+
+.profileImageFileUplpad input{
+    display: none
+}
+
+.profileImageFileUplpadPoient{
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.userProfileBottomSection{
+    margin-top: 15px;
+}
+
+.userProfileBottomSectionTitle{
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.userProfileBottomSectionTitle span{
+    margin-right: 5px;
+}
+
+.userProfileBottomSectionTitle svg{
+    cursor: pointer;
+}
+
+.userProfileBottomSectionBasicInfioForm{
+    width: 100%;
+}
+
+.userProfileBottomSectionBasicInfioForm .FormFild{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.formFildSingalInput{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+.formFildSingalInput .formFildSingalInputLable,
+.formFildSingalInput .formFildSingalInputGenderTitle{
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #444;
+    margin-left: 5px;
+}
+
+.formFildSingalInput input{
+    width: 100%;
+    padding: 13px 10px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    background: #F4F8F9;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.formFildSingalInput input::placeholder{
+    color: #999;
+}
+
+.formFildSingalInputGender .formFildSingalInputGenderAllFild{
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.formFildSingalInputGender input{
+    width: auto;
+}
+.userProfileBottomSectionFormSaveAndCan {
+    margin-top: 10px;
+    width: 100%;
+    text-align: right;
+    transition: all .3s;
+}
+
+
+.userProfileBottomSectionFormSaveAndCan .s50ps{
+    border: none;
+    padding: 13px 15px;
+    border: .5px solid #b9b9b9;
+    background: none;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    background: #fff;
+    transition: all .3s;
+    font-weight: 500;
+}
+
+.userProfileBottomSectionFormSaveAndCan .savebtn{
+    background: #000;
+    border: none;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.userProfileBottomSectionFormSaveAndCan .s50ps:hover{
+    background-color: #fff;
+    border: .5px solid #b9b9b9;
+    color: #000;
+}
+/* === End Profile Section === */
+
+
+
 @media screen and (max-width: 798PX) {
     .userAcountSidebar {
         position: fixed;
@@ -241,13 +448,18 @@ span.gaterthan {
         width: 100% ;
         height: 100vh;
         z-index: 1000;
-        /* display: none; */
+        display: none;
     }
     .userAcountSidebarAllMenue{
         background: #fff;
         height: 100vh;
         max-width: 250px;
     }
+
+    .resDeCrochBtnSVG{
+        display: block;
+    }
+
     .userAcountMainContant{
         flex: 0 0 100%;
         padding: 10px;
