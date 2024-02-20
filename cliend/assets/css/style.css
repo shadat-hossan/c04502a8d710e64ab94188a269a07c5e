@@ -1558,7 +1558,7 @@ body {
 }
 .checkout_btn .checkout {
   width: 100%;
-  padding: 12px 20px;
+  padding: 15px 20px;
   border-radius: 6px;
   background-color: #b50107;
   border: 1px solid #b50107;
@@ -2581,4 +2581,103 @@ body {
 .form-popup-bg {
   align-items: flex-start;
 }
+}
+
+
+/* -------account_login_area-------- */
+.account_login_area {
+  padding: 0 20px;
+}
+.account_login {
+  padding: 30px 0 50px;
+}
+.Login_form_bg {
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 12px;
+  background: #f4f8f9;
+  padding: 35px 30px 20px 30px;
+}
+.Login_form_bg .billing_filed {
+    width: 100%;
+}
+.Login_form_bg h4 {
+    font-size: 20px;
+    color: #333;
+    line-height: 1;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+.Login_form_bg h5 {
+    font-size: 18px;
+    color: #333;
+    line-height: 1;
+    font-weight: 600;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.Login_form_bg .checkout_btn { padding-top: 10px; }
+.forgot_password_link {
+  padding-top: 8px;
+  padding-bottom: 25px;
+}
+.forgot_password_link a {
+  display: inline-block;
+  color: #ec2d2d;
+  font-size: 14px;
+  text-decoration: underline;
+}
+.reg_button .checkout,
+.login_with_phone .checkout {
+  background-color: #1b1b28;
+  border-color: #1b1b28;
+}
+.reg_button .checkout:hover,
+.login_with_phone .checkout:hover {
+  color: #1b1b28;
+}
+.login_with_phone { padding-bottom: 30px; }
+.signup_link h5 a {
+  color: #ec2d2d;
+  text-decoration: underline;
+}
+.ligin_with_social {
+  gap: 15px;
+  padding:0 0 20px 0;
+  justify-content: center;
+}
+.ligin_with_social button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.reg_button,
+.reset-btn {
+  padding-bottom: 30px;
+}
+.account_login .terms_conditions {
+    padding-top: 5px;
+}
+.terms_conditions .checkmark,
+.account_login .checkmark {
+  border-color: #1b1b28;
+}
+.terms_conditions input:checked ~ .checkmark,
+.checkbox_item input:checked ~ .checkmark {
+  background-color: #1b1b28;
+}
+.billing_filed { position: relative; }
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 39px;
+  z-index: 2;
+  font-size: 18px;
+  color: #8b8b8b;
 }
