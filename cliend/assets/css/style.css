@@ -1385,39 +1385,44 @@ body {
   display: flex;
   justify-content: flex-end;
   animation: ShoppingCart_fadeOut__tDyhq .4s ease forwards;
+  display: none;
 }
 .cart_pop_area.active {
   animation: ShoppingCart_fadeIn__jVSP9 .6s ease forwards;
   transition-duration: .15s;
-  transition-duration: 400;
   transition-property: opacity;
   transition-timing-function: cubic-bezier(.4,0,.2,1);
-  z-index: 9999
+  z-index: 9999;
+  display: flex;
 }
 .cart_pop_area.close {
     animation: ShoppingCart_fadeOut__tDyhq .4s ease forwards;
-    opacity: 0
+    opacity: 0;
+    display: flex;
 }
 @keyframes ShoppingCart_fadeIn__jVSP9 {
     0% {
         opacity: 0;
         z-index: -10;
+        visibility: hidden;
     }
-
     to {
         opacity: 1;
         z-index: 999;
+        visibility: visible;
     }
 }
 
 @keyframes ShoppingCart_fadeOut__tDyhq {
     0% {
-        opacity: 1
+        opacity: 1;
+        visibility: visible;
     }
 
     to {
         opacity: 0;
         z-index: -1;
+        visibility: hidden;
     }
 }
 .cart_sidebar {
@@ -2245,7 +2250,6 @@ body {
 .singalProductBayNowBtn button:hover {
   background: #ec2d2dcb;
 }
-
 .singalProductFavaritIcon label input {
   display: none;
 }
@@ -2349,12 +2353,12 @@ body {
   padding: 7px 0;
 }
 .coupon_code_area strong {
-    display: block;
-    font-size: 15px;
-    font-weight: 600;
-    color: #333;
-    line-height: 1.4;
-    padding-bottom: 8px;
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.4;
+  padding-bottom: 8px;
 }
 .billing_filed .form-control,
 .coupon_code_wrap .form-control {
@@ -2623,7 +2627,7 @@ body {
 }
 .forgot_password_link a {
   display: inline-block;
-  color: #ec2d2d;
+  color: #1b1b28;
   font-size: 14px;
   text-decoration: underline;
 }
@@ -2680,4 +2684,9 @@ body {
   z-index: 2;
   font-size: 18px;
   color: #8b8b8b;
+}
+@media only screen and (max-width: 767px) {
+.Login_form_bg {
+  max-width: 100%;
+}  
 }
