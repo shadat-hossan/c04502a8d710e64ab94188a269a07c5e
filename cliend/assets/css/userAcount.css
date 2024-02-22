@@ -379,7 +379,8 @@ span.gaterthan {
 
 .formFildSingalInput input{
     width: 100%;
-    padding: 13px 10px;
+    height: 45px;
+    padding: 10px 15px;
     outline: none;
     border: none;
     border-radius: 8px;
@@ -387,6 +388,7 @@ span.gaterthan {
     margin-bottom: 10px;
     font-size: 14px;
     color: #555;
+    border: 1px solid #dfdfdf;
 }
 
 .formFildSingalInput input::placeholder{
@@ -401,6 +403,7 @@ span.gaterthan {
 
 .formFildSingalInputGender input{
     width: auto;
+    height: auto;
 }
 .userProfileBottomSectionFormSaveAndCan {
     margin-top: 10px;
@@ -435,7 +438,60 @@ span.gaterthan {
     border: .5px solid #b9b9b9;
     color: #000;
 }
+
+.formFildSingalInput .toggle-password {
+    top: 46px;
+}
 /* === End Profile Section === */
+
+/* === Start User Address Book Add Section === */
+.userAddressBookAddSection{
+    width: 100%;
+    /* background: #e4e4e470; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 15px 0;
+    border-bottom: 1px solid #e6e6e6bd;
+}
+
+.userAddressBookAddSection .addedAdderssBtn{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    border: 1px solid #e61212;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #000;
+    transition: all .2s;
+}
+
+.userAddressBookAddSection .addedAdderssBtn .addedAdderssBtnSVG{
+    fill: #333;
+    transition: all .2s;
+}
+
+.userAddressBookAddSection .addedAdderssBtn .addedAdderssBtnText{
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    transition: all .2s;
+}
+
+.userAddressBookAddSection .addedAdderssBtn:hover .addedAdderssBtnText{
+    color: #fff !important;
+}
+
+.userAddressBookAddSection .addedAdderssBtn:hover .addedAdderssBtnSVG{
+    fill: #fff !important;
+}
+
+.userAddressBookAddSection .addedAdderssBtn:hover{
+    background: #e61212;
+}
+/* === End User Address Book Add Section === */
+
 
 
 
