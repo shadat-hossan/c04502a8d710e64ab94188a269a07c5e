@@ -166,6 +166,7 @@
         <div class="category_product_area flex-nowrap">
             <div class="category_filter">
                 <div class="pop_close"></div>
+                <form action="#">
                 <div class="category_widget">
                     <h4>Category</h4>
                     <div class="category_search">
@@ -194,6 +195,8 @@
                         <label class="checkbox_item"><input type="checkbox" name="es"><span class="checkmark"></span> SIP/VoIP Phones</label>
                     </div>
                 </div>
+                </form>
+                <form action="#">
                 <div class="category_widget">
                     <h4>Rating</h4>
                     <div class="widget_checkbox">
@@ -212,17 +215,39 @@
                         <label class="checkbox_item"><input type="checkbox" name="rating"><span class="checkmark"></span> <i class="fa fa-star"></i> 0-5</label>
                     </div>
                 </div>
+                </form>
+                <form action="#">
                 <div class="category_widget">
                     <h4>Price</h4>
-                    <div class="range-slider">
-                        <div class="flex-nowrap">
-                            <input type="number" value="500" min="500" max="120000"/>
-                            <input class="max-2" type="number" value="50000" min="500" max="120000"/>
+                    <div class="price_range_box flex-nowrap">
+                        <div class="min_price">
+                            <div class="counterManiContant">
+                                <div class="numberCount"><input placeholder="10" type="text" value="10"></div> 
+                                <button class="couterBtn dickrement">
+                                  <i class="fa fa-minus" aria-hidden="true"></i>
+                                </button>                                <button class="couterBtn increment">
+                                  <i class="fa fa-plus" aria-hidden="true"></i>
+                                </button>
+                            </div>
                         </div>
-                        <input value="500" min="500" max="120000" step="100" type="range"/>
-                        <input value="50000" min="500" max="120000" step="100" type="range"/>
+                        <div class="max_price">
+                            <div class="counterManiContant">
+                                <div class="numberCount"><input placeholder="100" type="text" value="100"></div>
+                                <button class="couterBtn increment">
+                                  <i class="fa fa-plus" aria-hidden="true"></i>
+                                </button>
+                                <button class="couterBtn dickrement">
+                                  <i class="fa fa-minus" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="peice_search">
+                            <button class="submit" type="submit"></button>
+                        </div>
                     </div>
-                </div>
+                </div> 
+                </form>
+                <form action="#">
                 <div class="category_widget">
                     <h4>Delivery</h4>
                     <div class="widget_checkbox">
@@ -232,6 +257,8 @@
                         <label class="checkbox_item"><input type="checkbox" name="delivery"><span class="checkmark"></span> Free Delivery</label>
                     </div>
                 </div>
+                </form>
+                <form action="#">
                 <div class="category_widget">
                     <h4>Brand</h4>
                     <div class="category_search">
@@ -260,6 +287,8 @@
                         <label class="checkbox_item"><input type="checkbox" name="brand"><span class="checkmark"></span> Oppo</label>
                     </div>
                 </div>
+                </form>
+                <form action="#">
                 <div class="category_widget">
                     <h4>Color</h4>
                     <div class="category_search">
@@ -288,6 +317,8 @@
                         <label class="checkbox_item"><input type="checkbox" name="Color"><span class="checkmark"></span> Aqua</label>
                     </div>
                 </div>
+                </form>
+                <form action="#">
                 <div class="category_widget">
                     <h4>Wireless Connectivity</h4>
                     <div class="category_search">
@@ -310,6 +341,7 @@
                         <label class="checkbox_item"><input type="radio" name="Connectivity"><span class="checkmark"></span> No</label>
                     </div>
                 </div>
+                </form>
             </div>
             <div class="flashSalesCard">
                 <div class="View_allProduct flex-wrap">
@@ -817,10 +849,19 @@
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/index.js"></script>
+    <script src="assets/js/prohuct.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/jquery.fancybox.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
     <script src="assets/js/cart.js"></script>
+    <script src="assets/js/zoomsl.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".xzoom").imagezoomsl({
+          zoomrange: [3, 3],
+        });
+      });
+    </script>
     <script>
       $(".allProduct").owlCarousel({
         loop: false,

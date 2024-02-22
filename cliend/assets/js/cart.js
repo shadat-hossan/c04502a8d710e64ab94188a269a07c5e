@@ -1,22 +1,3 @@
-// let Increment = document.querySelectorAll(".increment");
-// let Dickrement = document.querySelectorAll(".dickrement");
-// let numberCount = document.querySelectorAll(".numberCount");
-
-// let count = 1;
-
-// Increment.addEventListener("click", function () {
-//   count += 1;
-//   numberCount.innerHTML = count;
-// });
-
-// Dickrement.addEventListener("click", function () {
-//   if (count > 1) {
-//     count -= 1;
-//     numberCount.innerHTML = count;
-//   }
-// });
-
-
 $(document).ready(function() {
     $('.dickrement').click(function () {
       var $input = $(this).parent().find('input');
@@ -99,5 +80,42 @@ $(document).ready(function() {
       });
 
     })();
+
+  });
+
+
+
+function closeForm() {
+  $('.form-popup-bg').removeClass('is-visible');
+}
+$(document).ready(function($) {
+  
+  /* Contact Form Interactions */
+  $('.btnOpenForm').on('click', function(event) {
+    event.preventDefault();
+
+    $('.form-popup-bg').addClass('is-visible');
+    $('body').addClass('body-fixed');
+  });
+    //close popup when clicking x or off popup
+  $('.form-popup-bg').on('click', function(event) {
+    if ($(event.target).is('.form-popup-bg') || $(event.target).is('.btnCloseForm')) {
+      event.preventDefault();
+      $(this).removeClass('is-visible');
+      $('body').removeClass('body-fixed');
+    }
+  });
+  
+  
+  $(".toggle-password").click(function() {
+      $(this).toggleClass("fa-eye fa-eye-slash");
+      input = $(this).parent().find("input");
+      if (input.attr("type") == "password") {
+          input.attr("type", "text");
+      } else {
+          input.attr("type", "password");
+      }
+  });
+
 
   });
