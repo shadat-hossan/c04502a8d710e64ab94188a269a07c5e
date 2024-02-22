@@ -1,22 +1,3 @@
-// let Increment = document.querySelectorAll(".increment");
-// let Dickrement = document.querySelectorAll(".dickrement");
-// let numberCount = document.querySelectorAll(".numberCount");
-
-// let count = 1;
-
-// Increment.addEventListener("click", function () {
-//   count += 1;
-//   numberCount.innerHTML = count;
-// });
-
-// Dickrement.addEventListener("click", function () {
-//   if (count > 1) {
-//     count -= 1;
-//     numberCount.innerHTML = count;
-//   }
-// });
-
-
 $(document).ready(function() {
     $('.dickrement').click(function () {
       var $input = $(this).parent().find('input');

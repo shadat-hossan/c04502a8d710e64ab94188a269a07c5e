@@ -340,9 +340,20 @@
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/index.js"></script>
+    <script src="assets/js/prohuct.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/jquery.fancybox.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
     <script src="assets/js/cart.js"></script>
+    <script src="assets/js/zoomsl.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".xzoom").imagezoomsl({
+          zoomrange: [3, 3],
+        });
+      });
+    </script>
+    
     <script>
       $(".allProduct").owlCarousel({
         loop: false,
