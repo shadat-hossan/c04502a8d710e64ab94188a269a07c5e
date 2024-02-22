@@ -94,113 +94,167 @@
         <div class="phone_number"><a href="mailto:16890">16890</a></div>
       </div>
     </div>
-    
-    <div class="cart_page_area">
-        <div class="cart_page_box center-content flex-wrap">
-            <div class="cart_area_left">
-                <div class="cart_list_area">
-                    <div class="cart_title"><h4>Monitor</h4></div>
-                    <div class="cart_list_row flex-nowrap">
-                      <label class="checkbox_item"><input type="checkbox" name="pw"><span class="checkmark"></span></label>
-                      <div class="cart_photo"><img src="assets/images/product-image/Monitor.png" alt=""></div>
-                      <div class="product_cart_info">
-                        <h5>IPS LCD Gaming Monitor</h5>
-                        <p class="productDetailsPrice"><span class="discountPrice">৳960 </span> <del>৳1160</del></p>
-                        <p class="productDetailsPrice">Unite Total: <span class="discountPrice">৳1200 </span></p>
-                        <div class="product_add_or_remove flex-nowrap">
-                         <div class="counterManiContant">
-                            <button class="couterBtn dickrement">
-                              <i class="fa fa-minus" aria-hidden="true"></i>
-                            </button>
-                            <div class="numberCount"><input type="text" value="1"/></div>
-                            <button class="couterBtn increment">
-                              <i class="fa fa-plus" aria-hidden="true"></i>
-                            </button>
-                          </div>
-                          <div class="remove_cart"><span>Remove</span></div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="cart_list_row flex-nowrap">
-                      <label class="checkbox_item"><input type="checkbox" name="pw"><span class="checkmark"></span></label>
-                      <div class="cart_photo"><img src="assets/images/product-image/new_product1.png" alt=""></div>
-                      <div class="product_cart_info">
-                        <h5>IPS LCD Gaming Monitor</h5>
-                        <p class="productDetailsPrice"><span class="discountPrice">৳960 </span> <del>৳1160</del></p>
-                        <p class="productDetailsPrice">Unite Total: <span class="discountPrice">৳1200 </span></p>
-                        <div class="product_add_or_remove flex-nowrap">
-                         <div class="counterManiContant">
-                            <button class="couterBtn dickrement">
-                              <i class="fa fa-minus" aria-hidden="true"></i>
-                            </button>
-                            <div class="numberCount"><input type="text" value="1"/></div>
-                            <button class="couterBtn increment">
-                              <i class="fa fa-plus" aria-hidden="true"></i>
-                            </button>
-                          </div>
-                          <div class="remove_cart"><span>Remove</span></div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="cart_list_row flex-nowrap">
-                      <label class="checkbox_item"><input type="checkbox" name="pw"><span class="checkmark"></span></label>
-                      <div class="cart_photo"><img src="assets/images/product-image/new_product2.png" alt=""></div>
-                      <div class="product_cart_info">
-                        <h5>IPS LCD Gaming Monitor</h5>
-                        <p class="productDetailsPrice"><span class="discountPrice">৳960 </span> <del>৳1160</del></p>
-                        <p class="productDetailsPrice">Unite Total: <span class="discountPrice">৳1200 </span></p>
-                        <div class="product_add_or_remove flex-nowrap">
-                         <div class="counterManiContant">
-                            <button class="couterBtn dickrement">
-                              <i class="fa fa-minus" aria-hidden="true"></i>
-                            </button>
-                            <div class="numberCount"><input type="text" value="1"/></div>
-                            <button class="couterBtn increment">
-                              <i class="fa fa-plus" aria-hidden="true"></i>
-                            </button>
-                          </div>
-                          <div class="remove_cart"><span>Remove</span></div>
-                        </div>
-                      </div>
-                    </div>
-
+    <form action="#"> 
+      <div class="cart_page_area">
+          <div class="cart_page_box center-content flex-wrap">
+              <div class="cart_area_left">
+                  <div class="shipping_address_row flex-nowrap align-center space-between">
+                    <h4>Shipping Address</h4>
+                    <div class="new_address_add"><a class="btnOpenForm" href="javascript:void(0)"><i class="fa fa-plus-square"></i>New Address</a></div>
                   </div>
-            </div>
-            <div class="cart_area_right">
-                <h4>Order Total</h4>
-                <div class="price_header flex-nowrap space-between w-100">
-                    <span>Product</span>
-                    <span>Price</span>
-                </div>
-                <div class="cart_list_wrap">
-                    <div class="cart_list_item flex-nowrap space-between">
-                        <span>1. IPS LCD Gaming Monitor</span>
-                        <strong>৳120</strong>
+
+                  <div class="address_box_item flex-wrap">
+                    <div class="address_box_row">
+                        <div class="edit_address btnOpenForm">Edit</div>
+                        <div class="address_box_line flex-wrap">
+                            <p>Name:</p>
+                            <p class="p-info">Jahangir Alam Uzzal</p>
+                        </div>
+                        <div class="address_box_line flex-wrap">
+                            <p>Phone:</p>
+                            <p class="p-info">8801736556085</p>
+                        </div>
+                        <div class="address_box_line flex-wrap">
+                            <p>Address:</p>
+                            <p class="p-info">Khilkhet</p>
+                        </div>
+                        <div class="address_box_line flex-wrap">
+                            <p>Postal Code:</p>
+                            <p class="p-info">1229</p>
+                        </div>
+                        <div class="address_box_line flex-wrap">
+                            <p>City:</p>
+                            <p class="p-info">Dhaka</p>
+                        </div>
                     </div>
-                    <div class="cart_list_item flex-nowrap space-between">
-                        <span>2. IPS LCD Gaming Monitor</span>
-                        <strong>৳120</strong>
+                </div>
+                <div class="widget_checkbox terms_conditions">
+                    <label class="checkbox_item"><input type="checkbox" name="billing"><span class="checkmark"></span>I have a different Billing address</label>
+                </div>
+                <div class="order_note">
+                  <h4>Order Note</h4>
+                  <textarea class="form-control" cols="10" rows="10" placeholder="Place your order note"></textarea>
+                </div>
+                <div class="billing_form_area form-popup-bg">
+                  <div class="billing_form">
+                    <div class="billing_filed_row flex-wrap"> 
+                      <div class="billing_filed">
+                        <label>First Name *</label>
+                        <input class="form-control" type="text" placeholder="Enter your first name" name="">
+                      </div>
+                      <div class="billing_filed">
+                        <label>Last Name *</label>
+                        <input class="form-control" type="text" placeholder="Enter your last name" name="">
+                      </div>
                     </div>
-                    <div class="cart_list_item flex-nowrap space-between">
-                        <span>3. IPS LCD Gaming Monitor</span>
-                        <strong>৳120</strong>
+                    <div class="billing_filed_row flex-wrap"> 
+                      <div class="billing_filed">
+                        <label>Phone *</label>
+                        <input class="form-control" type="text" placeholder="Enter your phone number" name="">
+                      </div>
+                      <div class="billing_filed">
+                        <label>Email Address</label>
+                        <input class="form-control" type="text" placeholder="Enter your email" name="">
+                      </div>
                     </div>
+                    <div class="billing_filed_row flex-wrap"> 
+                      <div class="billing_filed">
+                        <label>Country *</label>
+                        <select class="form-control">
+                          <option>Bangladesh</option>
+                        </select>
+                      </div>
+                      <div class="billing_filed">
+                        <label>City *</label>
+                        <select class="form-control">
+                          <option>Dhaka</option>
+                          <option>Mymensingh</option>
+                          <option>Sylhet</option>
+                          <option>Chattogram</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="billing_filed_row flex-wrap"> 
+                      <div class="billing_filed">
+                        <label>Area *</label>
+                        <select class="form-control">
+                          <option>Shyamoli</option>
+                          <option>Mirpur</option>
+                          <option>Khilkhet</option>
+                        </select>
+                      </div>
+                      <div class="billing_filed">
+                        <label>Street Address *</label>
+                        <input class="form-control" type="text" placeholder="Enter your street Address" name="">
+                      </div>
+                    </div>
+                    <div class="billing_filed_row flex-wrap"> 
+                      <div class="billing_filed">
+                        <label>Postal Code *</label>
+                        <input class="form-control" type="text" placeholder="Enter your street Address" name="">
+                      </div>
+                      <div class="billing_filed">
+                        <label>Location Type *</label>
+                        <select class="form-control">
+                          <option>Home</option>
+                          <option>Office</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form_submit_box flex-nowrap">
+                      <div class="btnCloseForm">Cancel</div>
+                      <button class="save_info">Save</button>
+                    </div>
+                  </div>
                 </div>
-                <div class="cart_list_item total_item flex-nowrap space-between">
-                    <strong>Sub Total</strong>
-                    <strong>৳360</strong>
-                </div>
-                <div class="cart_list_item total_item flex-nowrap space-between">
-                    <strong>Total</strong>
-                    <strong>৳360</strong>
-                </div>
-                <div class="checkout_btn"><button class="checkout">Next</button></div>
-            </div>
-        </div>
-    </div>
-   
+              </div>
+              <div class="cart_area_right">
+                  <h4>Order Total</h4>
+                  <div class="price_header flex-nowrap space-between w-100">
+                      <span>Product</span>
+                      <span>Price</span>
+                  </div>
+                  <div class="cart_list_wrap">
+                      <div class="cart_list_item flex-nowrap space-between">
+                          <span>1. IPS LCD Gaming Monitor</span>
+                          <strong>৳120</strong>
+                      </div>
+                      <div class="cart_list_item flex-nowrap space-between">
+                          <span>2. IPS LCD Gaming Monitor</span>
+                          <strong>৳120</strong>
+                      </div>
+                      <div class="cart_list_item flex-nowrap space-between">
+                          <span>3. IPS LCD Gaming Monitor</span>
+                          <strong>৳120</strong>
+                      </div>
+                  </div>
+                  <div class="cart_list_item total_item flex-nowrap space-between">
+                      <strong>Sub Total</strong>
+                      <strong>৳360</strong>
+                  </div>
+                  <div class="cart_list_item flex-nowrap space-between">
+                      <span>(+) Shipping charge (Est. price, inside Dhaka)</span>
+                      <strong>৳0</strong>
+                  </div>
+                  <div class="coupon_code_area">
+                    <strong>Apply coupon code</strong>
+                    <div class="coupon_code_wrap flex-nowrap">
+                      <input class="form-control" placeholder="Enter coupon CODE" type="text" name="">
+                      <input type="submit" value="Apply" name="">
+                    </div>
+                  </div>
+                  <div class="cart_list_item total_item flex-nowrap space-between">
+                      <strong>Total</strong>
+                      <strong>৳360</strong>
+                  </div>
+                   <div class="widget_checkbox terms_conditions">
+                      <label class="checkbox_item"><input type="checkbox" name="asd"><span class="checkmark"></span><strong> I agree to the <a href="#">Terms and Conditions</a>, <a href="#">Privacy Policy</a></strong></label>
+                  </div>
+                  <div class="checkout_btn"><button class="checkout">Place Order</button></div>
+              </div>
+          </div>
+      </div>
+    </form>
   <footer class="footer_area">
     <div class="footer center-content flex-nowrap">
       <div class="footer_widget">
@@ -353,7 +407,6 @@
         });
       });
     </script>
-    
     <script>
       $(".allProduct").owlCarousel({
         loop: false,
