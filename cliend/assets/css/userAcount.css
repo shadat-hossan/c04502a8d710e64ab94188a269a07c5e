@@ -445,52 +445,54 @@ span.gaterthan {
 /* === End Profile Section === */
 
 /* === Start User Address Book Add Section === */
-.userAddressBookAddSection{
+
+.cart_area_add_book{
     width: 100%;
-    /* background: #e4e4e470; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 0 15px 0;
-    border-bottom: 1px solid #e6e6e6bd;
-}
-
-.userAddressBookAddSection .addedAdderssBtn{
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px;
-    border: 1px solid #e61212;
-    border-radius: 10px;
-    cursor: pointer;
-    color: #000;
-    transition: all .2s;
-}
-
-.userAddressBookAddSection .addedAdderssBtn .addedAdderssBtnSVG{
-    fill: #333;
-    transition: all .2s;
-}
-
-.userAddressBookAddSection .addedAdderssBtn .addedAdderssBtnText{
-    font-size: 14px;
-    font-weight: 500;
-    color: #000;
-    transition: all .2s;
-}
-
-.userAddressBookAddSection .addedAdderssBtn:hover .addedAdderssBtnText{
-    color: #fff !important;
-}
-
-.userAddressBookAddSection .addedAdderssBtn:hover .addedAdderssBtnSVG{
-    fill: #fff !important;
-}
-
-.userAddressBookAddSection .addedAdderssBtn:hover{
-    background: #e61212;
 }
 /* === End User Address Book Add Section === */
+
+/* === Start User Review Section === */
+    .userReviewSection{
+        padding: 10px;
+    }
+
+    .userReviewSectionTitle{
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .userReviewProduct{
+        margin-top: 10px;
+        padding: 15px;
+        background: #EFF0F4;
+        border-radius: 10px;
+    }
+
+    .userReviewProductInfo{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        border: 1px solid #d4d4d4;
+        padding: 15px;
+    }
+
+    .userReviewProductImage{
+        width: 80px;
+        height: 80px;
+    }
+
+    .userReviewProductImage img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .userReviewProductName p{
+        font-size: 18px;
+    }
+
+/* === End User Review Section === */
+
 
 
 
