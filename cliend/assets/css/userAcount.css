@@ -491,7 +491,147 @@ span.gaterthan {
         font-size: 18px;
     }
 
+    /* === Start Review Star Rating Style === */
+
+.userReciewProductRating{
+    margin-top: 10px;
+}
+
+.rating-wrap {
+    width: 480px;
+    margin: auto;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .starRatingCenter {
+    width: 190px;
+    margin: auto;
+  }
+  
+  .rating-value {
+    width: 110px;
+    margin: 40px auto 0;
+    padding: 10px 5px;
+    text-align: center;
+    box-shadow: 0 0 2px 1px rgba(46, 204, 113, 0.2);
+  }
+  
+  /* ====Rating===== */
+  
+  .rating {
+    border: none;
+    float: left;
+  }
+  
+  .rating > input {
+    display: none;
+  }
+  
+  .rating > label::before {
+    content: "\f005";
+    font-family: FontAwesome;
+    margin: 5px;
+    font-size: 1.8rem;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .rating > .helf::before {
+    content: "\f089";
+    position: absolute;
+    cursor: pointer;
+  }
+  
+  .rating > label {
+    color: #bbb;
+    float: right;
+    cursor: pointer;
+  }
+  
+  .rating > input:checked ~ label,
+  .rating:not(:checked) > label:hover,
+  .rating:not(:checked) > label:hover ~ label {
+    color: #ff8220;
+  }
+  
+  .rating > input:checked + label:hover,
+  .rating > input:checked ~ label:hover,
+  .rating > input:hover ~ input:checked ~ label,
+  .rating > input:checked ~ label:hover ~ label {
+    color: #ff8220;
+  }
+  
+
+  .userReciewProductRatingStarMesage{
+    margin-top: 10px;
+    width: 100%;
+    font-size: 17px;
+    border-left: 5px solid ;
+    color: #fff;
+    transition: all .3s;
+  }
+
+  .userReciewProductRatingStarMesage p{}
+
+
+/* === End Review Star Rating Style === */
+
+.userReviewSection .reviewMessage{
+    margin-top: 10px;
+    background: #EFF0F4;
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    border-radius: 10px;
+}
+
+.userReviewSection .reviewMessage .reviewMessageTitle{
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.userReviewSection .reviewMessage textarea{
+    resize: none;
+    width: 71%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #d4d8db;
+    border-radius: 3px;
+    background: #f8f8f8;
+    font-family: "Inter", sans-serif;
+    color: #555;
+}
+
+.userReviewSection .reviewMessage textarea::placeholder{
+    color: #bbb;
+}
+
+.userReviewSubmit{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.userReviewSubmit button{
+    width: 250px;
+    padding: 8px;
+    border: none;
+    font-size: 17px;
+    font-weight: 400;
+    background: #e61212;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.userReviewSubmit button:hover{
+    background: rgba(247, 19, 19, 0.829);
+}
 /* === End User Review Section === */
+
+
 
 
 
@@ -527,5 +667,22 @@ span.gaterthan {
         display: block;
         margin-right: 10px;
     }
+
+    .rating-wrap {
+        width: 200px;
+    }
     
+    .userReviewSection .reviewMessage {
+       flex-direction: column;
+    }
+    .userReviewSection .reviewMessage textarea{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 450PX){
+    .userReviewProductInfo{
+        display: block;
+    }
 }
