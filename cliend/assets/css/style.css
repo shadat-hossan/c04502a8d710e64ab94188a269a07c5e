@@ -2806,3 +2806,7 @@ span.totalRating {
   opacity: 1;
   visibility: visible;
 }
+.rightProductfullDetailsTopContent .product_add_or_remove {
+  padding: 0;
+}
+.rightProductfullDetailsTopContent .numberCount { min-width: 90px; }
