@@ -106,7 +106,6 @@ $(document).ready(function($) {
     }
   });
   
-  
   $(".toggle-password").click(function() {
       $(this).toggleClass("fa-eye fa-eye-slash");
       input = $(this).parent().find("input");
@@ -116,6 +115,15 @@ $(document).ready(function($) {
           input.attr("type", "password");
       }
   });
+
+
+  document.querySelectorAll(".productfiltaringBottom").forEach(function(element) {
+    element.addEventListener("click", function() {
+        this.classList.add("active");
+        this.closest('.item').classList.add("cart-active");
+      });
+  });
+
 
 
   });
