@@ -2149,7 +2149,8 @@ span.totalRating {
 .singalProductReviowAndStock .stockMessage {
   padding-left: 10px;
   border-left: 1px solid #b4b4b4;
-  color: #00ff66;
+  color: green;
+  font-weight: 600;
 }
 
 .singalProductPrice {
@@ -2810,3 +2811,56 @@ span.totalRating {
   padding: 0;
 }
 .rightProductfullDetailsTopContent .numberCount { min-width: 90px; }
+
+/* -------item-cart---- */
+body { padding-top: 177px; }
+@media only screen and (max-width: 767px) {
+body { padding-top: 225px; } 
+}
+
+.header_container_area {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
+}
+.productfiltaringBottom.active {
+  opacity: 0;
+}
+.item .counterManiContant {
+  width: 100%;
+  background-color: #fff;
+  justify-content: space-between;
+  border-radius: 0 0 3px 3px;
+}
+.added_info_item {
+  width: 100%;
+  transition: all 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-16px);
+}
+.item.cart-active .added_info_item {
+  visibility: visible;
+  opacity: 1;
+}
+.couterBtn {
+  outline: none;
+}
+.added_info {
+  width: 100% !important;
+  text-align: center;
+  transition: all 0.3s;
+}
+.added_info span {
+  width: 100%;
+  background: #000;
+  display: block;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  border-radius: 3px 3px 0 0;
+}

@@ -1,18 +1,21 @@
 $(document).ready(function() {
-    $('.dickrement').click(function () {
-      var $input = $(this).parent().find('input');
-      var count = parseInt($input.val()) - 1;
-      count = count < 1 ? 1 : count;
-      $input.val(count);
-      $input.change();
-      return false;
-    });
-    $('.increment').click(function () {
-      var $input = $(this).parent().find('input');
-      $input.val(parseInt($input.val()) + 1);
-      $input.change();
-      return false;
-    });
+    // $('.dickrement').click(function () {
+    //   var $input = $(this).parent().find('input');
+    //   var count = parseInt($input.val()) - 1;
+    //   count = count < 1 ? 1 : count;
+    //   $input.val(count);
+    //   $input.change();
+    //   return false;
+    // });
+    // $('.increment').click(function () {
+    //   var $input = $(this).parent().find('input');
+    //   var $productToralPrice = $(this).parent().find('[class*="productToralPrice"]');
+    //   console.log($productToralPrice)
+    //   $input.val(parseInt($input.val()) + 1);
+    //   $input.change();
+    //   $productToralPrice.text(1000);
+    //   return false;
+    // });
 
     $('.remove_cart').click(function () {
       $(this).parents('.cart_list_row').hide();
@@ -75,7 +78,6 @@ $(document).ready(function() {
 
           rangeS[0].value = number1;
           rangeS[1].value = number2;
-
         }
       });
 
@@ -106,7 +108,6 @@ $(document).ready(function($) {
     }
   });
   
-  
   $(".toggle-password").click(function() {
       $(this).toggleClass("fa-eye fa-eye-slash");
       input = $(this).parent().find("input");
@@ -118,4 +119,110 @@ $(document).ready(function($) {
   });
 
 
+  document.querySelectorAll(".productfiltaringBottom").forEach(function(element) {
+    element.addEventListener("click", function() {
+        this.classList.add("active");
+        this.closest('.item').classList.add("cart-active");
+      });
   });
+
+
+
+  });
+
+
+  // For decrement button
+
+  document.querySelectorAll('.dickrement').forEach(function(button) {
+    button.addEventListener('click', function() {
+      var input = this.parentNode.querySelector('input');
+      var inoutValueNumber = parseInt(input.value);
+      if (inoutValueNumber > 1) {
+        var singalProduvtPriceValue = this.parentNode.parentNode.parentNode.querySelector(".singalProduvtPriceValue").textContent;
+        var productTotalPriceElemrnt = this.parentNode.parentNode.parentNode.querySelector(".productToralPrice");
+        var newTotalPrice = parseInt(productTotalPriceElemrnt.textContent) - parseInt(singalProduvtPriceValue);
+        newTotalPrice = Math.max(newTotalPrice, parseInt(singalProduvtPriceValue));
+        
+        var cardAllProductTotalPrice = document.querySelector(".cardAllProductTotalPrice");
+    var cardAllProductTotalPriceInt = parseInt(cardAllProductTotalPrice.textContent);
+    var inputCheckbox = this.parentNode.parentNode.parentNode.parentNode.querySelector(".checkbox_item input");
+    if(inputCheckbox.checked) {
+      cardAllProductTotalPrice.textContent = cardAllProductTotalPriceInt - parseInt(singalProduvtPriceValue);
+    }
+        
+        productTotalPriceElemrnt.innerHTML = newTotalPrice;
+        input.value = inoutValueNumber - 1;
+      }
+      
+      input.dispatchEvent(new Event('change'));
+      return false;
+  });
+});
+
+// For increment button
+document.querySelectorAll('.increment').forEach(function(button) {
+  button.addEventListener('click', function() {
+    var input = this.parentNode.querySelector('input');
+    var singalProduvtPriceValue = this.parentNode.parentNode.parentNode.querySelector(".singalProduvtPriceValue").textContent;
+    var productTotalPriceElemrnt = this.parentNode.parentNode.parentNode.querySelector(".productToralPrice");
+    var productTotalPriceString = productTotalPriceElemrnt.textContent.toString();
+    var inoutValueNumber = parseInt(input.value);
+
+    var cardAllProductTotalPrice = document.querySelector(".cardAllProductTotalPrice");
+    var cardAllProductTotalPriceInt = parseInt(cardAllProductTotalPrice.textContent);
+    var productTotalPriceElemrntInt = parseInt(productTotalPriceString);
+    var inputCheckbox = this.parentNode.parentNode.parentNode.parentNode.querySelector(".checkbox_item input");
+
+    if(inputCheckbox.checked) {
+      cardAllProductTotalPrice.textContent = cardAllProductTotalPriceInt + parseInt(singalProduvtPriceValue);
+    }
+
+
+    productTotalPriceElemrnt.innerHTML = productTotalPriceElemrntInt +  parseInt(singalProduvtPriceValue)
+
+    input.value = inoutValueNumber + 1;
+    input.dispatchEvent(new Event('change'));
+    return false;
+  });
+});
+
+
+document.querySelectorAll('.cart_list_row .checkmark').forEach(function(checkmark) {
+  checkmark.addEventListener("click", function(){
+    var inputCheckbox = this.parentNode.querySelector("input");
+    var cardAllProductTotalPrice = document.querySelector(".cardAllProductTotalPrice");
+    var cardAllProductTotalPriceInt = parseInt(cardAllProductTotalPrice.textContent);
+    var productTotalPriceElemrnt = this.parentNode.parentNode.querySelector(".productToralPrice").textContent;
+    var productTotalPriceElemrntInt = parseInt(productTotalPriceElemrnt);
+
+    if(!inputCheckbox.checked) {
+      cardAllProductTotalPrice.textContent = cardAllProductTotalPriceInt + productTotalPriceElemrntInt;
+    } else {
+      cardAllProductTotalPrice.textContent = cardAllProductTotalPriceInt - productTotalPriceElemrnt
+    }
+  });
+});
+
+
+document.querySelectorAll('.cart_list_row .remove_cart').forEach(function(remove) {
+  remove.addEventListener("click", function(){
+    var inputCheckbox = this.parentNode.querySelector("input");
+    var cardAllProductTotalPrice = document.querySelector(".cardAllProductTotalPrice");
+    var cardAllProductTotalPriceInt = parseInt(cardAllProductTotalPrice.textContent);
+    var productTotalPriceElemrnt = this.parentNode.parentNode.querySelector(".productToralPrice").textContent;
+    var productTotalPriceElemrntInt = parseInt(productTotalPriceElemrnt);
+
+
+      cardAllProductTotalPrice.textContent = cardAllProductTotalPriceInt - productTotalPriceElemrnt;
+  });
+});
+
+
+const cartSidebar = document.querySelector(".cart_pop_area");
+
+window.addEventListener("click", function(e){
+  if(e.target == cartSidebar){
+    cartSidebar.classList.add("close");
+    cartSidebar.classList.remove("active");
+  }
+})
