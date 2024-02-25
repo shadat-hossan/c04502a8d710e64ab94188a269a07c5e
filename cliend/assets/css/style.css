@@ -2149,7 +2149,8 @@ span.totalRating {
 .singalProductReviowAndStock .stockMessage {
   padding-left: 10px;
   border-left: 1px solid #b4b4b4;
-  color: #00ff66;
+  color: green;
+  font-weight: 600;
 }
 
 .singalProductPrice {
