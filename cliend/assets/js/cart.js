@@ -1,33 +1,34 @@
-$(document).ready(function() {
-    // $('.dickrement').click(function () {
-    //   var $input = $(this).parent().find('input');
-    //   var count = parseInt($input.val()) - 1;
-    //   count = count < 1 ? 1 : count;
-    //   $input.val(count);
-    //   $input.change();
-    //   return false;
-    // });
-    // $('.increment').click(function () {
-    //   var $input = $(this).parent().find('input');
-    //   var $productToralPrice = $(this).parent().find('[class*="productToralPrice"]');
-    //   console.log($productToralPrice)
-    //   $input.val(parseInt($input.val()) + 1);
-    //   $input.change();
-    //   $productToralPrice.text(1000);
-    //   return false;
-    // });
+document.querySelectorAll('.item .dickrement').forEach(function(element) {
+    element.addEventListener('click', function() {
+        var input = this.parentElement.querySelector('input');
+        var count = parseInt(input.value) - 1;
+        count = count < 1 ? 1 : count;
+        input.value = count;
+        input.dispatchEvent(new Event('change'));
+        return false;
+    });
+});
+document.querySelectorAll('.item .increment').forEach(function(element) {
+    element.addEventListener('click', function() {
+        var input = this.parentElement.querySelector('input');
+        var productTotalPrice = this.parentElement.querySelector('[class*="productTotalPrice"]');
+        input.value = parseInt(input.value) + 1;
+        input.dispatchEvent(new Event('change'));
+        productTotalPrice.innerText = '1000';
+        return false;
+    });
+});
 
+$(document).ready(function() {
     $('.remove_cart').click(function () {
       $(this).parents('.cart_list_row').hide();
     });
     $('.cart_icon_box').click(function () {
-      // $('.cart_pop_area').fadeIn('slow');
       $('.cart_pop_area').addClass('active');
       $('.cart_pop_area').removeClass('close');
     });
 
     $('.pop_close').click(function () {
-      // $('.cart_pop_area').fadeOut('slow');
       $('.cart_pop_area').removeClass('active');
       $('.cart_pop_area').addClass('close');
     });
