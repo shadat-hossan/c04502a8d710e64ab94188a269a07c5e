@@ -31,7 +31,7 @@ dickrement.addEventListener("click", function(){
 let myimage = document.querySelector("#myimage");
 let myresult = document.querySelector("myresult");
 
-console.log(productFinalImageShow.src);
+// console.log(productFinalImageShow.src);
 
 allGogalImage.forEach(function (i) {
   i.addEventListener("click", function () {
