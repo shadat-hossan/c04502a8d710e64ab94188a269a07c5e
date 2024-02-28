@@ -1572,20 +1572,29 @@
     <div class="messageBoxLogo">
         <img src="assets/images/Icon/messageIcon.png" alt="">
     </div>
-    <div class="messageChartBox">
+    <div class="messageChartBox" >
         <div class="message-chart-box-header">
             <h3>ChatBot</h3>
+            <div class="messageClose"></div>
         </div>
         <div class="all-message-see">
             <div class="post post-user">Me</div>
             <div class="post post-user-friend">My Friend</div>
+            <div class="post post-user">Hi</div>
+            <div class="post post-user-friend">My Friend, Hello</div>
+            <div class="post post-user">How Are You</div>
+            <div class="post post-user-friend">My Friend, Good and You</div>
+            <div class="post post-user">I also Good</div>
+            <div class="post post-user-friend">My Friend, Hmm Good</div>
+            <div class="post post-user">I also Good</div>
+            <div class="post post-user-friend">My Friend, Hmm Good</div>
         </div>
         <div class="message-user-interac">
             <div class="messageEmoji">
-                <button><i class="fa fa-smile-o" aria-hidden="true"></i></button>
+                <button title="Add Emoji"><i class="fa fa-smile-o" aria-hidden="true"></i></button>
             </div>
             <div class="message-user-input">
-                <input type="text" placeholder="Type your message here">
+                <div id="user-message" placeholder="Type your message here" rows="1" contenteditable="" class=""></div>
             </div>
             <div class="user-message-send">
                 <button><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
@@ -1598,6 +1607,7 @@
     <a id="backbutton"></a>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/index.js"></script>
+    <script src="assets/js/message.js"></script>
     <script src="assets/js/prohuct.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/jquery.fancybox.min.js"></script>

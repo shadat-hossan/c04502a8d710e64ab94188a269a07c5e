@@ -2865,11 +2865,13 @@ body { padding-top: 225px; }
   border-radius: 3px 3px 0 0;
 }
 
+/* ==== Message Box Style ==== */
+
 .messageBox{
   position: fixed;
   bottom: 25px;
   right: 26px;
-  z-index: 1000;
+  z-index: 50;
   /* background: #fff; */
 }
 
@@ -2878,17 +2880,156 @@ body { padding-top: 225px; }
   background: #fff;
   border-radius: 50%;
   cursor: pointer;
-  display: none;
+  /* display: none; */
+  /* opacity: 0;
+  visibility: hidden; */
 }
 
 .messageChartBox{
   width: 300px;
-  height: 400px !important;
+  height: 400px;
   height: auto;
-  background: #dee2e6;
+  background: #f2f3f5;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transition: all .3s;
+  display: none;
+  transform: scaleY(0);
 }
 
 .message-chart-box-header{
   width: 100%;
-  background-color: #00ff66;
+  background-color: #d62303;
+  padding: 10px 12px;
+  color: #fff; 
+}
+
+.all-message-see{
+  width: 100%;
+  height: 300px;
+  /* background: #929292; */
+  display: grid;
+  align-self: end;
+  grid-auto-rows: minmax(min-content, max-content);
+  padding: 5px;
+  box-sizing: border-box;
+  max-height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.all-message-see .post {
+  position: relative;
+  margin: 4px 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: .9rem;
+  word-break: break-word;
+}
+
+.all-message-see .post-user{
+  justify-self: right;
+  margin-left: 50px;
+  background: rgba(64, 83, 191, 0.1);
+  border-top-right-radius: 0;
+}
+
+.all-message-see .post-user-friend{
+  justify-self: left;
+  margin-right: 50px;
+  background: rgba(255, 152, 0, 0.1);
+  border-top-left-radius: 0;
+}
+
+.message-user-interac{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 5px;
+  border-top: 1px solid #999;
+
+}
+
+.message-user-interac .messageEmoji button{
+  border: none;
+  font-size: 23px;
+  cursor: pointer;
+  transition: all .3s;
+  width: 30px;
+  height: 30px;
+  /* padding: 10px; */
+  border-radius: 50%;
+  transition: all .2s;
+}
+
+.message-user-interac .messageEmoji button:hover{
+  background-color: #d623031c;
+  color: #d62303;
+}
+
+.message-user-input{
+  margin-top: 2px;
+}
+
+.message-user-input #user-message{
+  width: 200px;
+  padding: 5px;
+  font-size: 1rem;
+  min-height: 25px;
+  max-height: 25vh;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.747);
+  font-style: italic;
+  outline: none;
+  resize: none;
+}
+
+
+
+.message-user-interac .user-message-send button{
+  border: 1px solid #d1d1d1;
+  padding: 10px;
+  border-radius: 8px;
+  /* width: 40px;
+  height: 40px; */
+  font-size: 18x;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.message-user-interac .user-message-send button:hover,
+.message-user-interac .user-message-send button:active{
+  background-color: #d6230311;
+  border: 1px solid #d62303;
+  color: #d62303;
+}
+
+.messageChartBox .messageClose{
+  position: absolute;
+    right: 20px;
+    top: 8px;
+    color: #333;
+    font-size: 20px;
+    z-index: 2;
+    width: 25px;
+    height: 25px;
+    background: url(../images/close.svg) no-repeat center #333;
+    cursor: pointer;
+    background-color: #d4d4d4;
+    border-radius: 50%;
+    transition: all .2s;
+}
+
+.messageChartBox .messageClose:hover{
+  position: absolute;
+    background-color: #c7c7c7;
+    color: red;
 }
