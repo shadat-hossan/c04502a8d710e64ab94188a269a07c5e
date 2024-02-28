@@ -2064,7 +2064,6 @@ span.totalRating {
   flex: 60%;
   display: flex;
   gap: 10px;
-  align-items: flex-start;
 }
 
 .productTogolImage {
@@ -2089,6 +2088,7 @@ span.totalRating {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  object-position: center center;
 }
 
 .productOverViewoFinalImage {
@@ -3093,4 +3093,698 @@ body { padding-top: 225px; }
 .singalProductBayNowBtn button {
     padding: 10px 14px;
 }
+}
+
+.productSingalImage,
+.productSingalImage a {
+  width: 100%;
+}
+.productSingalImage img {
+  width: 100% !important;
+  max-height: 180px;
+  height: 180px !important;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+input, textarea {
+    -webkit-appearance: auto;
+}
+
+.userAcountContainer{
+    width: 100%;
+    display: flex;
+    gap: 1rem ;
+    margin-bottom: 20px;
+}
+
+/* === Start User Acount Sidebar Style === */
+
+.userAcountSidebar{
+    flex: 0 0 25%;
+    
+}
+
+.userAcountSidebarAllMenue{
+    padding: 10px;
+    position: relative;
+}
+
+.userAcountSidebarMenue{
+    padding: 5px 0;
+    transition: all .2s;
+    color: #555;
+}
+
+.userAcountSidebarMenueMainC{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all .2s;
+}
+
+.userAcountSidebarMenue:hover .userAcountSidebarMenueText{
+    color: #000;
+    
+}
+
+.userAcountSidebarMenueText{
+    font-size: 16px;
+    font-weight: 400;
+    color: #555;
+    transition: all .2s;
+}
+
+.userAcountSidebarSubMenue{
+    margin-left: 35px;
+    margin-top: 10px;
+}
+
+.userAcountSidebarSubMenueItem{
+    padding: 5px 0;
+
+}
+.userAcountSidebarSubMenueItem a {
+    color: #555;
+}
+
+.userAcountSidebar .resDeCrochBtn{
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.resDeCrochBtnSVG{
+    fill: #333;
+    display: none;
+}
+
+.userAcountSidebar .resDeCrochBtn:hover .resDeCrochBtnSVG{
+    fill: #e61212;
+}
+
+/* ===End User Acount Sidebar Style ==== */
+
+
+/* === Start User Acount Main Contant Style === */
+.userAcountMainContant{
+    flex: 0 0 75%;
+    padding: 10px;
+    position: relative;
+} 
+
+.userProfile{
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+}
+
+.userProfileLeft{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.userProfileImg{
+    width: 60px;
+    height: 60px;
+}
+.verifiMessage{
+    display: flex;
+    align-items: center;
+}
+.userProfileNmarAndMess h3{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.userProfileNmarAndMess .verifiMessage{
+    font-size: .8rem;
+    color: #001405;
+}
+
+.verifiMessageChickMark{
+    margin-right: 5px;
+}
+
+.userProfileBar{
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.userAcountInfo{
+    margin: 25px 0;
+}
+
+.userAcountInfo .atAGlance{
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.userAcountInfo .atAGlance .glanceItem{
+    width: 190px;
+    height: 120px;
+    background-color: #f4f8f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    transition: all .3s;
+    cursor: pointer;
+}
+.userAcountInfo .atAGlance .glanceItem:hover{
+    background-color: #e2eaec
+}
+
+.userAcountInfo .atAGlance .glanceItem h4{
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.userAcountInfo .atAGlance .glanceItem p{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    gap: 2px;
+}
+
+span.gaterthan {
+    transform: translateY(2px);
+}
+
+.userProfileAllProduct{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.noproductFountMessageText{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f8f9;
+    padding: 25px 10px;
+    font-size: 19px;
+    font-weight: 400;
+    border-radius: 5px;
+}
+
+.noproductFountMessagesvg{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* display: none; */
+}
+
+.noproductFountMessagesvg svg{
+    width: 300px;
+    height: 300px;
+    opacity: .6;
+}
+
+.productImage{
+    background: none;
+}
+
+  
+
+.userProfileAllProductList{
+    border: 1px solid #d8d8d8;
+}
+
+.userProfileAllProductList{
+    width: 100%;
+    text-align: center;
+}
+
+.userProfileAllProductListItem .productImage{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.userProfileAllProductListItem td{
+    vertical-align: middle;
+    text-align: center;
+}
+
+.userProfileAllProduct table, .userProfileAllProduct table tr, .userProfileAllProduct table tr td {
+    border-spacing: 0px;
+}
+
+.userProfileAllProduct tr{
+    margin-bottom: 10px;
+}
+
+
+.userProfileAllProductListItem:nth-child(even) {
+    background-color: #eff7f7;
+  }
+
+  .userProfileAllProductListHead th{
+    padding: 15px 0;
+    font-weight: 500;
+    border-bottom: 1px solid #d8d8d8;
+  }
+
+.userProfileAllProductListItem .productImage img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+} 
+
+/* === End User Acount Main Contant Style === */
+
+/* === Start Ourder List Filter Style === */
+.orderListFilterSection h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.orderListFilterAllBtn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.orderListFilterBtnItem{
+    padding: 12px 14px;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+    outline: none;
+    background: none;
+    color: #555;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.orderListFilterBtnItem:hover{
+    background: #e61212;
+    color: #fff;
+}
+
+.orderListFilterAllBtn .olActive{
+    background: #e61212;
+    color: #fff;
+}
+/* === End Ourder List Filter Style === */
+
+
+/* === Start User Profile Section  === */
+
+.userProfileTopSection h3{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.userProfileTopSection .userProfileImage{
+    display: flex;
+    margin-top: 10px;
+    gap: 20px;
+    align-items: center;
+}
+
+.userProfileTopSection .userProfileImage .ProfileImage{
+    width: 60px;
+    height: 60px;
+    border: 50%;
+    overflow: hidden;
+}
+
+.userProfileTopSection .userProfileImage .ProfileImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    
+}
+
+
+.profileImageFileUplpad input{
+    display: none
+}
+
+.profileImageFileUplpadPoient{
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.userProfileBottomSection{
+    margin-top: 15px;
+}
+
+.userProfileBottomSectionTitle{
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.userProfileBottomSectionTitle span{
+    margin-right: 5px;
+}
+
+.userProfileBottomSectionTitle svg{
+    cursor: pointer;
+}
+
+.userProfileBottomSectionBasicInfioForm{
+    width: 100%;
+}
+
+.userProfileBottomSectionBasicInfioForm .FormFild{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.formFildSingalInput{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+.formFildSingalInput .formFildSingalInputLable,
+.formFildSingalInput .formFildSingalInputGenderTitle{
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #444;
+    margin-left: 5px;
+}
+
+.formFildSingalInput input{
+    width: 100%;
+    height: 45px;
+    padding: 10px 15px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    background: #F4F8F9;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+    border: 1px solid #dfdfdf;
+}
+
+.formFildSingalInput input::placeholder{
+    color: #999;
+}
+
+.formFildSingalInputGender .formFildSingalInputGenderAllFild{
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.formFildSingalInputGender input{
+    width: auto;
+    height: auto;
+}
+.userProfileBottomSectionFormSaveAndCan {
+    margin-top: 10px;
+    width: 100%;
+    text-align: right;
+    transition: all .3s;
+}
+
+
+.userProfileBottomSectionFormSaveAndCan .s50ps{
+    border: none;
+    padding: 13px 15px;
+    border: .5px solid #b9b9b9;
+    background: none;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    background: #fff;
+    transition: all .3s;
+    font-weight: 500;
+}
+
+.userProfileBottomSectionFormSaveAndCan .savebtn{
+    background: #000;
+    border: none;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.userProfileBottomSectionFormSaveAndCan .s50ps:hover{
+    background-color: #fff;
+    border: .5px solid #b9b9b9;
+    color: #000;
+}
+
+.formFildSingalInput .toggle-password {
+    top: 46px;
+}
+/* === End Profile Section === */
+
+/* === Start User Address Book Add Section === */
+
+.cart_area_add_book{
+    width: 100%;
+}
+/* === End User Address Book Add Section === */
+
+/* === Start User Review Section === */
+    .userReviewSection{
+        padding: 10px;
+    }
+
+    .userReviewSectionTitle{
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .userReviewProduct{
+        margin-top: 10px;
+        padding: 15px;
+        background: #EFF0F4;
+        border-radius: 10px;
+    }
+
+    .userReviewProductInfo{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        border: 1px solid #d4d4d4;
+        padding: 15px;
+    }
+
+    .userReviewProductImage{
+        width: 80px;
+        height: 80px;
+    }
+
+    .userReviewProductImage img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .userReviewProductName p{
+        font-size: 18px;
+    }
+
+    /* === Start Review Star Rating Style === */
+
+.userReciewProductRating{
+    margin-top: 10px;
+}
+
+.rating-wrap {
+    width: 480px;
+    margin: auto;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .starRatingCenter {
+    width: 190px;
+    margin: auto;
+  }
+  
+  .rating-value {
+    width: 110px;
+    margin: 40px auto 0;
+    padding: 10px 5px;
+    text-align: center;
+    box-shadow: 0 0 2px 1px rgba(46, 204, 113, 0.2);
+  }
+  
+  /* ====Rating===== */
+  
+  .rating {
+    border: none;
+    float: left;
+  }
+  
+  .rating > input {
+    display: none;
+  }
+  
+  .rating > label::before {
+    content: "\f005";
+    font-family: FontAwesome;
+    margin: 5px;
+    font-size: 1.8rem;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .rating > .helf::before {
+    content: "\f089";
+    position: absolute;
+    cursor: pointer;
+  }
+  
+  .rating > label {
+    color: #bbb;
+    float: right;
+    cursor: pointer;
+  }
+  
+  .rating > input:checked ~ label,
+  .rating:not(:checked) > label:hover,
+  .rating:not(:checked) > label:hover ~ label {
+    color: #ff8220;
+  }
+  
+  .rating > input:checked + label:hover,
+  .rating > input:checked ~ label:hover,
+  .rating > input:hover ~ input:checked ~ label,
+  .rating > input:checked ~ label:hover ~ label {
+    color: #ff8220;
+  }
+  
+
+  .userReciewProductRatingStarMesage{
+    margin-top: 10px;
+    width: 100%;
+    font-size: 17px;
+    border-left: 5px solid ;
+    color: #fff;
+    transition: all .3s;
+  }
+
+  .userReciewProductRatingStarMesage p{}
+
+
+/* === End Review Star Rating Style === */
+
+.userReviewSection .reviewMessage{
+    margin-top: 10px;
+    background: #EFF0F4;
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    border-radius: 10px;
+}
+
+.userReviewSection .reviewMessage .reviewMessageTitle{
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.userReviewSection .reviewMessage textarea{
+    resize: none;
+    width: 71%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #d4d8db;
+    border-radius: 3px;
+    background: #f8f8f8;
+    font-family: "Inter", sans-serif;
+    color: #555;
+}
+
+.userReviewSection .reviewMessage textarea::placeholder{
+    color: #bbb;
+}
+
+.userReviewSubmit{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.userReviewSubmit button{
+    width: 250px;
+    padding: 8px;
+    border: none;
+    font-size: 17px;
+    font-weight: 400;
+    background: #e61212;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.userReviewSubmit button:hover{
+    background: rgba(247, 19, 19, 0.829);
+}
+/* === End User Review Section === */
+@media screen and (max-width: 798PX) {
+    .userAcountSidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #00000060;
+        width: 100% ;
+        height: 100vh;
+        z-index: 1000;
+        display: none;
+    }
+    .userAcountSidebarAllMenue{
+        background: #fff;
+        height: 100vh;
+        max-width: 250px;
+    }
+
+    .resDeCrochBtnSVG{
+        display: block;
+    }
+
+    .userAcountMainContant{
+        flex: 0 0 100%;
+        padding: 10px;
+    }
+
+    .userProfileBar {
+        display: block;
+        margin-right: 10px;
+    }
+
+    .rating-wrap {
+        width: 200px;
+    }
+    
+    .userReviewSection .reviewMessage {
+       flex-direction: column;
+    }
+    .userReviewSection .reviewMessage textarea{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 450PX){
+    .userReviewProductInfo{
+        display: block;
+    }
 }
