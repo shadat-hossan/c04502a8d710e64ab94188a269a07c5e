@@ -181,7 +181,7 @@
                                 </div>
                                 <div class="trabalShoutProduct">
                                     <a class="add_wishlist" href="javascript:void(0)"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                                    <a class="single-product-view" href="javascript:void(0)"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                    <a class="btnOpenForm" href="javascript:void(0)"><i class="fa fa-eye" aria-hidden="true"></i></a>
                                     <a data-fancybox="gallery" href="assets/images/product-image/MonitorDell1.jpeg"><img class="trabalShoutProductIconImage" src="assets/images/Icon/vector.png" alt="" /></a>
                                 </div>
                             </div>
@@ -1567,9 +1567,45 @@
     </div>
   </div>
 
+  <!-- Message Box -->
+  <div class="messageBox">
+    <div class="messageBoxLogo">
+        <img src="assets/images/Icon/messageIcon.png" alt="">
+    </div>
+    <div class="messageChartBox" >
+        <div class="message-chart-box-header">
+            <h3>ChatBot</h3>
+            <div class="messageClose"></div>
+        </div>
+        <div class="all-message-see">
+            <div class="post post-user">Me</div>
+            <div class="post post-user-friend">My Friend</div>
+            <div class="post post-user">Hi</div>
+            <div class="post post-user-friend">My Friend, Hello</div>
+            <div class="post post-user">How Are You</div>
+            <div class="post post-user-friend">My Friend, Good and You</div>
+            <div class="post post-user">I also Good</div>
+            <div class="post post-user-friend">My Friend, Hmm Good</div>
+            <div class="post post-user">I also Good</div>
+            <div class="post post-user-friend">My Friend, Hmm Good</div>
+        </div>
+        <div class="message-user-interac">
+            <div class="messageEmoji">
+                <button title="Add Emoji"><i class="fa fa-smile-o" aria-hidden="true"></i></button>
+            </div>
+            <div class="message-user-input">
+                <div id="user-message" placeholder="Type your message here" rows="1" contenteditable="" class=""></div>
+            </div>
+            <div class="user-message-send">
+                <button><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </div>
+  </div>
 
-    <div class="product_popup_area">
+    <div class="product_popup_area form-popup-bg">
         <div class="singalProductDetails center-content">
+            <div class="btnCloseForm product-pop-close">X</div>
           <div class="leftProductOverViewo">
             <div class="productTogolImage">
               <div class="filtaringImageItem">
@@ -1698,17 +1734,17 @@
                 <div class="singalProductBaynow">
                  <div class="product_add_or_remove flex-nowrap">
                    <div class="counterManiContant">
-                      <button class="couterBtn dickrement">
+                      <button type="button" class="couterBtn dickrement">
                         <i class="fa fa-minus" aria-hidden="true"></i>
                       </button>
                       <div class="numberCount"><input type="text" value="1"/></div>
-                      <button class="couterBtn increment">
+                      <button type="button" class="couterBtn increment">
                         <i class="fa fa-plus" aria-hidden="true"></i>
                       </button>
                     </div>
                   </div>
                   <div class="singalProductBayNowBtn">
-                    <button>Buy Now</button>
+                    <button type="button">Buy Now</button>
                   </div>
                   <div class="singalProductFavaritIcon">
                     <label for="favarit">
@@ -1757,6 +1793,7 @@
     <a id="backbutton"></a>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/index.js"></script>
+    <script src="assets/js/message.js"></script>
     <script src="assets/js/prohuct.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/jquery.fancybox.min.js"></script>

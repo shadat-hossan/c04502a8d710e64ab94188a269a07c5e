@@ -1,4 +1,4 @@
-document.querySelectorAll('.item .dickrement,.singalProductBaynow .dickrement').forEach(function(element) {
+document.querySelectorAll('.item .dickrement,.rightProductfullDetails .dickrement').forEach(function(element) {
     element.addEventListener('click', function() {
         var input = this.parentElement.querySelector('input');
         var count = parseInt(input.value) - 1;
@@ -8,7 +8,7 @@ document.querySelectorAll('.item .dickrement,.singalProductBaynow .dickrement').
         return false;
     });
 });
-document.querySelectorAll('.item .increment,.singalProductBaynow .increment').forEach(function(element) {
+document.querySelectorAll('.item .increment,.rightProductfullDetails .increment').forEach(function(element) {
     element.addEventListener('click', function() {
         var input = this.parentElement.querySelector('input');
         var productTotalPrice = this.parentElement.querySelector('[class*="productTotalPrice"]');
@@ -31,15 +31,14 @@ document.querySelectorAll('.add_wishlist').forEach(function(element) {
 
 
 $(document).ready(function() {
-
-    $(.single-product-view).click(function(){
-      
+   $('.single-product-view').click(function () {
+      $('.product_popup_area').fadeToggle('slow');
     });
-
 
     $('.remove_cart').click(function () {
       $(this).parents('.cart_list_row').hide();
     });
+
     $('.cart_icon_box').click(function () {
       $('.cart_pop_area').addClass('active');
       $('.cart_pop_area').removeClass('close');
