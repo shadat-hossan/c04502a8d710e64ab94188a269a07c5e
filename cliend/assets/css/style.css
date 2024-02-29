@@ -610,7 +610,7 @@ input[placeholder],
     z-index: 100;
   }
   .navbar ul {
-    justify-content: center;
+    justify-content: space-between;
   }
   .navbar ul li {
     font-size: 14px;
@@ -2257,6 +2257,7 @@ span.totalRating {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
 }
 .singalProductCount {
   display: inline-block;
@@ -2271,7 +2272,7 @@ span.totalRating {
   font-size: 17px;
 }
 .singalProductBayNowBtn button {
-  padding: 10px 50px;
+  padding: 10px 25px;
   border: none;
   background: #ec2d2d;
   color: #fafafa;
@@ -2810,7 +2811,7 @@ span.totalRating {
 .rightProductfullDetailsTopContent .product_add_or_remove {
   padding: 0;
 }
-.rightProductfullDetailsTopContent .numberCount { min-width: 90px; }
+.rightProductfullDetailsTopContent .numberCount { min-width: 80px; }
 
 /* -------item-cart---- */
 body { padding-top: 177px; }
