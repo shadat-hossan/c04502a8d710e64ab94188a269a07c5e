@@ -168,11 +168,20 @@ document.querySelectorAll('.increment').forEach(function(button) {
     var productTotalPriceElemrnt = this.parentNode.parentNode.parentNode.querySelector(".productToralPrice");
     var productTotalPriceString = productTotalPriceElemrnt.textContent.toString();
     var inoutValueNumber = parseInt(input.value);
-
     var cardAllProductTotalPrice = document.querySelector(".cardAllProductTotalPrice");
     var cardAllProductTotalPriceInt = parseInt(cardAllProductTotalPrice.textContent);
     var productTotalPriceElemrntInt = parseInt(productTotalPriceString);
     var inputCheckbox = this.parentNode.parentNode.parentNode.parentNode.querySelector(".checkbox_item input");
+    var cartListWrap = document.querySelector(".cart_list_item").childNodes;
+    var productName = this.parentNode.parentNode.parentNode.querySelector("h5").textContent;
+
+  
+
+    if (window.location.pathname == "/cart.html") {
+      
+      
+    }
+    
 
     if(inputCheckbox.checked) {
       cardAllProductTotalPrice.textContent = cardAllProductTotalPriceInt + parseInt(singalProduvtPriceValue);
@@ -188,13 +197,37 @@ document.querySelectorAll('.increment').forEach(function(button) {
 });
 
 
-document.querySelectorAll('.cart_list_row .checkmark').forEach(function(checkmark) {
+document.querySelectorAll('.cart_list_row .checkmark').forEach(function(checkmark, i) {
   checkmark.addEventListener("click", function(){
     var inputCheckbox = this.parentNode.querySelector("input");
     var cardAllProductTotalPrice = document.querySelector(".cardAllProductTotalPrice");
     var cardAllProductTotalPriceInt = parseInt(cardAllProductTotalPrice.textContent);
     var productTotalPriceElemrnt = this.parentNode.parentNode.querySelector(".productToralPrice").textContent;
     var productTotalPriceElemrntInt = parseInt(productTotalPriceElemrnt);
+    var cartListWrap = document.querySelector(".cart_list_wrap");
+    var productName = this.parentNode.parentNode.querySelector(".product_cart_info h5").textContent;
+
+    if (window.location.pathname == "/cart.html") {
+      if (!inputCheckbox.checked) {
+          var cartListItem = document.createElement("div");
+          cartListItem.classList.add("cart_list_item", "flex-nowrap", "space-between");
+          var itemName = document.createElement("span");
+          itemName.textContent = i + 1 + ". " + productName;
+          var itemPrice = document.createElement("strong");
+          itemPrice.textContent = `৳ ${productTotalPriceElemrntInt}`;
+          cartListItem.appendChild(itemName);
+          cartListItem.appendChild(itemPrice);
+          cartListItem.setAttribute("data-cart-item-id", i);
+  
+          cartListWrap.appendChild(cartListItem);
+      } else {
+          var cartListItemToRemove = cartListWrap.querySelector(`[data-cart-item-id="${i}"]`);
+          if (cartListItemToRemove) {
+              cartListWrap.removeChild(cartListItemToRemove);
+          }
+      }
+  }
+  
 
     if(!inputCheckbox.checked) {
       cardAllProductTotalPrice.textContent = cardAllProductTotalPriceInt + productTotalPriceElemrntInt;
@@ -207,14 +240,15 @@ document.querySelectorAll('.cart_list_row .checkmark').forEach(function(checkmar
 
 document.querySelectorAll('.cart_list_row .remove_cart').forEach(function(remove) {
   remove.addEventListener("click", function(){
-    var inputCheckbox = this.parentNode.querySelector("input");
+    var inputCheckbox = this.parentNode.parentNode.parentNode.querySelector(".checkbox_item input")
     var cardAllProductTotalPrice = document.querySelector(".cardAllProductTotalPrice");
     var cardAllProductTotalPriceInt = parseInt(cardAllProductTotalPrice.textContent);
     var productTotalPriceElemrnt = this.parentNode.parentNode.querySelector(".productToralPrice").textContent;
     var productTotalPriceElemrntInt = parseInt(productTotalPriceElemrnt);
 
-
-      cardAllProductTotalPrice.textContent = cardAllProductTotalPriceInt - productTotalPriceElemrnt;
+    if(inputCheckbox.checked) {
+      cardAllProductTotalPrice.textContent = cardAllProductTotalPriceInt - productTotalPriceElemrntInt;
+    } 
   });
 });
 
@@ -227,3 +261,24 @@ window.addEventListener("click", function(e){
     cartSidebar.classList.remove("active");
   }
 })
+
+
+
+// The Script is billing all Product price some return
+const cartListwrap = document.querySelectorAll(".cart_list_item .cart_list_item_price");
+var totalItem = document.querySelector(".total_item .total_item_value");
+var cartListItemShipping = document.querySelector(".cart_list_item .cart_list_item_shipping")
+var totalItemValueWidthShipping = document.querySelector(".total_item_value_width_shipping");
+
+
+var totalPrice = 0;
+cartListwrap.forEach(function(item) {
+  var itemProductPrice = parseInt(item.textContent.substring(1));
+  totalPrice += itemProductPrice;
+});
+totalItem.innerHTML = totalPrice;
+
+var cartListItemShippingInt = parseInt(cartListItemShipping.textContent.substring(1));
+totalPrice += cartListItemShippingInt
+
+totalItemValueWidthShipping.innerHTML= totalPrice
