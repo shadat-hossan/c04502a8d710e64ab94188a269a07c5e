@@ -1,4 +1,4 @@
-document.querySelectorAll('.item .dickrement').forEach(function(element) {
+document.querySelectorAll('.item .dickrement,.rightProductfullDetails .dickrement').forEach(function(element) {
     element.addEventListener('click', function() {
         var input = this.parentElement.querySelector('input');
         var count = parseInt(input.value) - 1;
@@ -8,7 +8,7 @@ document.querySelectorAll('.item .dickrement').forEach(function(element) {
         return false;
     });
 });
-document.querySelectorAll('.item .increment').forEach(function(element) {
+document.querySelectorAll('.item .increment,.rightProductfullDetails .increment').forEach(function(element) {
     element.addEventListener('click', function() {
         var input = this.parentElement.querySelector('input');
         var productTotalPrice = this.parentElement.querySelector('[class*="productTotalPrice"]');
@@ -19,10 +19,26 @@ document.querySelectorAll('.item .increment').forEach(function(element) {
     });
 });
 
+document.querySelectorAll('.add_wishlist').forEach(function(element) {
+    element.addEventListener('click', function() {
+        if (this.classList.contains('active')) {
+            this.classList.remove('active');
+        } else {
+            this.classList.add('active');
+        }
+    });
+});
+
+
 $(document).ready(function() {
+   $('.single-product-view').click(function () {
+      $('.product_popup_area').fadeToggle('slow');
+    });
+
     $('.remove_cart').click(function () {
       $(this).parents('.cart_list_row').hide();
     });
+
     $('.cart_icon_box').click(function () {
       $('.cart_pop_area').addClass('active');
       $('.cart_pop_area').removeClass('close');
@@ -271,14 +287,29 @@ var cartListItemShipping = document.querySelector(".cart_list_item .cart_list_it
 var totalItemValueWidthShipping = document.querySelector(".total_item_value_width_shipping");
 
 
-var totalPrice = 0;
-cartListwrap.forEach(function(item) {
-  var itemProductPrice = parseInt(item.textContent.substring(1));
-  totalPrice += itemProductPrice;
-});
-totalItem.innerHTML = totalPrice;
+if(window.location.pathname ==  "/billing.html"){
 
-var cartListItemShippingInt = parseInt(cartListItemShipping.textContent.substring(1));
-totalPrice += cartListItemShippingInt
+  var totalPrice = 0;
+  cartListwrap.forEach(function(item) {
+    var itemProductPrice = parseInt(item.textContent.substring(1));
+    totalPrice += itemProductPrice;
+  });
+  totalItem.innerHTML = totalPrice;
+  
+  var cartListItemShippingInt = parseInt(cartListItemShipping.textContent.substring(1));
+  totalPrice += cartListItemShippingInt
+  
+  totalItemValueWidthShipping.innerHTML= totalPrice
+}
 
-totalItemValueWidthShipping.innerHTML= totalPrice
+
+// The Script is Wishilist filter out.
+
+var removeButtons = document.querySelectorAll(".userProfileAllProductListItemRemove");
+
+        removeButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                var row = this.closest("tr");
+                row.parentNode.removeChild(row);
+            });
+        });
