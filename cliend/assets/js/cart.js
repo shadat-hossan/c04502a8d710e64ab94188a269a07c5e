@@ -188,16 +188,6 @@ document.querySelectorAll('.increment').forEach(function(button) {
     var cardAllProductTotalPriceInt = parseInt(cardAllProductTotalPrice.textContent);
     var productTotalPriceElemrntInt = parseInt(productTotalPriceString);
     var inputCheckbox = this.parentNode.parentNode.parentNode.parentNode.querySelector(".checkbox_item input");
-    var cartListWrap = document.querySelector(".cart_list_item").childNodes;
-    var productName = this.parentNode.parentNode.parentNode.querySelector("h5").textContent;
-
-  
-
-    if (window.location.pathname == "/cart.html") {
-      
-      
-    }
-    
 
     if(inputCheckbox.checked) {
       cardAllProductTotalPrice.textContent = cardAllProductTotalPriceInt + parseInt(singalProduvtPriceValue);
@@ -208,6 +198,15 @@ document.querySelectorAll('.increment').forEach(function(button) {
 
     input.value = inoutValueNumber + 1;
     input.dispatchEvent(new Event('change'));
+
+    if (window.location.pathname == "/cart.html") {
+      var cartListWrap = document.querySelector(".cart_list_item").childNodes;
+    var productName = this.parentNode.parentNode.parentNode.querySelector("h5").textContent;
+      console.log("Hello")
+      
+    }
+    
+
     return false;
   });
 });

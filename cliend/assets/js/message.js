@@ -2,7 +2,6 @@ const messageBoxLogo = document.querySelector(".messageBoxLogo");
 const messageChartBox = document.querySelector(".messageChartBox");
 const messageClose = document.querySelector(".messageClose");
 
-console.log(messageChartBox)
 
 messageBoxLogo.addEventListener("click", function(){
     messageChartBox.style.display = "block";
