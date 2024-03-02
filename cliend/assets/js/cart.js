@@ -304,12 +304,11 @@ if(window.location.pathname ==  "/billing.html"){
 
 
 // The Script is Wishilist filter out.
-
 var removeButtons = document.querySelectorAll(".userProfileAllProductListItemRemove");
 
-        removeButtons.forEach(function (button) {
-            button.addEventListener("click", function () {
-                var row = this.closest("tr");
-                row.parentNode.removeChild(row);
-            });
-        });
+removeButtons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    var row = this.closest("tr");
+    row.parentNode.removeChild(row);
+  });
+});

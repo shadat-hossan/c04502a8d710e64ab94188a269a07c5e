@@ -2871,8 +2871,8 @@ body { padding-top: 225px; }
 .messageBox{
   position: fixed;
   bottom: 25px;
-  right: 26px;
-  z-index: 50;
+  right: 27px;
+  z-index: 10000;
   /* background: #fff; */
 }
 
@@ -2904,7 +2904,9 @@ body { padding-top: 225px; }
 
 .message-chart-box-header{
   width: 100%;
-  background-color: #00ff66;
+  background-color: #b50107;
+  padding: 9px 12px;
+  color: #fff;
 }
 
 .all-message-see{
