@@ -3062,9 +3062,11 @@ body { padding-top: 225px; }
   padding: 40px 20px;
   z-index: -1;
   overflow: auto;
+  display: none;
 }
 .product_popup_area.is-visible {
   z-index: 8888;
+  display: block;
 }
 .product_popup_area .singalProductDetails {
   padding: 30px;
