@@ -1,9 +1,10 @@
-// The Script is a page Loding
+/* The code snippet you provided is setting up an event handler for the `window.onload` event in
+JavaScript. When the page finishes loading, the function inside `window.onload` will be executed. */
 window.onload = function () {
   if (window.onload) {
     setTimeout(function () {
       document.getElementById("loadingMessage").style.display = "none";
-    }, 1000);
+    }, 500);
   } else {
     document.getElementById("loadingMessage").style.display = "block";
   }
