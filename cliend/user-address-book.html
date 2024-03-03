@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="assets/css/font-awesome-min.css" />
     <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/userAcount.css" />
   </head>
   <body>
     <div class="loading-Container" id="loadingMessage">
@@ -54,14 +53,14 @@
             </form>
           </div>
           <div class="header_right d-flex flex-nowrap">
-            <div class="wishlist_item">
+            <div class="wishlist_item" title="Wishlist">
               <a class="wishlist_icon" href="wishlist.html"></a>
             </div>
             <div class="cart_icon_box">
-              <span class="cart_icon_small"><small>3</small></span>
+              <span class="cart_icon_small" title="Cart"><small>3</small></span>
             </div>
             <div class="user_area">
-              <div class="user_login"></div>
+              <div class="user_login" title="Account"></div>
               <div class="user_dropdown hide-menu">
                 <ul>
                   <li>
@@ -107,6 +106,9 @@
                 </ul>
               </div>
             </div>
+            <div class="seller_reg_btn">
+              <a href="signup.html">Seller Registration</a>
+            </div>
           </div>
         </div>
       </div>
@@ -115,10 +117,12 @@
         <div class="menu_box center-content flex-wrap align-center">
           <div class="flex-wrap align-center">
             <div class="all_categories_item flex-nowrap align-center">
-              <div class="menu_bar">
-                <span></span><span></span><span></span>
+                <div class="menu_tiger flex-nowrap align-center">
+                  <div class="menu_bar">
+                    <span></span><span></span><span></span>
+                </div>
+                <strong>All Categories</strong>
               </div>
-              <strong>All Categories</strong>
               <div class="categorie_dropdown">
                 <ul>
                   <li class="drop_child">
@@ -152,7 +156,7 @@
             <div class="navbar">
               <ul>
                 <li>
-                  <a class="active" href="index.html"
+                  <a class="" href="index.html"
                     ><div class="nav_small_icon">
                       <img src="assets/images/icon_home.svg" alt="" />
                     </div>

@@ -11,7 +11,7 @@ window.onload = function () {
 };
 
 if (matchMedia("only screen and (max-width: 768px)").matches) {
-  jQuery(".menu_bar").click(function () {
+  jQuery(".menu_tiger").click(function () {
     jQuery(".categorie_dropdown").slideToggle(400);
   });
 
