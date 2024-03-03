@@ -142,12 +142,7 @@ $(document).ready(function($) {
         this.closest('.item').classList.add("cart-active");
       });
   });
-
-
-
-  });
-
-
+ 
   // For decrement button
 
   document.querySelectorAll('.dickrement').forEach(function(button) {
@@ -184,6 +179,7 @@ document.querySelectorAll('.increment').forEach(function(button) {
     var productTotalPriceElemrnt = this.parentNode.parentNode.parentNode.querySelector(".productToralPrice");
     var productTotalPriceString = productTotalPriceElemrnt.textContent.toString();
     var inoutValueNumber = parseInt(input.value);
+
     var cardAllProductTotalPrice = document.querySelector(".cardAllProductTotalPrice");
     var cardAllProductTotalPriceInt = parseInt(cardAllProductTotalPrice.textContent);
     var productTotalPriceElemrntInt = parseInt(productTotalPriceString);
@@ -198,51 +194,18 @@ document.querySelectorAll('.increment').forEach(function(button) {
 
     input.value = inoutValueNumber + 1;
     input.dispatchEvent(new Event('change'));
-
-    if (window.location.pathname == "/cart.html") {
-      var cartListWrap = document.querySelector(".cart_list_item").childNodes;
-    var productName = this.parentNode.parentNode.parentNode.querySelector("h5").textContent;
-      console.log("Hello")
-      
-    }
-    
-
     return false;
   });
 });
 
 
-document.querySelectorAll('.cart_list_row .checkmark').forEach(function(checkmark, i) {
+document.querySelectorAll('.cart_list_row .checkmark').forEach(function(checkmark) {
   checkmark.addEventListener("click", function(){
     var inputCheckbox = this.parentNode.querySelector("input");
     var cardAllProductTotalPrice = document.querySelector(".cardAllProductTotalPrice");
     var cardAllProductTotalPriceInt = parseInt(cardAllProductTotalPrice.textContent);
     var productTotalPriceElemrnt = this.parentNode.parentNode.querySelector(".productToralPrice").textContent;
     var productTotalPriceElemrntInt = parseInt(productTotalPriceElemrnt);
-    var cartListWrap = document.querySelector(".cart_list_wrap");
-    var productName = this.parentNode.parentNode.querySelector(".product_cart_info h5").textContent;
-
-    if (window.location.pathname == "/cart.html") {
-      if (!inputCheckbox.checked) {
-          var cartListItem = document.createElement("div");
-          cartListItem.classList.add("cart_list_item", "flex-nowrap", "space-between");
-          var itemName = document.createElement("span");
-          itemName.textContent = i + 1 + ". " + productName;
-          var itemPrice = document.createElement("strong");
-          itemPrice.textContent = `৳ ${productTotalPriceElemrntInt}`;
-          cartListItem.appendChild(itemName);
-          cartListItem.appendChild(itemPrice);
-          cartListItem.setAttribute("data-cart-item-id", i);
-  
-          cartListWrap.appendChild(cartListItem);
-      } else {
-          var cartListItemToRemove = cartListWrap.querySelector(`[data-cart-item-id="${i}"]`);
-          if (cartListItemToRemove) {
-              cartListWrap.removeChild(cartListItemToRemove);
-          }
-      }
-  }
-  
 
     if(!inputCheckbox.checked) {
       cardAllProductTotalPrice.textContent = cardAllProductTotalPriceInt + productTotalPriceElemrntInt;
@@ -255,15 +218,14 @@ document.querySelectorAll('.cart_list_row .checkmark').forEach(function(checkmar
 
 document.querySelectorAll('.cart_list_row .remove_cart').forEach(function(remove) {
   remove.addEventListener("click", function(){
-    var inputCheckbox = this.parentNode.parentNode.parentNode.querySelector(".checkbox_item input")
+    var inputCheckbox = this.parentNode.querySelector("input");
     var cardAllProductTotalPrice = document.querySelector(".cardAllProductTotalPrice");
     var cardAllProductTotalPriceInt = parseInt(cardAllProductTotalPrice.textContent);
     var productTotalPriceElemrnt = this.parentNode.parentNode.querySelector(".productToralPrice").textContent;
     var productTotalPriceElemrntInt = parseInt(productTotalPriceElemrnt);
 
-    if(inputCheckbox.checked) {
-      cardAllProductTotalPrice.textContent = cardAllProductTotalPriceInt - productTotalPriceElemrntInt;
-    } 
+
+      cardAllProductTotalPrice.textContent = cardAllProductTotalPriceInt - productTotalPriceElemrnt;
   });
 });
 
@@ -278,36 +240,7 @@ window.addEventListener("click", function(e){
 })
 
 
-
-// The Script is billing all Product price some return
-const cartListwrap = document.querySelectorAll(".cart_list_item .cart_list_item_price");
-var totalItem = document.querySelector(".total_item .total_item_value");
-var cartListItemShipping = document.querySelector(".cart_list_item .cart_list_item_shipping")
-var totalItemValueWidthShipping = document.querySelector(".total_item_value_width_shipping");
-
-
-if(window.location.pathname ==  "/billing.html"){
-
-  var totalPrice = 0;
-  cartListwrap.forEach(function(item) {
-    var itemProductPrice = parseInt(item.textContent.substring(1));
-    totalPrice += itemProductPrice;
   });
-  totalItem.innerHTML = totalPrice;
+
   
-  var cartListItemShippingInt = parseInt(cartListItemShipping.textContent.substring(1));
-  totalPrice += cartListItemShippingInt
   
-  totalItemValueWidthShipping.innerHTML= totalPrice
-}
-
-
-// The Script is Wishilist filter out.
-var removeButtons = document.querySelectorAll(".userProfileAllProductListItemRemove");
-
-removeButtons.forEach(function (button) {
-  button.addEventListener("click", function () {
-    var row = this.closest("tr");
-    row.parentNode.removeChild(row);
-  });
-});
