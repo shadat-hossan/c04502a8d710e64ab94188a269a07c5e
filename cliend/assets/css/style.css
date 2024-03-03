@@ -195,7 +195,7 @@ input[placeholder],
   width: 216px;
 }
 .header_search {
-  width: 570px;
+  width: 44%;
   position: relative;
 }
 .header_search .form-control {
@@ -224,7 +224,7 @@ input[placeholder],
 }
 .header_right {
   align-items: center;
-  gap: 15px;
+  gap: 30px;
 }
 .wishlist_icon {
   width: 22px;
@@ -398,6 +398,20 @@ input[placeholder],
   position: relative;
   cursor: pointer;
 }
+@media screen and (max-width: 991px) {
+.header_search {
+    width: 100% !important;
+    order: 3;
+    margin-top: 10px;
+}
+.header_right {
+    gap: 20px;
+}
+}
+@media screen and (max-width: 640px) {
+.seller_reg_btn { display: none; }
+}
+
 @media screen and (min-width: 769px) {
 .categorie_dropdown {
   opacity: 0;
@@ -2564,17 +2578,17 @@ span.totalRating {
   justify-content: center;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
-  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
-  transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s, display 0.3s 0s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s, display 0.3s 0s;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s, display 0.3s 0s;
   z-index: 10000;
 }
 .form-popup-bg.is-visible {
   opacity: 1;
   visibility: visible;
-  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
-  -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
-  transition: opacity 0.3s 0s, visibility 0s 0s;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s, display 0.3s 0s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s, 0s display 0.3s 0s;
+  transition: opacity 0.3s 0s, visibility 0s 0s, display 0.3s 0s;
 }
 .btnCloseForm {
   margin-right: 15px;
@@ -3817,3 +3831,70 @@ span.gaterthan {
         display: block;
     }
 }
+
+
+.product_feature .productImage {
+  height: 220px;
+  flex-direction: column;
+}
+.product_feature .discoundParsant {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    z-index: 2;
+}
+.product_feature .trabalShoutProduct {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 3;
+}
+.product_feature .added_info_item {
+    transform: translateY(0);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+.product_feature .productfiltaringBottom {
+    transform: translateY(100px);
+}
+.product_feature:hover .productfiltaringBottom {
+    transform: translateY(0);
+}
+.seller_reg_btn a {
+  padding: 10px 15px;
+  display: block;
+  background-color: #ec2d2d;
+  font-size: 16px;
+  border-radius: 6px;
+  color: #fff;
+  position:relative;
+  overflow:hidden;
+}
+.seller_reg_btn a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -10px;
+  width: 20px;
+  height: 140%;
+  background: #fff;
+  transform: rotate(12deg);
+  filter: blur(8px);
+  opacity: 0.6;
+  animation: sellerline 2s infinite;
+}
+@keyframes sellerline {
+    0% {
+      left: 0;
+    }
+  
+    100% {
+      left: 170px;
+    }
+  }

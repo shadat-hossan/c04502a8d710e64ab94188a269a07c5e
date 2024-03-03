@@ -26,14 +26,14 @@
                 </form>
               </div>
               <div class="header_right d-flex flex-nowrap">
-                <div class="wishlist_item">
+                <div class="wishlist_item" title="Wishlist">
                   <a class="wishlist_icon" href="wishlist.html"></a>
                 </div>
                 <div class="cart_icon_box">
-                  <span class="cart_icon_small"><small>3</small></span>
+                  <span class="cart_icon_small" title="Cart"><small>3</small></span>
                 </div>
                 <div class="user_area">
-                  <div class="user_login"></div>
+                  <div class="user_login" title="Account"></div>
                   <div class="user_dropdown hide-menu">
                     <ul>
                       <li><a href="user-acount.html"><div class="drop_icon"><img src="assets/images/user_icon.svg" alt="" /></div> Manage My Account</a></li>
@@ -44,6 +44,7 @@
                     </ul>
                   </div>
                 </div>
+                <div class="seller_reg_btn"><a href="signup.html">Seller Registration</a></div>
               </div>
           </div>
         </div>
@@ -84,7 +85,7 @@
               </div>
               <div class="navbar">
                 <ul>
-                  <li><a class="active" href="index.html"><div class="nav_small_icon"><img src="assets/images/icon_home.svg" alt="" /></div> Home</a></li>
+                  <li><a class="" href="index.html"><div class="nav_small_icon"><img src="assets/images/icon_home.svg" alt="" /></div> Home</a></li>
                   <li><a href="#"><div class="nav_small_icon"><img src="assets/images/icon_shop.svg" alt="" /></div> Shop</a></li>
                   <li><a href="#"><div class="nav_small_icon"><img src="assets/images/icon_offer.svg" alt="" /></div> Your offer</a></li>
                   <li><a href="#"><div class="nav_small_icon"><img src="assets/images/icon_shop2.svg" alt="" /></div> My shop</a></li>
@@ -129,7 +130,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -169,43 +169,39 @@
 
         <div class="flashSalesCard">
             <div class="owl-carousel allProduct">
-                <div class="item">
+                <div class="item product_feature">
                     <div class="productImage">
                         <div class="productSingalImage">
-                            <a href="product-single.html"><img src="assets/images/product-image/gameControler.png" alt="gameControler" /></a>
+                            <a href="single-product.html"><img src="assets/images/product-image/gameControler.png" alt="gameControler" /></a>
                         </div>
-                        <div class="productfiltaring">
-                            <div class="productfiltaringTop">
-                                <div class="discoundParsant">
-                                    <a href="#">-40%</a>
-                                </div>
-                                <div class="trabalShoutProduct">
-                                    <a class="add_wishlist" href="javascript:void(0)"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                                    <a class="btnOpenForm" href="javascript:void(0)"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                    <a data-fancybox="gallery" href="assets/images/product-image/MonitorDell1.jpeg"><img class="trabalShoutProductIconImage" src="assets/images/Icon/vector.png" alt="" /></a>
-                                </div>
+                        <div class="discoundParsant">
+                            <a href="#">-40%</a>
+                        </div>
+                        <div class="trabalShoutProduct">
+                            <a title="Wishlist" class="add_wishlist" href="javascript:void(0)"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                            <a title="Product single" class="btnOpenForm" href="javascript:void(0)"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                            <a title="Gallery" data-fancybox="gallery" href="assets/images/product-image/MonitorDell1.jpeg"><img class="trabalShoutProductIconImage" src="assets/images/Icon/vector.png" alt="" /></a>
+                        </div>
+                        <div class="productfiltaringBottom">
+                            <a href="javascript:void(0)">Add To Cart</a>
+                        </div>
+                        <div class="added_info_item">
+                            <div class="added_info">
+                                <span>Added to Cart</span>
                             </div>
-                            <div class="productfiltaringBottom">
-                                <a href="javascript:void(0)">Add To Cart</a>
-                            </div>
-                            <div class="added_info_item">
-                                <div class="added_info">
-                                    <span>Added to Cart</span>
-                                </div>
-                                <div class="counterManiContant">
-                                    <button class="couterBtn dickrement">
-                                      <i class="fa fa-minus" aria-hidden="true"></i>
-                                    </button>
-                                    <div class="numberCount"><input type="text" value="1"></div>
-                                    <button class="couterBtn increment">
-                                      <i class="fa fa-plus" aria-hidden="true"></i>
-                                    </button>
-                                </div>
+                            <div class="counterManiContant">
+                                <button class="couterBtn dickrement">
+                                  <i class="fa fa-minus" aria-hidden="true"></i>
+                                </button>
+                                <div class="numberCount"><input type="text" value="1"></div>
+                                <button class="couterBtn increment">
+                                  <i class="fa fa-plus" aria-hidden="true"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
                     <div class="productDetails">
-                        <h4><a href="product-single.html">HAVIT HV-G92 Gamepad</a></h4>
+                        <h4><a href="single-product.html">HAVIT HV-G92 Gamepad</a></h4>
                         <p class="productDetailsPrice"><span class="discountPrice">$120 </span> <del>$160</del></p>
                         <div class="rateStar">
                             <div class="rating-star">
@@ -1793,7 +1789,7 @@
     <a id="backbutton"></a>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/index.js"></script>
-    <script src="assets//js/product.js"></script>
+    <script src="assets/js/product.js"></script>
     <script src="assets/js/message.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/jquery.fancybox.min.js"></script>
