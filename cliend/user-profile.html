@@ -3,49 +3,111 @@
   <head>
     <title>Saffron-E-commerce</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="assets/images/saffron-icon-logo.svg">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/images/saffron-icon-logo.svg"
+    />
     <link rel="stylesheet" href="assets/css/root.css" />
-    <link rel="stylesheet" href="assets/css/owl.carousel.css">
-    <link rel="stylesheet" href="assets/css/font-awesome-min.css"/>
-    <link rel='stylesheet' href="assets/css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome-min.css" />
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/userAcount.css">
+    <link rel="stylesheet" href="assets/css/userAcount.css" />
   </head>
   <body>
+    <div class="loading-Container" id="loadingMessage">
+      <div class="loadingio-spinner-eclipse-gpyaq5a3aje">
+        <div class="ldio-3jczv0zjjlz">
+          <div></div>
+          <span class="loadingLogo"
+            ><img src="./assets/images/Icon/saffronLogo.png" alt="Loading Logo"
+          /></span>
+        </div>
+      </div>
+    </div>
     <div class="header_container_area">
       <div class="top_container_area">
         <div class="top_content center-content">
-            <div class="logo">
-              <a href="index.html"><img src="assets/images/logo.svg" alt="logo" /></a>
+          <div class="logo">
+            <a href="index.html"
+              ><img src="assets/images/logo.svg" alt="logo"
+            /></a>
+          </div>
+          <div class="header_search">
+            <form action="#">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="What are you looking for?"
+                name=""
+              />
+              <input type="submit" value="" name="" />
+            </form>
+          </div>
+          <div class="header_right d-flex flex-nowrap">
+            <div class="wishlist_item">
+              <a class="wishlist_icon" href="wishlist.html"></a>
             </div>
-            <div class="header_search">
-              <form action="#">
-                <input class="form-control" type="text" placeholder="What are you looking for?" name="">
-                <input type="submit" value="" name="">
-              </form>
+            <div class="cart_icon_box">
+              <span class="cart_icon_small"><small>3</small></span>
             </div>
-            <div class="header_right d-flex flex-nowrap">
-              <div class="wishlist_item">
-                <a class="wishlist_icon" href="wishlist.html"></a>
-              </div>
-              <div class="cart_icon_box">
-                <span class="cart_icon_small"><small>3</small></span>
-              </div>
-              <div class="user_area">
-                <div class="user_login"></div>
-                <div class="user_dropdown hide-menu">
-                  <ul>
-                    <li><a href="user-acount.html"><div class="drop_icon"><img src="assets/images/user_icon.svg" alt="" /></div> Manage My Account</a></li>
-                    <li><a href="order-list.html"><div class="drop_icon"><img src="assets/images/icon-mallbag.svg" alt="" /></div> My Order</a></li>
-                    <li><a href="#"><div class="drop_icon"><img src="assets/images/icon-cancel.svg" alt="" /></div> My Cancellations</a></li>
-                    <li><a href="user-review.html"> <div class="drop_icon"><img src="assets/images/Icon-Reviews.svg" alt="" /></div>My Reviews</a></li>
-                    <li><a href="#"> <div class="drop_icon"><img src="assets/images/Icon-logout.svg" alt="" /></div>Logout</a></li>
-                  </ul>
-                </div>
+            <div class="user_area">
+              <div class="user_login"></div>
+              <div class="user_dropdown hide-menu">
+                <ul>
+                  <li>
+                    <a href="user-acount.html"
+                      ><div class="drop_icon">
+                        <img src="assets/images/user_icon.svg" alt="" />
+                      </div>
+                      Manage My Account</a
+                    >
+                  </li>
+                  <li>
+                    <a href="order-list.html"
+                      ><div class="drop_icon">
+                        <img src="assets/images/icon-mallbag.svg" alt="" />
+                      </div>
+                      My Order</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><div class="drop_icon">
+                        <img src="assets/images/icon-cancel.svg" alt="" />
+                      </div>
+                      My Cancellations</a
+                    >
+                  </li>
+                  <li>
+                    <a href="user-review.html">
+                      <div class="drop_icon">
+                        <img src="assets/images/Icon-Reviews.svg" alt="" />
+                      </div>
+                      My Reviews</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="drop_icon">
+                        <img src="assets/images/Icon-logout.svg" alt="" />
+                      </div>
+                      Logout</a
+                    >
+                  </li>
+                </ul>
               </div>
             </div>
+          </div>
         </div>
       </div>
 
@@ -53,42 +115,74 @@
         <div class="menu_box center-content flex-wrap align-center">
           <div class="flex-wrap align-center">
             <div class="all_categories_item flex-nowrap align-center">
-              <div class="menu_bar"><span></span><span></span><span></span></div>
+              <div class="menu_bar">
+                <span></span><span></span><span></span>
+              </div>
               <strong>All Categories</strong>
               <div class="categorie_dropdown">
-                  <ul>
-                    <li class="drop_child"><a href="javascript:void(0)">Woman’s Fashion</a>
-                      <ul>
-                        <li><a href="#">Sports & Outdoor</a></li>
-                        <li><a href="#">Baby’s & Toys</a></li>
-                        <li><a href="#">Groceries & Pets</a></li>
-                        <li><a href="#">Health & Beauty</a></li>
-                      </ul>
-                    </li>
-                    <li class="drop_child"><a href="javascript:void(0)">Men’s Fashion</a>
-                       <ul>
-                        <li><a href="#">Sports & Outdoor</a></li>
-                        <li><a href="#">Baby’s & Toys</a></li>
-                        <li><a href="#">Groceries & Pets</a></li>
-                        <li><a href="#">Health & Beauty</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Electronics</a></li>
-                    <li><a href="#">Home & Lifestyle</a></li>
-                    <li><a href="#">Medicine</a></li>
-                    <li><a href="#">Sports & Outdoor</a></li>
-                    <li><a href="#">Baby’s & Toys</a></li>
-                    <li><a href="#">Groceries & Pets</a></li>
-                    <li><a href="#">Health & Beauty</a></li>
-                  </ul>
-                </div>
+                <ul>
+                  <li class="drop_child">
+                    <a href="javascript:void(0)">Woman’s Fashion</a>
+                    <ul>
+                      <li><a href="#">Sports & Outdoor</a></li>
+                      <li><a href="#">Baby’s & Toys</a></li>
+                      <li><a href="#">Groceries & Pets</a></li>
+                      <li><a href="#">Health & Beauty</a></li>
+                    </ul>
+                  </li>
+                  <li class="drop_child">
+                    <a href="javascript:void(0)">Men’s Fashion</a>
+                    <ul>
+                      <li><a href="#">Sports & Outdoor</a></li>
+                      <li><a href="#">Baby’s & Toys</a></li>
+                      <li><a href="#">Groceries & Pets</a></li>
+                      <li><a href="#">Health & Beauty</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Electronics</a></li>
+                  <li><a href="#">Home & Lifestyle</a></li>
+                  <li><a href="#">Medicine</a></li>
+                  <li><a href="#">Sports & Outdoor</a></li>
+                  <li><a href="#">Baby’s & Toys</a></li>
+                  <li><a href="#">Groceries & Pets</a></li>
+                  <li><a href="#">Health & Beauty</a></li>
+                </ul>
+              </div>
             </div>
             <div class="navbar">
               <ul>
-                <li><a class="active" href="index.html"><div class="nav_small_icon"><img src="assets/images/icon_home.svg" alt="" /></div> Home</a></li>
-                <li><a href="#"><div class="nav_small_icon"><img src="assets/images/icon_shop.svg" alt="" /></div> Shop</a></li>
-                <li><a href="#"><div class="nav_small_icon"><img src="assets/images/icon_offer.svg" alt="" /></div> Your offer</a></li>
-                <li><a href="#"><div class="nav_small_icon"><img src="assets/images/icon_shop2.svg" alt="" /></div> My shop</a></li>
+                <li>
+                  <a class="active" href="index.html"
+                    ><div class="nav_small_icon">
+                      <img src="assets/images/icon_home.svg" alt="" />
+                    </div>
+                    Home</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><div class="nav_small_icon">
+                      <img src="assets/images/icon_shop.svg" alt="" />
+                    </div>
+                    Shop</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><div class="nav_small_icon">
+                      <img src="assets/images/icon_offer.svg" alt="" />
+                    </div>
+                    Your offer</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><div class="nav_small_icon">
+                      <img src="assets/images/icon_shop2.svg" alt="" />
+                    </div>
+                    My shop</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
@@ -98,325 +192,685 @@
     </div>
     <!-- Stat User Acount -->
     <main class="userAcount">
-        <div class="center-content userAcountContainer">
-            <div class="userAcountSidebar">
-              <ul class="userAcountSidebarAllMenue">
-                <span class="resDeCrochBtn">
-                  <svg class="resDeCrochBtnSVG" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6.9997 5.0865L11.9495 0.136721L13.3637 1.55093L8.4139 6.5007L13.3637 11.4504L11.9495 12.8646L6.9997 7.9149L2.04996 12.8646L0.635742 11.4504L5.5855 6.5007L0.635742 1.55093L2.04996 0.136721L6.9997 5.0865Z" />
-                    </svg>                    
-                </span>
-                <a href="user-acount.html">
-                  <li class="userAcountSidebarMenue">
-                    <div class="userAcountSidebarMenueMainC">
-                      <div class="userAcountSidebarMenueIcon">
-                        <svg class="Sidebar_icon__b36n1" width="18" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.15722 20.7714V17.7047C9.1572 16.9246 9.79312 16.2908 10.581 16.2856H13.4671C14.2587 16.2856 14.9005 16.9209 14.9005 17.7047V17.7047V20.7809C14.9003 21.4432 15.4343 21.9845 16.103 22H18.0271C19.9451 22 21.5 20.4607 21.5 18.5618V18.5618V9.83784C21.4898 9.09083 21.1355 8.38935 20.538 7.93303L13.9577 2.6853C12.8049 1.77157 11.1662 1.77157 10.0134 2.6853L3.46203 7.94256C2.86226 8.39702 2.50739 9.09967 2.5 9.84736V18.5618C2.5 20.4607 4.05488 22 5.97291 22H7.89696C8.58235 22 9.13797 21.4499 9.13797 20.7714V20.7714" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                      </div>
-                      <span class="userAcountSidebarMenueText">Dashboard</span>
-                    </div>
-                  </li>
-                </a>
-
-                <a href="javascript:void(0)">
-                <li class="userAcountSidebarMenue">
-                  <div class="userAcountSidebarMenueMainC">
+      <div class="center-content userAcountContainer">
+        <div class="userAcountSidebar">
+          <ul class="userAcountSidebarAllMenue">
+            <span class="resDeCrochBtn">
+              <svg
+                class="resDeCrochBtnSVG"
+                width="14"
+                height="13"
+                viewBox="0 0 14 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.9997 5.0865L11.9495 0.136721L13.3637 1.55093L8.4139 6.5007L13.3637 11.4504L11.9495 12.8646L6.9997 7.9149L2.04996 12.8646L0.635742 11.4504L5.5855 6.5007L0.635742 1.55093L2.04996 0.136721L6.9997 5.0865Z"
+                />
+              </svg>
+            </span>
+            <a href="user-acount.html">
+              <li class="userAcountSidebarMenue">
+                <div class="userAcountSidebarMenueMainC">
                   <div class="userAcountSidebarMenueIcon">
-                    <svg class="Sidebar_icon__b36n1" width="18" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.75 3.25L4.83 3.61L5.793 15.083C5.87 16.02 6.653 16.739 7.593 16.736H18.502C19.399 16.738 20.16 16.078 20.287 15.19L21.236 8.632C21.342 7.899 20.833 7.219 20.101 7.113C20.037 7.104 5.164 7.099 5.164 7.099" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14.125 10.7949H16.898" stroke="#495057" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M7.15338 20.2031C7.45438 20.2031 7.69738 20.4471 7.69738 20.7471C7.69738 21.0481 7.45438 21.2921 7.15338 21.2921C6.85238 21.2921 6.60938 21.0481 6.60938 20.7471C6.60938 20.4471 6.85238 20.2031 7.15338 20.2031Z" fill="#495057" stroke="#495057" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M18.4346 20.2031C18.7356 20.2031 18.9796 20.4471 18.9796 20.7471C18.9796 21.0481 18.7356 21.2921 18.4346 21.2921C18.1336 21.2921 17.8906 21.0481 17.8906 20.7471C17.8906 20.4471 18.1336 20.2031 18.4346 20.2031Z" fill="#495057" stroke="#495057" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    <svg
+                      class="Sidebar_icon__b36n1"
+                      width="18"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.15722 20.7714V17.7047C9.1572 16.9246 9.79312 16.2908 10.581 16.2856H13.4671C14.2587 16.2856 14.9005 16.9209 14.9005 17.7047V17.7047V20.7809C14.9003 21.4432 15.4343 21.9845 16.103 22H18.0271C19.9451 22 21.5 20.4607 21.5 18.5618V18.5618V9.83784C21.4898 9.09083 21.1355 8.38935 20.538 7.93303L13.9577 2.6853C12.8049 1.77157 11.1662 1.77157 10.0134 2.6853L3.46203 7.94256C2.86226 8.39702 2.50739 9.09967 2.5 9.84736V18.5618C2.5 20.4607 4.05488 22 5.97291 22H7.89696C8.58235 22 9.13797 21.4499 9.13797 20.7714V20.7714"
+                        stroke="#495057"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="userAcountSidebarMenueText">Dashboard</span>
+                </div>
+              </li>
+            </a>
+
+            <a href="javascript:void(0)">
+              <li class="userAcountSidebarMenue">
+                <div class="userAcountSidebarMenueMainC">
+                  <div class="userAcountSidebarMenueIcon">
+                    <svg
+                      class="Sidebar_icon__b36n1"
+                      width="18"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2.75 3.25L4.83 3.61L5.793 15.083C5.87 16.02 6.653 16.739 7.593 16.736H18.502C19.399 16.738 20.16 16.078 20.287 15.19L21.236 8.632C21.342 7.899 20.833 7.219 20.101 7.113C20.037 7.104 5.164 7.099 5.164 7.099"
+                        stroke="#495057"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M14.125 10.7949H16.898"
+                        stroke="#495057"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M7.15338 20.2031C7.45438 20.2031 7.69738 20.4471 7.69738 20.7471C7.69738 21.0481 7.45438 21.2921 7.15338 21.2921C6.85238 21.2921 6.60938 21.0481 6.60938 20.7471C6.60938 20.4471 6.85238 20.2031 7.15338 20.2031Z"
+                        fill="#495057"
+                        stroke="#495057"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M18.4346 20.2031C18.7356 20.2031 18.9796 20.4471 18.9796 20.7471C18.9796 21.0481 18.7356 21.2921 18.4346 21.2921C18.1336 21.2921 17.8906 21.0481 17.8906 20.7471C17.8906 20.4471 18.1336 20.2031 18.4346 20.2031Z"
+                        fill="#495057"
+                        stroke="#495057"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
                   </div>
                   <span class="userAcountSidebarMenueText">My Orders</span>
-                  </div>
-                  <ul class="userAcountSidebarSubMenue">
-                    <li class="userAcountSidebarSubMenueItem"><a href="order-list.html">Order list</a></li>
-                    <li class="userAcountSidebarSubMenueItem"><a href="old-order-list.html">Old Orders</a></li>
-                  </ul>
-                </li>
-                </a>
+                </div>
+                <ul class="userAcountSidebarSubMenue">
+                  <li class="userAcountSidebarSubMenueItem">
+                    <a href="order-list.html">Order list</a>
+                  </li>
+                  <li class="userAcountSidebarSubMenueItem">
+                    <a href="old-order-list.html">Old Orders</a>
+                  </li>
+                </ul>
+              </li>
+            </a>
 
-                <a href="javascript:void(0)">
-                <li class="userAcountSidebarMenue">
-                  <div class="userAcountSidebarMenueMainC">
+            <a href="javascript:void(0)">
+              <li class="userAcountSidebarMenue">
+                <div class="userAcountSidebarMenueMainC">
                   <div class="userAcountSidebarMenueIcon">
-                    <svg class="Sidebar_icon__b36n1" width="18" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.9077 15.0857C8.08174 15.0857 4.81445 15.6963 4.81445 18.1419C4.81445 20.5874 8.06101 21.2199 11.9077 21.2199C15.7337 21.2199 19 20.6083 19 18.1637C19 15.7192 15.7544 15.0857 11.9077 15.0857Z" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M11.9076 11.5982C14.4183 11.5982 16.4533 9.44899 16.4533 6.79858C16.4533 4.14817 14.4183 2 11.9076 2C9.39679 2 7.36087 4.14817 7.36087 6.79858C7.35239 9.44004 9.37418 11.5892 11.8755 11.5982H11.9076Z" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    <svg
+                      class="Sidebar_icon__b36n1"
+                      width="18"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M11.9077 15.0857C8.08174 15.0857 4.81445 15.6963 4.81445 18.1419C4.81445 20.5874 8.06101 21.2199 11.9077 21.2199C15.7337 21.2199 19 20.6083 19 18.1637C19 15.7192 15.7544 15.0857 11.9077 15.0857Z"
+                        stroke="#495057"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M11.9076 11.5982C14.4183 11.5982 16.4533 9.44899 16.4533 6.79858C16.4533 4.14817 14.4183 2 11.9076 2C9.39679 2 7.36087 4.14817 7.36087 6.79858C7.35239 9.44004 9.37418 11.5892 11.8755 11.5982H11.9076Z"
+                        stroke="#495057"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
                   </div>
                   <span class="userAcountSidebarMenueText">My Profile</span>
-                  </div>
-                  <ul class="userAcountSidebarSubMenue">
-                    <li class="userAcountSidebarSubMenueItem"><a href="user-profile.html">Profile manage/update</a></li>
-                    <li class="userAcountSidebarSubMenueItem"><a href="user-address-book.html">Address book</a></li>
-                    <li class="userAcountSidebarSubMenueItem"><a href="#">My Vouchers</a></li>
-                    <li class="userAcountSidebarSubMenueItem"><a href="user-review.html">My reviews</a></li>
-                    <li class="userAcountSidebarSubMenueItem"><a href="#">My rewards</a></li>
-                  </ul>
-                </li>
-                </a>
+                </div>
+                <ul class="userAcountSidebarSubMenue">
+                  <li class="userAcountSidebarSubMenueItem">
+                    <a href="user-profile.html">Profile manage/update</a>
+                  </li>
+                  <li class="userAcountSidebarSubMenueItem">
+                    <a href="user-address-book.html">Address book</a>
+                  </li>
+                  <li class="userAcountSidebarSubMenueItem">
+                    <a href="#">My Vouchers</a>
+                  </li>
+                  <li class="userAcountSidebarSubMenueItem">
+                    <a href="user-review.html">My reviews</a>
+                  </li>
+                  <li class="userAcountSidebarSubMenueItem">
+                    <a href="#">My rewards</a>
+                  </li>
+                </ul>
+              </li>
+            </a>
 
-                <a href="wishlist.html">
-                <li class="userAcountSidebarMenue">
-                  <div class="userAcountSidebarMenueMainC">
+            <a href="wishlist.html">
+              <li class="userAcountSidebarMenue">
+                <div class="userAcountSidebarMenueMainC">
                   <div class="userAcountSidebarMenueIcon">
-                    <svg class="Sidebar_icon__b36n1" width="18" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.62 20.8096C12.28 20.9296 11.72 20.9296 11.38 20.8096C8.48 19.8196 2 15.6896 2 8.68961C2 5.59961 4.49 3.09961 7.56 3.09961C9.38 3.09961 10.99 3.97961 12 5.33961C13.01 3.97961 14.63 3.09961 16.44 3.09961C19.51 3.09961 22 5.59961 22 8.68961C22 15.6896 15.52 19.8196 12.62 20.8096Z" stroke="#495057" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    <svg
+                      class="Sidebar_icon__b36n1"
+                      width="18"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.62 20.8096C12.28 20.9296 11.72 20.9296 11.38 20.8096C8.48 19.8196 2 15.6896 2 8.68961C2 5.59961 4.49 3.09961 7.56 3.09961C9.38 3.09961 10.99 3.97961 12 5.33961C13.01 3.97961 14.63 3.09961 16.44 3.09961C19.51 3.09961 22 5.59961 22 8.68961C22 15.6896 15.52 19.8196 12.62 20.8096Z"
+                        stroke="#495057"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
                   </div>
                   <span class="userAcountSidebarMenueText">Wishlist</span>
-                  </div>
-                </li>
-                </a>
+                </div>
+              </li>
+            </a>
 
-                <a href="#">
-                <li class="userAcountSidebarMenue">
-                  <div class="userAcountSidebarMenueMainC">
+            <a href="#">
+              <li class="userAcountSidebarMenue">
+                <div class="userAcountSidebarMenueMainC">
                   <div class="userAcountSidebarMenueIcon">
-                    <svg class="Sidebar_icon__b36n1" width="18" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 17.8476C17.6392 17.8476 20.2481 17.1242 20.5 14.2205C20.5 11.3188 18.6812 11.5054 18.6812 7.94511C18.6812 5.16414 16.0452 2 12 2C7.95477 2 5.31885 5.16414 5.31885 7.94511C5.31885 11.5054 3.5 11.3188 3.5 14.2205C3.75295 17.1352 6.36177 17.8476 12 17.8476Z" stroke="#495057" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14.3889 20.8572C13.0247 22.3719 10.8967 22.3899 9.51953 20.8572" stroke="#495057" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    <svg
+                      class="Sidebar_icon__b36n1"
+                      width="18"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12 17.8476C17.6392 17.8476 20.2481 17.1242 20.5 14.2205C20.5 11.3188 18.6812 11.5054 18.6812 7.94511C18.6812 5.16414 16.0452 2 12 2C7.95477 2 5.31885 5.16414 5.31885 7.94511C5.31885 11.5054 3.5 11.3188 3.5 14.2205C3.75295 17.1352 6.36177 17.8476 12 17.8476Z"
+                        stroke="#495057"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M14.3889 20.8572C13.0247 22.3719 10.8967 22.3899 9.51953 20.8572"
+                        stroke="#495057"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
                   </div>
                   <span class="userAcountSidebarMenueText">Notification</span>
-                  </div>
-                </li>
-                </a>
-              </ul>
-            </div>
-
-            <!-- Start User Acount Main Contant -->
-            <div class="userAcountMainContant">
-              <div class="userProfileBar">
-                &#x2630;
-              </div>
-              <form action="#">
-                <div class="userProfileTopSection">
-                    <h3>My profile</h3>
-                    <div class="userProfileImage">
-                        <div class="ProfileImage">
-                            <img src="assets/images/user profile/userImg2.png" alt="User Profile Image">
-                        </div>
-                        <label for="userImage" class="profileImageFileUplpad" title="Uploade Your Profile Image">
-                            <input type="file" id="userImage" name="userImage">
-                            <p class="profileImageFileUplpadPoient"><svg class="ProfileManage_icon__GzYtg" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.619 2.0918H5.81475C3.5085 2.0918 2.0625 3.72455 2.0625 6.03605V12.2715C2.0625 14.583 3.50175 16.2158 5.81475 16.2158H12.4327C14.7465 16.2158 16.1857 14.583 16.1857 12.2715V9.25055" stroke="#1B1B28" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.62097 8.19086L12.2257 2.58611C12.924 1.88861 14.0557 1.88861 14.754 2.58611L15.6667 3.49886C16.365 4.19711 16.365 5.32961 15.6667 6.02711L10.035 11.6589C9.72972 11.9641 9.31572 12.1359 8.88372 12.1359H6.07422L6.14472 9.30086C6.15522 8.88386 6.32547 8.48636 6.62097 8.19086Z" stroke="#1B1B28" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11.373 3.45215L14.7975 6.87665" stroke="#1B1B28" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                            <span>Place Image</span>
-                            </p>
-                        </label>
-                    </div>
                 </div>
-                <div class="userProfileBottomSection">
-                  <h3 class="userProfileBottomSectionTitle"><span>Basic Info</span>
-                    <svg class="ProfileManage_icon__GzYtg" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.619 2.0918H5.81475C3.5085 2.0918 2.0625 3.72455 2.0625 6.03605V12.2715C2.0625 14.583 3.50175 16.2158 5.81475 16.2158H12.4327C14.7465 16.2158 16.1857 14.583 16.1857 12.2715V9.25055" stroke="#1B1B28" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.62097 8.19086L12.2257 2.58611C12.924 1.88861 14.0557 1.88861 14.754 2.58611L15.6667 3.49886C16.365 4.19711 16.365 5.32961 15.6667 6.02711L10.035 11.6589C9.72972 11.9641 9.31572 12.1359 8.88372 12.1359H6.07422L6.14472 9.30086C6.15522 8.88386 6.32547 8.48636 6.62097 8.19086Z" stroke="#1B1B28" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11.373 3.45215L14.7975 6.87665" stroke="#1B1B28" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                  </h3>
-
-                  <div class="userProfileBottomSectionBasicInfioForm">
-                    <div class="FormFild">
-                      <div class="formFildSingalInput">
-                        <label class="formFildSingalInputLable" for="fristName">First Name</label>
-                        <input type="text" id="fristName" name="fristName" placeholder="Feist Name">
-                      </div>
-                      <div class="formFildSingalInput">
-                        <label class="formFildSingalInputLable" for="lastNamr">Last Name</label>
-                        <input type="text" id="lastNamr" name="lastNamr" placeholder="Last Name">
-                      </div>
-                    </div>
-                    <div class="FormFild">
-                      <div class="formFildSingalInput">
-                        <label class="formFildSingalInputLable" for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Write Your Email Adderss" >
-                      </div>
-                    </div>
-                    <div class="FormFild">
-                      <div class="formFildSingalInput">
-                        <label class="formFildSingalInputLable" for="phone">Mobile</label>
-                        <input type="text" id="phone" name="phone" placeholder="Write Your Phome Number" >
-                      </div>
-                      <div class="formFildSingalInput">
-                        <label class="formFildSingalInputLable" for="profession">Profession</label>
-                        <input type="text" id="profession" name="profession" placeholder="Your Profession" >
-                      </div>
-                    </div>
-                    <div class="FormFild">
-                      <div class="formFildSingalInput">
-                        <label class="formFildSingalInputLable" for="birthday">Birthday</label>
-                        <input type="date" id="birthday" name="birthday" placeholder="Birthday Day" >
-                      </div>
-                      <div class="formFildSingalInput formFildSingalInputGender">
-                        <p class="formFildSingalInputGenderTitle">Gender</p>
-                        <div class="formFildSingalInputGenderAllFild">
-                          <label class="formFildSingalInputGenderLable" for="mail">
-                            <input type="radio" name="gender" id="mail">
-                            Mali
-                          </label>
-                          <label class="formFildSingalInputGenderLable" for="femali">
-                            <input type="radio" name="gender" id="femali">
-                            Femele
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="userProfileBottomSecuritySection">
-                  <h3 class="userProfileBottomSectionTitle"><span>Security</span>
-                    <svg class="ProfileManage_icon__GzYtg" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.619 2.0918H5.81475C3.5085 2.0918 2.0625 3.72455 2.0625 6.03605V12.2715C2.0625 14.583 3.50175 16.2158 5.81475 16.2158H12.4327C14.7465 16.2158 16.1857 14.583 16.1857 12.2715V9.25055" stroke="#1B1B28" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.62097 8.19086L12.2257 2.58611C12.924 1.88861 14.0557 1.88861 14.754 2.58611L15.6667 3.49886C16.365 4.19711 16.365 5.32961 15.6667 6.02711L10.035 11.6589C9.72972 11.9641 9.31572 12.1359 8.88372 12.1359H6.07422L6.14472 9.30086C6.15522 8.88386 6.32547 8.48636 6.62097 8.19086Z" stroke="#1B1B28" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11.373 3.45215L14.7975 6.87665" stroke="#1B1B28" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                  </h3>
-
-                  <div class="userProfileBottomSectionBasicInfioForm">
-                    <div class="FormFild eaditePssword">
-                      <div class="formFildSingalInput billing_filed">
-                          <label class="formFildSingalInputLable">New Password</label>
-                            <input  type="password" placeholder="New password" name="">
-                            <i class="toggle-password fa fa-fw fa-eye-slash"></i>
-                        <!-- <label class="formFildSingalInputLable" for="phone">Old Password</label>
-                        <input type="password" id="phone" name="phone" placeholder="Old Password" > -->
-                      </div>
-                      <div class="formFildSingalInput billing_filed">
-                        <label class="formFildSingalInputLable">Confirm Password</label>
-                          <input  type="password" placeholder="Confirm password" name="">
-                          <i class="toggle-password fa fa-fw fa-eye-slash"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="userProfileBottomSectionFormSaveAndCan">
-                  <button type="button" class="cancelbtn s50ps">Cancel</button>
-                  <button type="submit" class="savebtn s50ps">Save</button>
-                </div>
-              </form>
-            </div>
-
-            <!-- End User Acount Main Contant -->
-
+              </li>
+            </a>
+          </ul>
         </div>
+
+        <!-- Start User Acount Main Contant -->
+        <div class="userAcountMainContant">
+          <div class="userProfileBar">&#x2630;</div>
+          <form action="#">
+            <div class="userProfileTopSection">
+              <h3>My profile</h3>
+              <div class="userProfileImage">
+                <div class="ProfileImage">
+                  <img
+                    src="assets/images/user profile/userImg2.png"
+                    alt="User Profile Image"
+                  />
+                </div>
+                <label
+                  for="userImage"
+                  class="profileImageFileUplpad"
+                  title="Uploade Your Profile Image"
+                >
+                  <input type="file" id="userImage" name="userImage" />
+                  <p class="profileImageFileUplpadPoient">
+                    <svg
+                      class="ProfileManage_icon__GzYtg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.619 2.0918H5.81475C3.5085 2.0918 2.0625 3.72455 2.0625 6.03605V12.2715C2.0625 14.583 3.50175 16.2158 5.81475 16.2158H12.4327C14.7465 16.2158 16.1857 14.583 16.1857 12.2715V9.25055"
+                        stroke="#1B1B28"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M6.62097 8.19086L12.2257 2.58611C12.924 1.88861 14.0557 1.88861 14.754 2.58611L15.6667 3.49886C16.365 4.19711 16.365 5.32961 15.6667 6.02711L10.035 11.6589C9.72972 11.9641 9.31572 12.1359 8.88372 12.1359H6.07422L6.14472 9.30086C6.15522 8.88386 6.32547 8.48636 6.62097 8.19086Z"
+                        stroke="#1B1B28"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M11.373 3.45215L14.7975 6.87665"
+                        stroke="#1B1B28"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                    <span>Place Image</span>
+                  </p>
+                </label>
+              </div>
+            </div>
+            <div class="userProfileBottomSection">
+              <h3 class="userProfileBottomSectionTitle">
+                <span>Basic Info</span>
+                <svg
+                  class="ProfileManage_icon__GzYtg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.619 2.0918H5.81475C3.5085 2.0918 2.0625 3.72455 2.0625 6.03605V12.2715C2.0625 14.583 3.50175 16.2158 5.81475 16.2158H12.4327C14.7465 16.2158 16.1857 14.583 16.1857 12.2715V9.25055"
+                    stroke="#1B1B28"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M6.62097 8.19086L12.2257 2.58611C12.924 1.88861 14.0557 1.88861 14.754 2.58611L15.6667 3.49886C16.365 4.19711 16.365 5.32961 15.6667 6.02711L10.035 11.6589C9.72972 11.9641 9.31572 12.1359 8.88372 12.1359H6.07422L6.14472 9.30086C6.15522 8.88386 6.32547 8.48636 6.62097 8.19086Z"
+                    stroke="#1B1B28"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M11.373 3.45215L14.7975 6.87665"
+                    stroke="#1B1B28"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </h3>
+
+              <div class="userProfileBottomSectionBasicInfioForm">
+                <div class="FormFild">
+                  <div class="formFildSingalInput">
+                    <label class="formFildSingalInputLable" for="fristName"
+                      >First Name</label
+                    >
+                    <input
+                      type="text"
+                      id="fristName"
+                      name="fristName"
+                      placeholder="Feist Name"
+                    />
+                  </div>
+                  <div class="formFildSingalInput">
+                    <label class="formFildSingalInputLable" for="lastNamr"
+                      >Last Name</label
+                    >
+                    <input
+                      type="text"
+                      id="lastNamr"
+                      name="lastNamr"
+                      placeholder="Last Name"
+                    />
+                  </div>
+                </div>
+                <div class="FormFild">
+                  <div class="formFildSingalInput">
+                    <label class="formFildSingalInputLable" for="email"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Write Your Email Adderss"
+                    />
+                  </div>
+                </div>
+                <div class="FormFild">
+                  <div class="formFildSingalInput">
+                    <label class="formFildSingalInputLable" for="phone"
+                      >Mobile</label
+                    >
+                    <input
+                      type="text"
+                      id="phone"
+                      name="phone"
+                      placeholder="Write Your Phome Number"
+                    />
+                  </div>
+                  <div class="formFildSingalInput">
+                    <label class="formFildSingalInputLable" for="profession"
+                      >Profession</label
+                    >
+                    <input
+                      type="text"
+                      id="profession"
+                      name="profession"
+                      placeholder="Your Profession"
+                    />
+                  </div>
+                </div>
+                <div class="FormFild">
+                  <div class="formFildSingalInput">
+                    <label class="formFildSingalInputLable" for="birthday"
+                      >Birthday</label
+                    >
+                    <input
+                      type="date"
+                      id="birthday"
+                      name="birthday"
+                      placeholder="Birthday Day"
+                    />
+                  </div>
+                  <div class="formFildSingalInput formFildSingalInputGender">
+                    <p class="formFildSingalInputGenderTitle">Gender</p>
+                    <div class="formFildSingalInputGenderAllFild">
+                      <label class="formFildSingalInputGenderLable" for="mail">
+                        <input type="radio" name="gender" id="mail" />
+                        Mali
+                      </label>
+                      <label
+                        class="formFildSingalInputGenderLable"
+                        for="femali"
+                      >
+                        <input type="radio" name="gender" id="femali" />
+                        Femele
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="userProfileBottomSecuritySection">
+              <h3 class="userProfileBottomSectionTitle">
+                <span>Security</span>
+                <svg
+                  class="ProfileManage_icon__GzYtg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.619 2.0918H5.81475C3.5085 2.0918 2.0625 3.72455 2.0625 6.03605V12.2715C2.0625 14.583 3.50175 16.2158 5.81475 16.2158H12.4327C14.7465 16.2158 16.1857 14.583 16.1857 12.2715V9.25055"
+                    stroke="#1B1B28"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M6.62097 8.19086L12.2257 2.58611C12.924 1.88861 14.0557 1.88861 14.754 2.58611L15.6667 3.49886C16.365 4.19711 16.365 5.32961 15.6667 6.02711L10.035 11.6589C9.72972 11.9641 9.31572 12.1359 8.88372 12.1359H6.07422L6.14472 9.30086C6.15522 8.88386 6.32547 8.48636 6.62097 8.19086Z"
+                    stroke="#1B1B28"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M11.373 3.45215L14.7975 6.87665"
+                    stroke="#1B1B28"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </h3>
+
+              <div class="userProfileBottomSectionBasicInfioForm">
+                <div class="FormFild eaditePssword">
+                  <div class="formFildSingalInput billing_filed">
+                    <label class="formFildSingalInputLable">New Password</label>
+                    <input type="password" placeholder="New password" name="" />
+                    <i class="toggle-password fa fa-fw fa-eye-slash"></i>
+                    <!-- <label class="formFildSingalInputLable" for="phone">Old Password</label>
+                        <input type="password" id="phone" name="phone" placeholder="Old Password" > -->
+                  </div>
+                  <div class="formFildSingalInput billing_filed">
+                    <label class="formFildSingalInputLable"
+                      >Confirm Password</label
+                    >
+                    <input
+                      type="password"
+                      placeholder="Confirm password"
+                      name=""
+                    />
+                    <i class="toggle-password fa fa-fw fa-eye-slash"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="userProfileBottomSectionFormSaveAndCan">
+              <button type="button" class="cancelbtn s50ps">Cancel</button>
+              <button type="submit" class="savebtn s50ps">Save</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- End User Acount Main Contant -->
+      </div>
     </main>
 
     <!-- End User Acount -->
-   
-  <footer class="footer_area">
-    <div class="footer center-content flex-nowrap">
-      <div class="footer_widget">
-        <div class="footer_logo"><img src="assets/images/logo.svg" alt="logo" /></div>
-        <div class="subscribe_now">
-          <h4>Subscribe</h4>
-          <p>Get 10% off your first order</p>
-          <div class="subscribe_form">
-            <form action="#">
-              <input class="form-control" type="text" placeholder="Enter your email" name="">
-              <input type="submit" value="" name="">
-            </form>
+
+    <footer class="footer_area">
+      <div class="footer center-content flex-nowrap">
+        <div class="footer_widget">
+          <div class="footer_logo">
+            <img src="assets/images/logo.svg" alt="logo" />
+          </div>
+          <div class="subscribe_now">
+            <h4>Subscribe</h4>
+            <p>Get 10% off your first order</p>
+            <div class="subscribe_form">
+              <form action="#">
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Enter your email"
+                  name=""
+                />
+                <input type="submit" value="" name="" />
+              </form>
+            </div>
           </div>
         </div>
+        <div class="footer_widget">
+          <h4>Support</h4>
+          <p>
+            Nuruzzaman Road,<br />
+            Shyamoli, Dhaka.
+          </p>
+          <p>
+            <a href="mailto:info@saffroncorporation.com.bd "
+              >info@saffroncorporation.com.bd
+            </a>
+          </p>
+          <p><a href="tel:+88-02-48113179">+88-02-48113179</a></p>
+        </div>
+        <div class="footer_widget">
+          <h4>Account</h4>
+          <ul>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Login / Register</a></li>
+            <li><a href="#">Cart</a></li>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">Shop</a></li>
+          </ul>
+        </div>
+        <div class="footer_widget">
+          <h4>Quick Link</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms Of Use</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer_social">
+          <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+          <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+          <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </div>
       </div>
-      <div class="footer_widget">
-        <h4>Support</h4>
-        <p>Nuruzzaman Road,<br> Shyamoli, Dhaka.</p>
-        <p><a href="mailto:info@saffroncorporation.com.bd ">info@saffroncorporation.com.bd </a></p>
-        <p><a href="tel:+88-02-48113179">+88-02-48113179</a></p>
-      </div>
-      <div class="footer_widget">
-        <h4>Account</h4>
-        <ul>
-          <li><a href="#">My Account</a></li>
-          <li><a href="#">Login / Register</a></li>
-          <li><a href="#">Cart</a></li>
-          <li><a href="#">Wishlist</a></li>
-          <li><a href="#">Shop</a></li>
-        </ul>
-      </div>
-      <div class="footer_widget">
-        <h4>Quick Link</h4>
-        <ul>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms Of Use</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer_social">
-        <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-        <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-        <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
-        <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+    </footer>
+    <div class="copyright_area">
+      <p>&copy; Copyright Saffron 2024. All right reserved</p>
+    </div>
+    <div class="cart_pop_area">
+      <div class="cart_sidebar">
+        <h3>Shopping Cart</h3>
+        <div class="pop_close"></div>
+        <div class="cart_list_area">
+          <div class="cart_title"><h4>Monitor</h4></div>
+          <div class="cart_list_row flex-nowrap">
+            <label class="checkbox_item"
+              ><input type="checkbox" name="pw" /><span class="checkmark"></span
+            ></label>
+            <div class="cart_photo">
+              <img src="assets/images/product-image/Monitor.png" alt="" />
+            </div>
+            <div class="product_cart_info">
+              <h5>IPS LCD Gaming Monitor</h5>
+              <p class="productDetailsPrice">
+                <span class="discountPrice"
+                  >$<span class="singalProduvtPriceValue">960</span></span
+                >
+                <del>$1160</del>
+              </p>
+              <p class="productDetailsPrice">
+                Unite Total:
+                <span class="discountPrice"
+                  >$<span class="productToralPrice">960</span></span
+                >
+              </p>
+              <div class="product_add_or_remove flex-nowrap">
+                <div class="counterManiContant">
+                  <button class="couterBtn dickrement">
+                    <i class="fa fa-minus" aria-hidden="true"></i>
+                  </button>
+                  <div class="numberCount">
+                    <input type="text" readonly value="1" />
+                  </div>
+                  <button class="couterBtn increment">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="remove_cart"><span>Remove</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cart_list_row flex-nowrap">
+            <label class="checkbox_item"
+              ><input type="checkbox" name="pw" /><span class="checkmark"></span
+            ></label>
+            <div class="cart_photo">
+              <img src="assets/images/product-image/new_product1.png" alt="" />
+            </div>
+            <div class="product_cart_info">
+              <h5>IPS LCD Gaming Monitor</h5>
+              <p class="productDetailsPrice">
+                <span class="discountPrice"
+                  >$<span class="singalProduvtPriceValue">1059</span></span
+                >
+                <del>$1160</del>
+              </p>
+              <p class="productDetailsPrice">
+                Unite Total:
+                <span class="discountPrice"
+                  >$<span class="productToralPrice">1059</span></span
+                >
+              </p>
+              <div class="product_add_or_remove flex-nowrap">
+                <div class="counterManiContant">
+                  <button class="couterBtn dickrement">
+                    <i class="fa fa-minus" aria-hidden="true"></i>
+                  </button>
+                  <div class="numberCount">
+                    <input type="text" readonly value="1" />
+                  </div>
+                  <button class="couterBtn increment">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="remove_cart"><span>Remove</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cart_list_row flex-nowrap">
+            <label class="checkbox_item"
+              ><input type="checkbox" name="pw" /><span class="checkmark"></span
+            ></label>
+            <div class="cart_photo">
+              <img src="assets/images/product-image/new_product2.png" alt="" />
+            </div>
+            <div class="product_cart_info">
+              <h5>IPS LCD Gaming Monitor</h5>
+              <p class="productDetailsPrice">
+                <span class="discountPrice"
+                  >$<span class="singalProduvtPriceValue">1000</span></span
+                >
+                <del>$1160</del>
+              </p>
+              <p class="productDetailsPrice">
+                Unite Total:
+                <span class="discountPrice"
+                  >$<span class="productToralPrice">1000</span></span
+                >
+              </p>
+              <div class="product_add_or_remove flex-nowrap">
+                <div class="counterManiContant">
+                  <button class="couterBtn dickrement">
+                    <i class="fa fa-minus" aria-hidden="true"></i>
+                  </button>
+                  <div class="numberCount">
+                    <input type="text" readonly value="1" />
+                  </div>
+                  <button class="couterBtn increment">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="remove_cart"><span>Remove</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub_total_area">
+          <div class="sub_total_box flex-nowrap align-center">
+            <strong>Sub Total</strong>
+            <span> <span class="cardAllProductTotalPrice">0</span> TK</span>
+          </div>
+          <div class="checkout_btn">
+            <button class="checkout">Checkout</button>
+          </div>
+        </div>
       </div>
     </div>
-  </footer>
-  <div class="copyright_area"><p>&copy; Copyright Saffron 2024. All right reserved </p></div>
-  <div class="cart_pop_area">
-    <div class="cart_sidebar">
-      <h3>Shopping Cart</h3>
-      <div class="pop_close"></div>
-      <div class="cart_list_area">
-        <div class="cart_title"><h4>Monitor</h4></div>
-        <div class="cart_list_row flex-nowrap">
-          <label class="checkbox_item"><input type="checkbox" name="pw"><span class="checkmark"></span></label>
-          <div class="cart_photo"><img src="assets/images/product-image/Monitor.png" alt=""></div>
-          <div class="product_cart_info">
-            <h5>IPS LCD Gaming Monitor</h5>
-            <p class="productDetailsPrice"><span class="discountPrice">$<span class="singalProduvtPriceValue">960</span></span> <del>$1160</del></p>
-            <p class="productDetailsPrice">Unite Total: <span class="discountPrice">$<span class="productToralPrice">960</span></span></p>
-            <div class="product_add_or_remove flex-nowrap">
-              <div class="counterManiContant">
-                <button class="couterBtn dickrement">
-                  <i class="fa fa-minus" aria-hidden="true"></i>
-                </button>
-                <div class="numberCount"><input type="text" readonly value="1"/></div>
-                <button class="couterBtn increment">
-                  <i class="fa fa-plus" aria-hidden="true"></i>
-                </button>
-              </div>
-              <div class="remove_cart"><span>Remove</span></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="cart_list_row flex-nowrap">
-          <label class="checkbox_item"><input type="checkbox" name="pw"><span class="checkmark"></span></label>
-          <div class="cart_photo"><img src="assets/images/product-image/new_product1.png" alt=""></div>
-          <div class="product_cart_info">
-            <h5>IPS LCD Gaming Monitor</h5>
-            <p class="productDetailsPrice"><span class="discountPrice">$<span class="singalProduvtPriceValue">1059</span></span> <del>$1160</del></p>
-            <p class="productDetailsPrice">Unite Total: <span class="discountPrice ">$<span class="productToralPrice">1059</span></span></p>
-            <div class="product_add_or_remove flex-nowrap">
-             <div class="counterManiContant">
-                <button class="couterBtn dickrement">
-                  <i class="fa fa-minus" aria-hidden="true"></i>
-                </button>
-                <div class="numberCount"><input type="text" readonly value="1"/></div>
-                <button class="couterBtn increment">
-                  <i class="fa fa-plus" aria-hidden="true"></i>
-                </button>
-              </div>
-              <div class="remove_cart"><span>Remove</span></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="cart_list_row flex-nowrap">
-          <label class="checkbox_item"><input type="checkbox" name="pw"><span class="checkmark"></span></label>
-          <div class="cart_photo"><img src="assets/images/product-image/new_product2.png" alt=""></div>
-          <div class="product_cart_info">
-            <h5>IPS LCD Gaming Monitor</h5>
-            <p class="productDetailsPrice"><span class="discountPrice">$<span class="singalProduvtPriceValue">1000</span></span> <del>$1160</del></p>
-            <p class="productDetailsPrice">Unite Total: <span class="discountPrice ">$<span class="productToralPrice">1000</span></span></p>
-            <div class="product_add_or_remove flex-nowrap">
-             <div class="counterManiContant">
-                <button class="couterBtn dickrement">
-                  <i class="fa fa-minus" aria-hidden="true"></i>
-                </button>
-                <div class="numberCount"><input type="text" readonly value="1"/></div>
-                <button class="couterBtn increment">
-                  <i class="fa fa-plus" aria-hidden="true"></i>
-                </button>
-              </div>
-              <div class="remove_cart"><span>Remove</span></div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="sub_total_area">
-        <div class="sub_total_box flex-nowrap align-center">
-          <strong>Sub Total</strong>
-          <span> <span class="cardAllProductTotalPrice">0</span> TK</span>
-        </div>
-        <div class="checkout_btn"><button class="checkout">Checkout</button></div>
-      </div>
-
-    </div>
-  </div>
     <!-- <div class="loader_area"></div> -->
 
     <a id="backbutton"></a>

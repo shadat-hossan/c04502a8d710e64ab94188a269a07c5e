@@ -1,26 +1,35 @@
+// The Script is a page Loding
+window.onload = function () {
+  if (window.onload) {
+    setTimeout(function () {
+      document.getElementById("loadingMessage").style.display = "none";
+    }, 1000);
+  } else {
+    document.getElementById("loadingMessage").style.display = "block";
+  }
+};
 
 if (matchMedia("only screen and (max-width: 768px)").matches) {
-jQuery(".menu_bar").click(function () {
-  jQuery(".categorie_dropdown").slideToggle(400);
-});
-
-jQuery(document).ready(function () {
-  // jQuery(document).on("click", function (e) {
-  //   if (!$(e.target).closest(".menu_box").length) {
-  //     $(".categorie_dropdown").slideUp();
-  //   }
-  // });
-
-  // jQuery(".menu_bar").on("click", function () {
-  //   jQuery(this).siblings(".categorie_dropdown").slideToggle();
-  // });
-
-  $(".categorie_dropdown ul > li.drop_child > a").click(function () {
-    $(this).toggleClass("active");
-    $(this).next("ul").slideToggle("slow");
+  jQuery(".menu_bar").click(function () {
+    jQuery(".categorie_dropdown").slideToggle(400);
   });
 
-});
+  jQuery(document).ready(function () {
+    // jQuery(document).on("click", function (e) {
+    //   if (!$(e.target).closest(".menu_box").length) {
+    //     $(".categorie_dropdown").slideUp();
+    //   }
+    // });
+
+    // jQuery(".menu_bar").on("click", function () {
+    //   jQuery(this).siblings(".categorie_dropdown").slideToggle();
+    // });
+
+    $(".categorie_dropdown ul > li.drop_child > a").click(function () {
+      $(this).toggleClass("active");
+      $(this).next("ul").slideToggle("slow");
+    });
+  });
 }
 $(document).ready(function () {
   $(".user_login").click(function () {
@@ -49,8 +58,6 @@ $(document).ready(function () {
     });
   });
 });
-
-
 
 // Flash Sales Time functionality
 
@@ -98,4 +105,3 @@ initializeClock("clockdiv", deadline);
 
 var deadline2 = new Date(Date.parse(new Date()) + 7 * 24 * 60 * 60 * 1000); // Day : hours : minutes : secounds
 initializeClock("clockdiv2", deadline2);
-
