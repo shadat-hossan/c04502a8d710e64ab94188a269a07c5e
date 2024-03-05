@@ -7,6 +7,8 @@
 document.querySelectorAll(".item .dickrement, .rightProductfullDetails .dickrement").forEach(element => {
   element.addEventListener("click", () => {
     const input = element.parentElement.querySelector("input");
+    const hidenQuentityValue= document.querySelector("#hidenQuentityValue");
+    hidenQuentityValue.value = input.value;
     input.value = Math.max(parseInt(input.value) - 1, 1);
     input.dispatchEvent(new Event("change"));
     return false;
@@ -17,7 +19,9 @@ document.querySelectorAll(".item .increment, .rightProductfullDetails .increment
   element.addEventListener("click", () => {
     const input = element.parentElement.querySelector("input");
     const productTotalPrice = element.parentElement.querySelector('[class*="productTotalPrice"]');
+    const hidenQuentityValue= document.querySelector("#hidenQuentityValue");
     input.value = parseInt(input.value) + 1;
+    hidenQuentityValue.value = input.value;
     input.dispatchEvent(new Event("change"));
     productTotalPrice.innerText = "1000";
     return false;

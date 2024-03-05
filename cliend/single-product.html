@@ -248,7 +248,7 @@
           <div class="rightProductfullDetails">
             <div class="rightProductfullDetailsTopContent mb-10">
                 <h3 class="singalProductName mb-10">Havic HV G-92 Gamepad</h3>
-                <form action="#">
+                <form action="#" id="singProFirstForm">
                 <div class="singalProductReviowAndStock mb-10">
                   <div class="rateStar">
                     <div class="rating-star">
@@ -301,34 +301,34 @@
                 <div class="singalProductColor mb-10">
                   <h3 class="singalProductColorTitle">Colours:</h3>
                   <label for="parpal">
-                    <input type="radio" name="color" id="parpal" />
+                    <input type="radio" name="color" value="parpal" id="parpal" />
                     <span class="color1"></span>
                   </label>
                   <label for="yellow">
-                    <input type="radio" name="color" id="yellow" />
+                    <input type="radio" name="color" value="yellow" id="yellow" />
                     <span class="color2"></span>
                   </label>
                 </div>
                 <div class="singalProductSize mb-10">
                   <h3 class="singalProductColorTitle">Size:</h3>
                   <label for="xs">
-                    <input type="radio" name="size" id="xs" />
+                    <input type="radio"" name="size" value="xs" id="xs" />
                     <span>XS</span>
                   </label>
                   <label for="s">
-                    <input type="radio" name="size" id="s" />
+                    <input type="radio" name="size" value="s" id="s" />
                     <span>S</span>
                   </label>
                   <label for="m">
-                    <input type="radio" name="size" id="m" />
+                    <input type="radio" name="size" value="m" id="m" />
                     <span>M</span>
                   </label>
                   <label for="l">
-                    <input type="radio" name="size" id="l" />
+                    <input type="radio" name="size" value="l" id="l" />
                     <span>L</span>
                   </label>
                   <label for="xxl">
-                    <input type="radio" name="size" id="xxl" />
+                    <input type="radio" name="size"  value="xxl" id="xxl" />
                     <span>XL</span>
                   </label>
                 </div>
@@ -348,9 +348,56 @@
                     <button type="submit">Buy Now</button>
                   </div>
                 </form>
+
+
                   <!-- Add to Card -->
+
                 <form action="#">
                  <div class="singalProductBayNowBtn">
+                   <div class="singalProductBayNowBtnAddCartHideSce">
+                    <div class="singalProductPrice mb-10">
+                      <input type="text" value="600" id="singProSecondFormInputPrice" readonly name="ProductPrice" />
+                    </div>
+                    <div class="singalProductColorSecond mb-10">
+                      <label for="parpal">
+                        <input type="radio" name="colorHide" value="parpal" id="parpal" />
+                        <span class="color1"></span>
+                      </label>`
+                      <label for="yellow">
+                        <input type="radio" name="colorHide" value="yellow" id="yellow" />
+                        <span class="color2"></span>
+                      </label>
+                    </div>
+
+                    <div class="singalProductSizeSecond mb-10">
+                      <label for="xs">
+                        <input type="radio" name="sizeHidden" value="xs" id="xs" />
+                        <span>XS</span>
+                      </label>
+                  <label for="s">
+                    <input type="radio" name="sizeHidden" value="s" id="s" />
+                    <span>S</span>
+                  </label>
+                  <label for="m">
+                    <input type="radio" name="sizeHidden" value="m" id="m" />
+                    <span>M</span>
+                  </label>
+                  <label for="l">
+                    <input type="radio" name="sizeHidden" value="l" id="l" />
+                    <span>L</span>
+                  </label>
+                  <label for="xxl">
+                    <input type="radio" name="sizeHidden" value="xxl" id="xxl" />
+                    <span>XL</span>
+                  </label>
+                </div>
+
+                <div class="counterManiContant">
+                  <div class="numberCount"><input type="text" value="1" id="hidenQuentityValue"/></div>
+                </div>
+
+
+                   </div>
                     <button type="submit">Add to Cart</button>
                   </div>
                 </form>
@@ -928,7 +975,7 @@
 
     <a id="backbutton"></a>
 
-    <script src="assets/js/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="assets/js/index.js"></script> 
     <script src="assets/js/product.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
