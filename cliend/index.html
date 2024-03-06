@@ -2630,13 +2630,6 @@
     <script src="assets/js/zoomsl.js"></script>
 
     <script>
-      $(document).ready(function () {
-        $(".xzooms").imagezoomsl({
-          zoomrange: [3, 3],
-        });
-      });
-    </script>
-    <script>
       $(".allProduct").owlCarousel({
         loop: false,
         margin: 30,
@@ -2734,6 +2727,15 @@
             dotsEach: 2,
           },
         },
+      });
+    </script>
+    <script src="assets/js/zoomsl.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".xzooms").imagezoomsl({
+          zoomrange: [3, 3],
+        });
       });
     </script>
   </body>

@@ -68,3 +68,201 @@
 .cartRemoveConfirmationBtn button:last-child {
   background: #d61818;
 }
+
+
+/* === Start Contant Form Style === */
+
+.e-commerceContan {
+  margin: 30px 0;
+  /* background-color: #44444459; */
+  display: flex;
+  gap: 15px;
+  padding: 20px 0;
+}
+
+.e-commerceContan  .contantLeftContant{
+  flex: 30%;
+  background: rgba(255, 255, 255, 1);
+  padding: 30px 22px;
+  border-radius: 5px;
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.05)
+}
+
+.e-commerceContan  .contantLeftContantCall{
+  padding-bottom: 30px;
+  border-bottom: 1px solid #a7a7a7;
+}
+
+.e-commerceContan .callTitle{
+  width: 100%;
+  display: flex;
+  align-items: center !important;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.e-commerceContan .Titlelogo{
+  width: 40px;
+  height: 40px;
+  background: rgb(214, 53, 53);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.e-commerceContan .callTitle h4{
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.e-commerceContan .contantLeftContantCall p{
+  line-height: 30px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.e-commerceContan .contantLeftContantMessage{
+  padding-top: 30px;
+}
+
+.e-commerceContan .contantLeftContantMessage p{
+  line-height: 30px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.e-commerceContan .contantLeftContantMessageTime{
+  line-height: 24px !important;
+  margin-bottom: 5px;
+}
+
+
+.e-commerceContan .contantLeftForm{
+  flex: 70%;
+  background: rgba(255, 255, 255, 1);
+  padding: 30px 22px;
+  border-radius: 5px;
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.05);
+}
+
+.e-commerceContan .contantLeftForm form{
+  display: flex;
+  row-gap: 30px;
+  flex-direction: column;
+}
+
+
+.contantLeftFormTopInput{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+.contantLeftFormTopInput label{
+  width: 35%;
+}
+
+.contantLeftFormTopInput label input{
+  display: inline-block;
+  height: 30px;
+  padding: 20px 10px;
+  border-radius: 5px;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  background: #F5F5F5;
+  font-family: "Inter", sans-serif;
+}
+.contantLeftFormTopInput label input::placeholder{
+  color: #a7a7a7;
+}
+
+.contantLeftFormBottomMessage{
+  width: 100%;
+}
+
+.contantLeftFormBottomMessage label{
+  width: 100%;
+}
+
+.contantLeftFormBottomMessage label #contantMessage{
+  width: 100%;
+  border: none;
+  background: #F5F5F5;
+  font-size: 16px;
+  resize: none;
+  outline: none;
+  height: 200px;
+  padding: 20px 10px;
+  border-radius: 5px;
+  font-family: "Inter", sans-serif;
+}
+
+.contantLeftFormBottomMessage label #contantMessage::placeholder{
+  color: #a7a7a7;
+}
+
+.contantLeftForm .contantLeftFormSubmitBtn{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contantLeftForm .contantLeftFormSubmitBtn button{
+  padding: 15px 25px;
+  border: none;
+  font-size: 17px;
+  background: #d61818;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all .2s;
+}
+.contantLeftForm .contantLeftFormSubmitBtn button:hover{
+  background: #d44040;
+
+}
+
+@media screen and (max-width: 1200px) {
+  .e-commerceContan{
+    padding: 20px;
+    
+  } 
+}
+
+@media screen and (max-width: 992px) {
+  .e-commerceContan{
+  margin-top: 30px !important;
+  }
+  .e-commerceContan .contantLeftContant{
+    flex: 40%;
+  }
+  .e-commerceContan .contantLeftForm{
+    flex: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .e-commerceContan{
+    display: block;
+    row-gap: 20px;
+    
+  }
+  .e-commerceContan .contantLeftForm{
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 662px) {
+  .contantLeftFormTopInput{
+    flex-direction: column;
+  }
+  .contantLeftFormTopInput label{
+    width: 100%;
+  }
+}
+
+
+/* === End Contant Form Style === */
