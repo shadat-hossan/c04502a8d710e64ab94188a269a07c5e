@@ -264,5 +264,42 @@
   }
 }
 
-
 /* === End Contant Form Style === */
+
+
+/* == Extra form desine == */
+
+.userProfileAllProduct #priceCalco,
+.userProfileAllProduct #priceCalco td{
+  border: 1px solid #888888;
+}
+
+.userProfileAllProduct #priceCalco{
+  width: 100%;
+}
+
+.userProfileAllProduct #priceCalco th,
+.userProfileAllProduct #priceCalco td{
+  padding: 10px;
+  border: 1px solid #a8a8a8;
+  text-align: center;
+}
+
+.userProfileAllProduct #priceCalco input{
+  border: none;
+  outline: none;
+  display: inline-block;
+  text-align: center;
+}
+
+#TotalValueSomeResult #allProductName{
+  width: 100%;
+}
+
+#TotalValueSomeResultEmtye{
+  visibility: hidden;
+}
+
+.sub_total_area .sidbarHidenCard{
+  display: none;
+}

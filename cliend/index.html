@@ -58,7 +58,7 @@
               <a class="wishlist_icon" href="wishlist.html"></a>
             </div>
             <div class="cart_icon_box">
-              <span class="cart_icon_small" title="Cart"><small>3</small></span>
+              <span class="cart_icon_small" title="Cart"></span>
             </div>
             <div class="user_area">
               <div class="user_login" title="Account"></div>
@@ -2233,7 +2233,7 @@
         <div class="pop_close"></div>
         <div class="cart_list_area">
           <div class="cart_title"><h4>Monitor</h4></div>
-          <div class="cart_list_row flex-nowrap">
+          <div class="cart_list_row flex-nowrap" id="product1">
             <label class="checkbox_item"
               ><input type="checkbox" name="pw" /><span class="checkmark"></span
             ></label>
@@ -2251,27 +2251,27 @@
               <p class="productDetailsPrice">
                 Unite Total:
                 <span class="discountPrice"
-                  >$<span class="productToralPrice">960</span></span
+                  >$<span class="productToralPrice"></span></span
                 >
               </p>
               <div class="product_add_or_remove flex-nowrap">
                 <div class="counterManiContant">
-                  <button class="couterBtn dickrement">
+                  <div class="couterBtn dickrement" type="button">
                     <i class="fa fa-minus" aria-hidden="true"></i>
-                  </button>
-                  <div class="numberCount">
-                    <input type="text" readonly value="1" />
                   </div>
-                  <button class="couterBtn increment">
-                    <i class="fa fa-plus" aria-hidden="true"></i>
-                  </button>
+                  <div class="numberCount">
+                    <input type="text" readonly value="1" name="quentite" />
+                  </div>
+                  <div class="couterBtn increment">
+                    <i class="fa fa-plus" aria-hidden="true" type="button"></i>
+                  </div>
                 </div>
                 <div class="remove_cart"><span>Remove</span></div>
               </div>
             </div>
           </div>
 
-          <div class="cart_list_row flex-nowrap">
+          <div class="cart_list_row flex-nowrap" id="product2">
             <label class="checkbox_item"
               ><input type="checkbox" name="pw" /><span class="checkmark"></span
             ></label>
@@ -2289,27 +2289,27 @@
               <p class="productDetailsPrice">
                 Unite Total:
                 <span class="discountPrice"
-                  >$<span class="productToralPrice">1059</span></span
+                  >$<span class="productToralPrice"></span></span
                 >
               </p>
               <div class="product_add_or_remove flex-nowrap">
                 <div class="counterManiContant">
-                  <button class="couterBtn dickrement">
+                  <div class="couterBtn dickrement" type="button">
                     <i class="fa fa-minus" aria-hidden="true"></i>
-                  </button>
-                  <div class="numberCount">
-                    <input type="text" readonly value="1" />
                   </div>
-                  <button class="couterBtn increment">
+                  <div class="numberCount">
+                    <input type="text" readonly value="1" name="quentite" />
+                  </div>
+                  <div class="couterBtn increment" type="button">
                     <i class="fa fa-plus" aria-hidden="true"></i>
-                  </button>
+                  </div>
                 </div>
                 <div class="remove_cart"><span>Remove</span></div>
               </div>
             </div>
           </div>
 
-          <div class="cart_list_row flex-nowrap">
+          <div class="cart_list_row flex-nowrap" id="product3">
             <label class="checkbox_item"
               ><input type="checkbox" name="pw" /><span class="checkmark"></span
             ></label>
@@ -2327,35 +2327,40 @@
               <p class="productDetailsPrice">
                 Unite Total:
                 <span class="discountPrice"
-                  >$<span class="productToralPrice">1000</span></span
+                  >$<span class="productToralPrice"></span></span
                 >
               </p>
               <div class="product_add_or_remove flex-nowrap">
                 <div class="counterManiContant">
-                  <button class="couterBtn dickrement">
+                  <div class="couterBtn dickrement" type="button">
                     <i class="fa fa-minus" aria-hidden="true"></i>
-                  </button>
-                  <div class="numberCount">
-                    <input type="text" readonly value="1" />
                   </div>
-                  <button class="couterBtn increment">
+                  <div class="numberCount">
+                    <input type="text" readonly value="1" name="quentite" />
+                  </div>
+                  <div class="couterBtn increment" type="button">
                     <i class="fa fa-plus" aria-hidden="true"></i>
-                  </button>
+                  </div>
                 </div>
                 <div class="remove_cart"><span>Remove</span></div>
               </div>
             </div>
-          </div>
+          </div>   
         </div>
 
         <div class="sub_total_area">
+          <form action="#">
+            <div class="sidbarHidenCard">
+
+            </div>
           <div class="sub_total_box flex-nowrap align-center">
             <strong>Sub Total</strong>
             <span> <span class="cardAllProductTotalPrice">0</span> TK</span>
           </div>
           <div class="checkout_btn">
-            <button class="checkout">Checkout</button>
+            <button class="checkout" type="submit">Checkout</button>
           </div>
+        </form>
         </div>
       </div>
     </div>
@@ -2627,7 +2632,7 @@
     <script src="assets/js/jquery.fancybox.min.js"></script>
     <script src="assets/js/jquery-ui.min.js"></script>
     <script src="assets/js/cart.js"></script>
-    <script src="assets/js/zoomsl.js"></script>
+    <!-- <script src="assets/js/zoomsl.js"></script> -->
 
     <script>
       $(".allProduct").owlCarousel({
