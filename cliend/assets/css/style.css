@@ -1,3 +1,5 @@
+@import url("./config.css");
+
 html,
 body,
 div,
@@ -3841,6 +3843,10 @@ span.gaterthan {
   top: 20%;
   left: 20%;
   box-shadow: 0 3px 0 0 #df1317;
+}
+
+.singalProductBayNowBtnAddCartHideSce{
+  display: none;
 }
 
 @keyframes ldio-3jczv0zjjlz {

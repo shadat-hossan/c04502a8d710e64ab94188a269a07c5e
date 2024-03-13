@@ -4,9 +4,24 @@
 ===== */
 
 
+const cartIconSmall = document.querySelector(".cart_icon_small");
+const cartListRowItem = document.querySelectorAll(".cart_list_area .cart_list_row");
+const smallElement = document.createElement("small");
+
+smallElement.innerHTML = cartListRowItem.length;
+
+cartIconSmall.appendChild(smallElement)
+
+
+
+
 document.querySelectorAll(".item .dickrement, .rightProductfullDetails .dickrement").forEach(element => {
   element.addEventListener("click", () => {
     const input = element.parentElement.querySelector("input");
+    const hidenQuentityValue= document.querySelector("#hidenQuentityValue");
+    if(hidenQuentityValue){
+      hidenQuentityValue.value = input.value;
+    }
     input.value = Math.max(parseInt(input.value) - 1, 1);
     input.dispatchEvent(new Event("change"));
     return false;
@@ -17,9 +32,15 @@ document.querySelectorAll(".item .increment, .rightProductfullDetails .increment
   element.addEventListener("click", () => {
     const input = element.parentElement.querySelector("input");
     const productTotalPrice = element.parentElement.querySelector('[class*="productTotalPrice"]');
+    const hidenQuentityValue= document.querySelector("#hidenQuentityValue");
     input.value = parseInt(input.value) + 1;
+    if(hidenQuentityValue){
+      hidenQuentityValue.value = input.value;
+    }
     input.dispatchEvent(new Event("change"));
-    productTotalPrice.innerText = "1000";
+    if(productTotalPrice){
+      productTotalPrice.innerText = "1000";
+    }
     return false;
   });
 });
@@ -139,6 +160,12 @@ $(document).ready(function () {
         });
       });
 
+
+    document.querySelectorAll(".singalProduvtPriceValue").forEach(item =>{
+      const priceTotal = item.closest(".cart_list_row").querySelector(".productToralPrice");
+      priceTotal.innerHTML = item.textContent;
+    })
+
       // The Script is work for dickrement value (twitter.com/Shahada37834874).
 
     document.querySelectorAll(".dickrement").forEach(button => {
@@ -154,6 +181,8 @@ $(document).ready(function () {
           const cardAllProductTotalPrice = document.querySelector(".cardAllProductTotalPrice");
           const cardAllProductTotalPriceInt = parseInt(cardAllProductTotalPrice.textContent);
           const inputCheckbox = button.closest(".cart_list_row").querySelector(".checkbox_item input");
+          const sidbarHidenCard = document.querySelector(".sidbarHidenCard");
+          const singalProduct = button.closest(".cart_list_row");
 
           if (inputCheckbox.checked) {
             cardAllProductTotalPrice.textContent = cardAllProductTotalPriceInt - parseInt(singalProduvtPriceValue);
@@ -161,9 +190,20 @@ $(document).ready(function () {
 
           productTotalPriceElemrnt.textContent = newTotalPrice;
           input.value = inoutValueNumber - 1;
+
+          const productsInSidebar = sidbarHidenCard.querySelectorAll(".cart_list_row");
+          productsInSidebar.forEach(product => {
+            if (product.getAttribute("id") === singalProduct.getAttribute("id")) {
+              const updatequentite = product.querySelector(".numberCount input");
+              updatequentite.value = input.value;
+            }
+          });
         }
 
         input.dispatchEvent(new Event("change"));
+
+       
+
         return false;
       });
     });
@@ -181,6 +221,8 @@ $(document).ready(function () {
         const cardAllProductTotalPriceInt = parseInt(cardAllProductTotalPrice.textContent);
         const productTotalPriceElemrntInt = parseInt(productTotalPriceElemrnt.textContent);
         const inputCheckbox = button.closest(".cart_list_row").querySelector(".checkbox_item input");
+        const sidbarHidenCard = document.querySelector(".sidbarHidenCard");
+        const singalProduct = button.closest(".cart_list_row");
 
         if (inputCheckbox.checked) {
           cardAllProductTotalPrice.textContent = cardAllProductTotalPriceInt + parseInt(singalProduvtPriceValue);
@@ -190,6 +232,17 @@ $(document).ready(function () {
 
         input.value = inoutValueNumber + 1;
         input.dispatchEvent(new Event("change"));
+
+        const productsInSidebar = sidbarHidenCard.querySelectorAll(".cart_list_row");
+          productsInSidebar.forEach(product => {
+            if (product.getAttribute("id") === singalProduct.getAttribute("id")) {
+              const updatequentite = product.querySelector(".numberCount input");
+              updatequentite.value = input.value;
+            }
+          });
+
+
+
         return false;
       });
     });
@@ -202,11 +255,29 @@ $(document).ready(function () {
         const cardAllProductTotalPrice = document.querySelector(".cardAllProductTotalPrice");
         const cardAllProductTotalPriceInt = parseInt(cardAllProductTotalPrice.textContent);
         const productTotalPriceElemrntInt = parseInt(checkmark.parentNode.parentNode.querySelector(".productToralPrice").textContent);
+        const sidbarHidenCard = document.querySelector(".sidbarHidenCard");
+        const singalProduct = checkmark.closest(".cart_list_row");
+        let clonedProduct = singalProduct.cloneNode(true);
+    
+        if (!inputCheckbox.checked) {
+          cardAllProductTotalPrice.textContent = cardAllProductTotalPriceInt + productTotalPriceElemrntInt;
+          sidbarHidenCard.appendChild(clonedProduct);
+        } else {
+          cardAllProductTotalPrice.textContent = cardAllProductTotalPriceInt - productTotalPriceElemrntInt;
+    
 
-        cardAllProductTotalPrice.textContent = inputCheckbox.checked ? cardAllProductTotalPriceInt - productTotalPriceElemrntInt : cardAllProductTotalPriceInt + productTotalPriceElemrntInt;
+          const productsInSidebar = sidbarHidenCard.querySelectorAll(".cart_list_row");
+          productsInSidebar.forEach(product => {
+            if (product.getAttribute("id") === singalProduct.getAttribute("id")) {
+              sidbarHidenCard.removeChild(product);
+            }
+          });
+        }
       });
     });
-
+    
+    
+  
     // The Script is work for cart remove Product (twitter.com/Shahada37834874).
 
     document.querySelectorAll(".cart_list_row .remove_cart").forEach(remove => {
@@ -219,7 +290,9 @@ $(document).ready(function () {
         const cartRemoveConfirmation = document.querySelector(".cartRemoveConfirmationPopupBox");
         const removeConfirm = document.querySelector(".cartRemoveConfirmationBtn .removeConfirm");
         const removeCancel = document.querySelector(".cartRemoveConfirmationBtn .removeCancel");
-
+        const sidbarHidenCard = document.querySelector(".sidbarHidenCard");
+        const singalProduct = remove.closest(".cart_list_row");
+        
         removeConfirm.addEventListener("click", () => {
           cartRemoveConfirmation.classList.remove("sdowConPo");
           if (cartListRow) cartListRow.remove();
@@ -227,12 +300,23 @@ $(document).ready(function () {
           else cardAllProductTotalPrice.textContent = cardAllProductTotalPriceInt;
         });
 
+        const productsInSidebar = sidbarHidenCard.querySelectorAll(".cart_list_row");
+          productsInSidebar.forEach(product => {
+            if (product.getAttribute("id") === singalProduct.getAttribute("id")) {
+              sidbarHidenCard.removeChild(product);
+            }
+          });
+
+
         removeCancel.addEventListener("click", () => {
           cartRemoveConfirmation.classList.remove("sdowConPo");
         });
 
         cartRemoveConfirmation.classList.add("sdowConPo");
       });
+
+
+
     });
 
     // The Script is work for Close cart bar (twitter.com/Shahada37834874).
@@ -246,3 +330,42 @@ $(document).ready(function () {
     });
   });
 });
+
+
+// === exrta table desine (twitter.com/Shahada37834874)
+
+const allTotalPriceInput = document.querySelector("#TotalValueSomeResult #allTotalPrice input");
+
+function updateTotalPrice() {
+  let totalPriceSome = 0;
+  document.querySelectorAll("#priceCalco #productPrice input").forEach((item) => {
+    const { value: productPrice } = item;
+    const { value: productQuantiy } = item.closest("tr").querySelector("#productQuantiy input");
+    const totalPriceInput = item.closest("tr").querySelector("#totalPrice input");
+
+    const totalPriceMany = +productPrice * +productQuantiy;
+
+    totalPriceInput.value = totalPriceMany;
+    totalPriceSome += totalPriceMany;
+  });
+
+  allTotalPriceInput.value = totalPriceSome;
+}
+
+updateTotalPrice();
+document.querySelectorAll("#priceCalco #productPrice input").forEach((item) => {
+  item.addEventListener('input', updateTotalPrice);
+});
+
+
+// This is input Chinge Event
+document.querySelectorAll("#priceCalco #productQuantiy input").forEach((item) => {
+  item.addEventListener('input', updateTotalPrice);
+});
+
+
+// Count a all Product Item;
+
+
+
+
