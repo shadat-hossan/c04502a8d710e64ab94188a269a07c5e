@@ -4012,3 +4012,8 @@ span.gaterthan {
       left: 170px;
     }
   }
+
+.category_product_area .View_allProduct,
+.flashSalesCard {
+  width: 100%;
+}
