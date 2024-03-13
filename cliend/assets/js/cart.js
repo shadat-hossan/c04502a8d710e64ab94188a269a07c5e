@@ -55,6 +55,26 @@ document.querySelectorAll(".add_wishlist").forEach(element => {
   });
 });
 
+// The Script is billing all Product price some return
+const cartListwrap = document.querySelectorAll(".cart_list_item .cart_list_item_price");
+var bTotalItem = document.querySelector(".total_item .total_item_value");
+var cartListItemShipping = document.querySelector(".cart_list_item .cart_list_item_shipping")
+var bTotalItemValueWidthShipping = document.querySelector(".total_item_value_width_shipping");
+
+if(cartListwrap){
+  var bTotalPrice = 0;
+  cartListwrap.forEach(function(item) {
+    var itemProductPrice = parseInt(item.textContent.substring(1));
+    bTotalPrice += itemProductPrice;
+  });
+  bTotalItem.innerHTML = bTotalPrice;
+  
+  var cartListItemShippingInt = parseInt(cartListItemShipping.textContent.substring(1));
+  bTotalPrice += cartListItemShippingInt
+  
+  bTotalItemValueWidthShipping.innerHTML= bTotalPrice
+}
+
 $(document).ready(function () {
   $(".single-product-view").click(function () {
     $(".product_popup_area").fadeToggle("slow");
@@ -349,7 +369,9 @@ function updateTotalPrice() {
     totalPriceSome += totalPriceMany;
   });
 
-  allTotalPriceInput.value = totalPriceSome;
+  if(allTotalPriceInput){
+    allTotalPriceInput.value = totalPriceSome;
+  }
 }
 
 updateTotalPrice();
@@ -364,7 +386,8 @@ document.querySelectorAll("#priceCalco #productQuantiy input").forEach((item) =>
 });
 
 
-// Count a all Product Item;
+
+
 
 
 
