@@ -203,7 +203,7 @@
             >
               <h4>Shipping Address</h4>
               <div class="new_address_add">
-                <a class="btnOpenForm" href="javascript:void(0)"
+                <a class="opennewaddress" href="javascript:void(0)"
                   ><i class="fa fa-plus-square"></i>New Address</a
                 >
               </div>
@@ -211,7 +211,7 @@
 
             <div class="address_box_item flex-wrap">
               <div class="address_box_row">
-                <div class="edit_address btnOpenForm">Edit</div>
+                <div class="edit_address editaddress_pop">Edit</div>
                 <div class="address_box_line flex-wrap">
                   <p>Name:</p>
                   <p class="p-info">Jahangir Alam Uzzal</p>
@@ -322,7 +322,112 @@
     </form>
 
 
-    <div class="billing_form_area form-popup-bg">
+    <div id="editmyaccount" class="billing_form_area form-popup-bg">
+      <div class="billing_form">
+        <form action="#">
+          <div class="billing_filed_row flex-wrap">
+            <div class="billing_filed">
+              <label>First Name *</label>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter your first name"
+                name=""
+              />
+            </div>
+            <div class="billing_filed">
+              <label>Last Name *</label>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter your last name"
+                name=""
+              />
+            </div>
+          </div>
+          <div class="billing_filed_row flex-wrap">
+            <div class="billing_filed">
+              <label>Phone *</label>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter your phone number"
+                name=""
+              />
+            </div>
+            <div class="billing_filed">
+              <label>Email Address</label>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter your email"
+                name=""
+              />
+            </div>
+          </div>
+          <div class="billing_filed_row flex-wrap">
+            <div class="billing_filed">
+              <label>Country *</label>
+              <select class="form-control">
+                <option>Bangladesh</option>
+              </select>
+            </div>
+            <div class="billing_filed">
+              <label>City *</label>
+              <select class="form-control">
+                <option>Dhaka</option>
+                <option>Mymensingh</option>
+                <option>Sylhet</option>
+                <option>Chattogram</option>
+              </select>
+            </div>
+          </div>
+          <div class="billing_filed_row flex-wrap">
+            <div class="billing_filed">
+              <label>Area *</label>
+              <select class="form-control">
+                <option>Shyamoli</option>
+                <option>Mirpur</option>
+                <option>Khilkhet</option>
+              </select>
+            </div>
+            <div class="billing_filed">
+              <label>Street Address *</label>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter your street Address"
+                name=""
+              />
+            </div>
+          </div>
+          <div class="billing_filed_row flex-wrap">
+            <div class="billing_filed">
+              <label>Postal Code *</label>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter your street Address"
+                name=""
+              />
+            </div>
+            <div class="billing_filed">
+              <label>Location Type *</label>
+              <select class="form-control">
+                <option>Home</option>
+                <option>Office</option>
+              </select>
+            </div>
+          </div>
+          <div class="form_submit_box flex-nowrap">
+            <div class="btnCloseForm">Cancel</div>
+            <button type="submit" class="save_info">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="newaddress" class="billing_form_area form-popup-bg">
       <div class="billing_form">
         <form action="#">
           <div class="billing_filed_row flex-wrap">

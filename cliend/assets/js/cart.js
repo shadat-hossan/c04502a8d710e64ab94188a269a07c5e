@@ -142,13 +142,33 @@ $(document).ready(function () {
   function closeForm() {
     $(".form-popup-bg").removeClass("is-visible");
   }
+
+
+
   $(document).ready(function ($) {
+
+    $(".editaddress_pop").on("click", function (event) {
+        event.preventDefault();
+
+        $("#editmyaccount").addClass("is-visible");
+        $("body").addClass("body-fixed");
+      });
+
+    $(".opennewaddress").on("click", function (event) {
+        event.preventDefault();
+
+        $("#newaddress").addClass("is-visible");
+        $("body").addClass("body-fixed");
+      });
+
+
     $(".btnOpenForm").on("click", function (event) {
       event.preventDefault();
 
       $(".form-popup-bg").addClass("is-visible");
       $("body").addClass("body-fixed");
     });
+
     //close popup when clicking x or off popup
     $(".form-popup-bg").on("click", function (event) {
       if (
