@@ -4017,3 +4017,10 @@ span.gaterthan {
 .flashSalesCard {
   width: 100%;
 }
+
+.odv {}
+.omv { display: none !important; }
+@media screen and (max-width: 768px) {
+.odv {display: none !important;}
+.omv { display: block !important; }
+}

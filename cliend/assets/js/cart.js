@@ -1,9 +1,3 @@
-/* =====
-    The Script is work cart Section.
-    (twitter.com/Shahada37834874).
-===== */
-
-
 const cartIconSmall = document.querySelector(".cart_icon_small");
 const cartListRowItem = document.querySelectorAll(".cart_list_area .cart_list_row");
 const smallElement = document.createElement("small");
@@ -11,9 +5,6 @@ const smallElement = document.createElement("small");
 smallElement.innerHTML = cartListRowItem.length;
 
 cartIconSmall.appendChild(smallElement)
-
-
-
 
 document.querySelectorAll(".item .dickrement, .rightProductfullDetails .dickrement").forEach(element => {
   element.addEventListener("click", () => {
@@ -149,14 +140,12 @@ $(document).ready(function () {
 
     $(".editaddress_pop").on("click", function (event) {
         event.preventDefault();
-
         $("#editmyaccount").addClass("is-visible");
         $("body").addClass("body-fixed");
       });
 
     $(".opennewaddress").on("click", function (event) {
         event.preventDefault();
-
         $("#newaddress").addClass("is-visible");
         $("body").addClass("body-fixed");
       });
