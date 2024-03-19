@@ -1,42 +1,50 @@
 const cartIconSmall = document.querySelector(".cart_icon_small");
-const cartListRowItem = document.querySelectorAll(".cart_list_area .cart_list_row");
+const cartListRowItem = document.querySelectorAll(
+  ".cart_list_area .cart_list_row"
+);
 const smallElement = document.createElement("small");
 
 smallElement.innerHTML = cartListRowItem.length;
 
-cartIconSmall.appendChild(smallElement)
+cartIconSmall.appendChild(smallElement);
 
-document.querySelectorAll(".item .dickrement, .rightProductfullDetails .dickrement").forEach(element => {
-  element.addEventListener("click", () => {
-    const input = element.parentElement.querySelector("input");
-    const hidenQuentityValue= document.querySelector("#hidenQuentityValue");
-    if(hidenQuentityValue){
-      hidenQuentityValue.value = input.value;
-    }
-    input.value = Math.max(parseInt(input.value) - 1, 1);
-    input.dispatchEvent(new Event("change"));
-    return false;
+document
+  .querySelectorAll(".item .dickrement, .rightProductfullDetails .dickrement")
+  .forEach((element) => {
+    element.addEventListener("click", () => {
+      const input = element.parentElement.querySelector("input");
+      const hidenQuentityValue = document.querySelector("#hidenQuentityValue");
+      if (hidenQuentityValue) {
+        hidenQuentityValue.value = input.value;
+      }
+      input.value = Math.max(parseInt(input.value) - 1, 1);
+      input.dispatchEvent(new Event("change"));
+      return false;
+    });
   });
-});
 
-document.querySelectorAll(".item .increment, .rightProductfullDetails .increment").forEach(element => {
-  element.addEventListener("click", () => {
-    const input = element.parentElement.querySelector("input");
-    const productTotalPrice = element.parentElement.querySelector('[class*="productTotalPrice"]');
-    const hidenQuentityValue= document.querySelector("#hidenQuentityValue");
-    input.value = parseInt(input.value) + 1;
-    if(hidenQuentityValue){
-      hidenQuentityValue.value = input.value;
-    }
-    input.dispatchEvent(new Event("change"));
-    if(productTotalPrice){
-      productTotalPrice.innerText = "1000";
-    }
-    return false;
+document
+  .querySelectorAll(".item .increment, .rightProductfullDetails .increment")
+  .forEach((element) => {
+    element.addEventListener("click", () => {
+      const input = element.parentElement.querySelector("input");
+      const productTotalPrice = element.parentElement.querySelector(
+        '[class*="productTotalPrice"]'
+      );
+      const hidenQuentityValue = document.querySelector("#hidenQuentityValue");
+      input.value = parseInt(input.value) + 1;
+      if (hidenQuentityValue) {
+        hidenQuentityValue.value = input.value;
+      }
+      input.dispatchEvent(new Event("change"));
+      if (productTotalPrice) {
+        productTotalPrice.innerText = "1000";
+      }
+      return false;
+    });
   });
-});
 
-document.querySelectorAll(".add_wishlist").forEach(element => {
+document.querySelectorAll(".add_wishlist").forEach((element) => {
   element.addEventListener("click", () => {
     if (element.classList.contains("active")) {
       element.classList.remove("active");
@@ -45,26 +53,6 @@ document.querySelectorAll(".add_wishlist").forEach(element => {
     }
   });
 });
-
-// The Script is billing all Product price some return
-const cartListwrap = document.querySelectorAll(".cart_list_item .cart_list_item_price");
-var bTotalItem = document.querySelector(".total_item .total_item_value");
-var cartListItemShipping = document.querySelector(".cart_list_item .cart_list_item_shipping")
-var bTotalItemValueWidthShipping = document.querySelector(".total_item_value_width_shipping");
-
-if(cartListwrap){
-  var bTotalPrice = 0;
-  cartListwrap.forEach(function(item) {
-    var itemProductPrice = parseInt(item.textContent.substring(1));
-    bTotalPrice += itemProductPrice;
-  });
-  bTotalItem.innerHTML = bTotalPrice;
-  
-  var cartListItemShippingInt = parseInt(cartListItemShipping.textContent.substring(1));
-  bTotalPrice += cartListItemShippingInt
-  
-  bTotalItemValueWidthShipping.innerHTML= bTotalPrice
-}
 
 $(document).ready(function () {
   $(".single-product-view").click(function () {
@@ -134,24 +122,8 @@ $(document).ready(function () {
     $(".form-popup-bg").removeClass("is-visible");
   }
 
-
-
   $(document).ready(function ($) {
-
-    $(".editaddress_pop").on("click", function (event) {
-        event.preventDefault();
-        $("#editmyaccount").addClass("is-visible");
-        $("body").addClass("body-fixed");
-      });
-
-    $(".opennewaddress").on("click", function (event) {
-        event.preventDefault();
-        $("#newaddress").addClass("is-visible");
-        $("body").addClass("body-fixed");
-      });
-
-
-    $(".btnOpenForm").on("click", function (event) {
+    $(".btnOpenForm , .btnOpenForms").on("click", function (event) {
       event.preventDefault();
 
       $(".form-popup-bg").addClass("is-visible");
@@ -189,49 +161,67 @@ $(document).ready(function () {
         });
       });
 
-
-    document.querySelectorAll(".singalProduvtPriceValue").forEach(item =>{
-      const priceTotal = item.closest(".cart_list_row").querySelector(".productToralPrice");
+    document.querySelectorAll(".singalProduvtPriceValue").forEach((item) => {
+      const priceTotal = item
+        .closest(".cart_list_row")
+        .querySelector(".productToralPrice");
       priceTotal.innerHTML = item.textContent;
-    })
+    });
 
-      // The Script is work for dickrement value (twitter.com/Shahada37834874).
+    // The Script is work for dickrement value (twitter.com/Shahada37834874).
 
-    document.querySelectorAll(".dickrement").forEach(button => {
+    document.querySelectorAll(".dickrement").forEach((button) => {
       button.addEventListener("click", () => {
         const input = button.parentNode.querySelector("input");
         const inoutValueNumber = parseInt(input.value);
 
         if (inoutValueNumber > 1) {
-          const singalProduvtPriceValue = button.closest(".cart_list_row").querySelector(".singalProduvtPriceValue").textContent;
-          const productTotalPriceElemrnt = button.closest(".cart_list_row").querySelector(".productToralPrice");
-          const newTotalPrice = Math.max(parseInt(productTotalPriceElemrnt.textContent) - parseInt(singalProduvtPriceValue), parseInt(singalProduvtPriceValue));
+          const singalProduvtPriceValue = button
+            .closest(".cart_list_row")
+            .querySelector(".singalProduvtPriceValue").textContent;
+          const productTotalPriceElemrnt = button
+            .closest(".cart_list_row")
+            .querySelector(".productToralPrice");
+          const newTotalPrice = Math.max(
+            parseInt(productTotalPriceElemrnt.textContent) -
+              parseInt(singalProduvtPriceValue),
+            parseInt(singalProduvtPriceValue)
+          );
 
-          const cardAllProductTotalPrice = document.querySelector(".cardAllProductTotalPrice");
-          const cardAllProductTotalPriceInt = parseInt(cardAllProductTotalPrice.textContent);
-          const inputCheckbox = button.closest(".cart_list_row").querySelector(".checkbox_item input");
+          const cardAllProductTotalPrice = document.querySelector(
+            ".cardAllProductTotalPrice"
+          );
+          const cardAllProductTotalPriceInt = parseInt(
+            cardAllProductTotalPrice.textContent
+          );
+          const inputCheckbox = button
+            .closest(".cart_list_row")
+            .querySelector(".checkbox_item input");
           const sidbarHidenCard = document.querySelector(".sidbarHidenCard");
           const singalProduct = button.closest(".cart_list_row");
 
           if (inputCheckbox.checked) {
-            cardAllProductTotalPrice.textContent = cardAllProductTotalPriceInt - parseInt(singalProduvtPriceValue);
+            cardAllProductTotalPrice.textContent =
+              cardAllProductTotalPriceInt - parseInt(singalProduvtPriceValue);
           }
 
           productTotalPriceElemrnt.textContent = newTotalPrice;
           input.value = inoutValueNumber - 1;
 
-          const productsInSidebar = sidbarHidenCard.querySelectorAll(".cart_list_row");
-          productsInSidebar.forEach(product => {
-            if (product.getAttribute("id") === singalProduct.getAttribute("id")) {
-              const updatequentite = product.querySelector(".numberCount input");
+          const productsInSidebar =
+            sidbarHidenCard.querySelectorAll(".cart_list_row");
+          productsInSidebar.forEach((product) => {
+            if (
+              product.getAttribute("id") === singalProduct.getAttribute("id")
+            ) {
+              const updatequentite =
+                product.querySelector(".numberCount input");
               updatequentite.value = input.value;
             }
           });
         }
 
         input.dispatchEvent(new Event("change"));
-
-       
 
         return false;
       });
@@ -239,38 +229,51 @@ $(document).ready(function () {
 
     // The Script is work for increment value (twitter.com/Shahada37834874).
 
-    document.querySelectorAll(".increment").forEach(button => {
+    document.querySelectorAll(".increment").forEach((button) => {
       button.addEventListener("click", () => {
         const input = button.parentNode.querySelector("input");
-        const singalProduvtPriceValue = button.closest(".cart_list_row").querySelector(".singalProduvtPriceValue").textContent;
-        const productTotalPriceElemrnt = button.closest(".cart_list_row").querySelector(".productToralPrice");
+        const singalProduvtPriceValue = button
+          .closest(".cart_list_row")
+          .querySelector(".singalProduvtPriceValue").textContent;
+        const productTotalPriceElemrnt = button
+          .closest(".cart_list_row")
+          .querySelector(".productToralPrice");
         const inoutValueNumber = parseInt(input.value);
 
-        const cardAllProductTotalPrice = document.querySelector(".cardAllProductTotalPrice");
-        const cardAllProductTotalPriceInt = parseInt(cardAllProductTotalPrice.textContent);
-        const productTotalPriceElemrntInt = parseInt(productTotalPriceElemrnt.textContent);
-        const inputCheckbox = button.closest(".cart_list_row").querySelector(".checkbox_item input");
+        const cardAllProductTotalPrice = document.querySelector(
+          ".cardAllProductTotalPrice"
+        );
+        const cardAllProductTotalPriceInt = parseInt(
+          cardAllProductTotalPrice.textContent
+        );
+        const productTotalPriceElemrntInt = parseInt(
+          productTotalPriceElemrnt.textContent
+        );
+        const inputCheckbox = button
+          .closest(".cart_list_row")
+          .querySelector(".checkbox_item input");
         const sidbarHidenCard = document.querySelector(".sidbarHidenCard");
         const singalProduct = button.closest(".cart_list_row");
 
         if (inputCheckbox.checked) {
-          cardAllProductTotalPrice.textContent = cardAllProductTotalPriceInt + parseInt(singalProduvtPriceValue);
+          cardAllProductTotalPrice.textContent =
+            cardAllProductTotalPriceInt + parseInt(singalProduvtPriceValue);
         }
 
-        productTotalPriceElemrnt.textContent = productTotalPriceElemrntInt + parseInt(singalProduvtPriceValue);
+        productTotalPriceElemrnt.textContent =
+          productTotalPriceElemrntInt + parseInt(singalProduvtPriceValue);
 
         input.value = inoutValueNumber + 1;
         input.dispatchEvent(new Event("change"));
 
-        const productsInSidebar = sidbarHidenCard.querySelectorAll(".cart_list_row");
-          productsInSidebar.forEach(product => {
-            if (product.getAttribute("id") === singalProduct.getAttribute("id")) {
-              const updatequentite = product.querySelector(".numberCount input");
-              updatequentite.value = input.value;
-            }
-          });
-
-
+        const productsInSidebar =
+          sidbarHidenCard.querySelectorAll(".cart_list_row");
+        productsInSidebar.forEach((product) => {
+          if (product.getAttribute("id") === singalProduct.getAttribute("id")) {
+            const updatequentite = product.querySelector(".numberCount input");
+            updatequentite.value = input.value;
+          }
+        });
 
         return false;
       });
@@ -278,80 +281,111 @@ $(document).ready(function () {
 
     // The Script is work for check out the product (twitter.com/Shahada37834874).
 
-    document.querySelectorAll(".cart_list_row .checkmark").forEach(checkmark => {
-      checkmark.addEventListener("click", () => {
-        const inputCheckbox = checkmark.parentNode.querySelector("input");
-        const cardAllProductTotalPrice = document.querySelector(".cardAllProductTotalPrice");
-        const cardAllProductTotalPriceInt = parseInt(cardAllProductTotalPrice.textContent);
-        const productTotalPriceElemrntInt = parseInt(checkmark.parentNode.parentNode.querySelector(".productToralPrice").textContent);
-        const sidbarHidenCard = document.querySelector(".sidbarHidenCard");
-        const singalProduct = checkmark.closest(".cart_list_row");
-        let clonedProduct = singalProduct.cloneNode(true);
-    
-        if (!inputCheckbox.checked) {
-          cardAllProductTotalPrice.textContent = cardAllProductTotalPriceInt + productTotalPriceElemrntInt;
-          sidbarHidenCard.appendChild(clonedProduct);
-        } else {
-          cardAllProductTotalPrice.textContent = cardAllProductTotalPriceInt - productTotalPriceElemrntInt;
-    
+    document
+      .querySelectorAll(".cart_list_row .checkmark")
+      .forEach((checkmark) => {
+        checkmark.addEventListener("click", () => {
+          const inputCheckbox = checkmark.parentNode.querySelector("input");
+          const cardAllProductTotalPrice = document.querySelector(
+            ".cardAllProductTotalPrice"
+          );
+          const cardAllProductTotalPriceInt = parseInt(
+            cardAllProductTotalPrice.textContent
+          );
+          const productTotalPriceElemrntInt = parseInt(
+            checkmark.parentNode.parentNode.querySelector(".productToralPrice")
+              .textContent
+          );
+          const sidbarHidenCard = document.querySelector(".sidbarHidenCard");
+          const singalProduct = checkmark.closest(".cart_list_row");
+          let clonedProduct = singalProduct.cloneNode(true);
 
-          const productsInSidebar = sidbarHidenCard.querySelectorAll(".cart_list_row");
-          productsInSidebar.forEach(product => {
-            if (product.getAttribute("id") === singalProduct.getAttribute("id")) {
-              sidbarHidenCard.removeChild(product);
-            }
-          });
-        }
+          if (!inputCheckbox.checked) {
+            cardAllProductTotalPrice.textContent =
+              cardAllProductTotalPriceInt + productTotalPriceElemrntInt;
+            sidbarHidenCard.appendChild(clonedProduct);
+          } else {
+            cardAllProductTotalPrice.textContent =
+              cardAllProductTotalPriceInt - productTotalPriceElemrntInt;
+
+            const productsInSidebar =
+              sidbarHidenCard.querySelectorAll(".cart_list_row");
+            productsInSidebar.forEach((product) => {
+              if (
+                product.getAttribute("id") === singalProduct.getAttribute("id")
+              ) {
+                sidbarHidenCard.removeChild(product);
+              }
+            });
+          }
+        });
       });
-    });
-    
-    
-  
+
     // The Script is work for cart remove Product (twitter.com/Shahada37834874).
 
-    document.querySelectorAll(".cart_list_row .remove_cart").forEach(remove => {
-      remove.addEventListener("click", () => {
-        const cartListRow = remove.closest(".cart_list_row");
-        const inputCheckbox = remove.closest(".cart_list_row").querySelector(".checkbox_item input");
-        const productTotalPriceElemrntInt = parseInt(remove.parentNode.parentNode.querySelector(".productToralPrice").textContent);
-        const cardAllProductTotalPrice = document.querySelector(".cardAllProductTotalPrice");
-        const cardAllProductTotalPriceInt = parseInt(cardAllProductTotalPrice.textContent);
-        const cartRemoveConfirmation = document.querySelector(".cartRemoveConfirmationPopupBox");
-        const removeConfirm = document.querySelector(".cartRemoveConfirmationBtn .removeConfirm");
-        const removeCancel = document.querySelector(".cartRemoveConfirmationBtn .removeCancel");
-        const sidbarHidenCard = document.querySelector(".sidbarHidenCard");
-        const singalProduct = remove.closest(".cart_list_row");
-        
-        removeConfirm.addEventListener("click", () => {
-          cartRemoveConfirmation.classList.remove("sdowConPo");
-          if (cartListRow) cartListRow.remove();
-          if (inputCheckbox.checked) cardAllProductTotalPrice.textContent = cardAllProductTotalPriceInt - productTotalPriceElemrntInt;
-          else cardAllProductTotalPrice.textContent = cardAllProductTotalPriceInt;
-        });
+    document
+      .querySelectorAll(".cart_list_row .remove_cart")
+      .forEach((remove) => {
+        remove.addEventListener("click", () => {
+          const cartListRow = remove.closest(".cart_list_row");
+          const inputCheckbox = remove
+            .closest(".cart_list_row")
+            .querySelector(".checkbox_item input");
+          const productTotalPriceElemrntInt = parseInt(
+            remove.parentNode.parentNode.querySelector(".productToralPrice")
+              .textContent
+          );
+          const cardAllProductTotalPrice = document.querySelector(
+            ".cardAllProductTotalPrice"
+          );
+          const cardAllProductTotalPriceInt = parseInt(
+            cardAllProductTotalPrice.textContent
+          );
+          const cartRemoveConfirmation = document.querySelector(
+            ".cartRemoveConfirmationPopupBox"
+          );
+          const removeConfirm = document.querySelector(
+            ".cartRemoveConfirmationBtn .removeConfirm"
+          );
+          const removeCancel = document.querySelector(
+            ".cartRemoveConfirmationBtn .removeCancel"
+          );
+          const sidbarHidenCard = document.querySelector(".sidbarHidenCard");
+          const singalProduct = remove.closest(".cart_list_row");
 
-        const productsInSidebar = sidbarHidenCard.querySelectorAll(".cart_list_row");
-          productsInSidebar.forEach(product => {
-            if (product.getAttribute("id") === singalProduct.getAttribute("id")) {
+          removeConfirm.addEventListener("click", () => {
+            cartRemoveConfirmation.classList.remove("sdowConPo");
+            if (cartListRow) cartListRow.remove();
+            if (inputCheckbox.checked)
+              cardAllProductTotalPrice.textContent =
+                cardAllProductTotalPriceInt - productTotalPriceElemrntInt;
+            else
+              cardAllProductTotalPrice.textContent =
+                cardAllProductTotalPriceInt;
+          });
+
+          const productsInSidebar =
+            sidbarHidenCard.querySelectorAll(".cart_list_row");
+          productsInSidebar.forEach((product) => {
+            if (
+              product.getAttribute("id") === singalProduct.getAttribute("id")
+            ) {
               sidbarHidenCard.removeChild(product);
             }
           });
 
+          removeCancel.addEventListener("click", () => {
+            cartRemoveConfirmation.classList.remove("sdowConPo");
+          });
 
-        removeCancel.addEventListener("click", () => {
-          cartRemoveConfirmation.classList.remove("sdowConPo");
+          cartRemoveConfirmation.classList.add("sdowConPo");
         });
-
-        cartRemoveConfirmation.classList.add("sdowConPo");
       });
-
-
-
-    });
 
     // The Script is work for Close cart bar (twitter.com/Shahada37834874).
 
     const cartSidebar = document.querySelector(".cart_pop_area");
-    window.addEventListener("click", e => {
+    window.addEventListener("click", (e) => {
       if (e.target == cartSidebar) {
         cartSidebar.classList.add("close");
         cartSidebar.classList.remove("active");
@@ -360,44 +394,72 @@ $(document).ready(function () {
   });
 });
 
-
 // === exrta table desine (twitter.com/Shahada37834874)
 
-const allTotalPriceInput = document.querySelector("#TotalValueSomeResult #allTotalPrice input");
+const allTotalPriceInput = document.querySelector(
+  "#TotalValueSomeResult #allTotalPrice input"
+);
 
 function updateTotalPrice() {
   let totalPriceSome = 0;
-  document.querySelectorAll("#priceCalco #productPrice input").forEach((item) => {
-    const { value: productPrice } = item;
-    const { value: productQuantiy } = item.closest("tr").querySelector("#productQuantiy input");
-    const totalPriceInput = item.closest("tr").querySelector("#totalPrice input");
+  document
+    .querySelectorAll("#priceCalco #productPrice input")
+    .forEach((item) => {
+      const { value: productPrice } = item;
+      const { value: productQuantiy } = item
+        .closest("tr")
+        .querySelector("#productQuantiy input");
+      const totalPriceInput = item
+        .closest("tr")
+        .querySelector("#totalPrice input");
 
-    const totalPriceMany = +productPrice * +productQuantiy;
+      const totalPriceMany = +productPrice * +productQuantiy;
 
-    totalPriceInput.value = totalPriceMany;
-    totalPriceSome += totalPriceMany;
-  });
+      totalPriceInput.value = totalPriceMany;
+      totalPriceSome += totalPriceMany;
+    });
 
-  if(allTotalPriceInput){
+  if (allTotalPriceInput) {
     allTotalPriceInput.value = totalPriceSome;
   }
 }
 
 updateTotalPrice();
 document.querySelectorAll("#priceCalco #productPrice input").forEach((item) => {
-  item.addEventListener('input', updateTotalPrice);
+  item.addEventListener("input", updateTotalPrice);
 });
-
 
 // This is input Chinge Event
-document.querySelectorAll("#priceCalco #productQuantiy input").forEach((item) => {
-  item.addEventListener('input', updateTotalPrice);
-});
+document
+  .querySelectorAll("#priceCalco #productQuantiy input")
+  .forEach((item) => {
+    item.addEventListener("input", updateTotalPrice);
+  });
 
+// The Script is billing all Product price some return
+const cartListwrap = document.querySelectorAll(
+  ".cart_list_item .cart_list_item_price"
+);
+var bTotalItem = document.querySelector(".total_item .total_item_value");
+var cartListItemShipping = document.querySelector(
+  ".cart_list_item .cart_list_item_shipping"
+);
+var bTotalItemValueWidthShipping = document.querySelector(
+  ".total_item_value_width_shipping"
+);
 
+if (bTotalItemValueWidthShipping) {
+  var bTotalPrice = 0;
+  cartListwrap.forEach(function (item) {
+    var itemProductPrice = parseInt(item.textContent.substring(1));
+    bTotalPrice += itemProductPrice;
+    bTotalItem.innerHTML = bTotalPrice;
+  });
 
+  var cartListItemShippingInt = parseInt(
+    cartListItemShipping.textContent.substring(1)
+  );
+  bTotalPrice += cartListItemShippingInt;
 
-
-
-
-
+  bTotalItemValueWidthShipping.innerHTML = bTotalPrice;
+}
