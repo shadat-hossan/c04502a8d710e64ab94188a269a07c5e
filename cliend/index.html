@@ -118,9 +118,9 @@
         <div class="menu_box center-content flex-wrap align-center">
           <div class="flex-wrap align-center">
             <div class="all_categories_item flex-nowrap align-center">
-                <div class="menu_tiger flex-nowrap align-center">
-                  <div class="menu_bar">
-                    <span></span><span></span><span></span>
+              <div class="menu_tiger flex-nowrap align-center">
+                <div class="menu_bar">
+                  <span></span><span></span><span></span>
                 </div>
                 <strong>All Categories</strong>
               </div>
@@ -195,13 +195,12 @@
         </div>
       </div>
     </div>
-    
+
     <div class="slider_area">
       <div class="slider_box center-content">
         <div class="slider owl-carousel">
           <div class="slide_item">
-            <img class="odv" src="assets/images/banner/slide1.jpg" alt="" />
-            <img class="omv" src="assets/images/banner/slide1.jpg" alt="" />
+            <img src="assets/images/banner/slide1.jpg" alt="" />
             <div class="slide_info_area">
               <div class="info_box">
                 <h4>Inkjet Printers</h4>
@@ -2228,14 +2227,13 @@
     <div class="copyright_area">
       <p>&copy; Copyright Saffron 2024. All right reserved</p>
     </div>
-
     <div class="cart_pop_area">
       <div class="cart_sidebar">
         <h3>Shopping Cart</h3>
         <div class="pop_close"></div>
         <div class="cart_list_area">
           <div class="cart_title"><h4>Monitor</h4></div>
-          <div class="cart_list_row flex-nowrap">
+          <div class="cart_list_row flex-nowrap" id="product1">
             <label class="checkbox_item"
               ><input type="checkbox" name="pw" /><span class="checkmark"></span
             ></label>
@@ -2253,27 +2251,27 @@
               <p class="productDetailsPrice">
                 Unite Total:
                 <span class="discountPrice"
-                  >$<span class="productToralPrice">960</span></span
-                >
+                  >$<span class="productToralPrice"></span
+                ></span>
               </p>
               <div class="product_add_or_remove flex-nowrap">
                 <div class="counterManiContant">
-                  <button class="couterBtn dickrement">
+                  <div class="couterBtn dickrement" type="button">
                     <i class="fa fa-minus" aria-hidden="true"></i>
-                  </button>
-                  <div class="numberCount">
-                    <input type="text" readonly value="1" />
                   </div>
-                  <button class="couterBtn increment">
-                    <i class="fa fa-plus" aria-hidden="true"></i>
-                  </button>
+                  <div class="numberCount">
+                    <input type="text" readonly value="1" name="quentite" />
+                  </div>
+                  <div class="couterBtn increment">
+                    <i class="fa fa-plus" aria-hidden="true" type="button"></i>
+                  </div>
                 </div>
                 <div class="remove_cart"><span>Remove</span></div>
               </div>
             </div>
           </div>
 
-          <div class="cart_list_row flex-nowrap">
+          <div class="cart_list_row flex-nowrap" id="product2">
             <label class="checkbox_item"
               ><input type="checkbox" name="pw" /><span class="checkmark"></span
             ></label>
@@ -2291,27 +2289,27 @@
               <p class="productDetailsPrice">
                 Unite Total:
                 <span class="discountPrice"
-                  >$<span class="productToralPrice">1059</span></span
-                >
+                  >$<span class="productToralPrice"></span
+                ></span>
               </p>
               <div class="product_add_or_remove flex-nowrap">
                 <div class="counterManiContant">
-                  <button class="couterBtn dickrement">
+                  <div class="couterBtn dickrement" type="button">
                     <i class="fa fa-minus" aria-hidden="true"></i>
-                  </button>
-                  <div class="numberCount">
-                    <input type="text" readonly value="1" />
                   </div>
-                  <button class="couterBtn increment">
+                  <div class="numberCount">
+                    <input type="text" readonly value="1" name="quentite" />
+                  </div>
+                  <div class="couterBtn increment" type="button">
                     <i class="fa fa-plus" aria-hidden="true"></i>
-                  </button>
+                  </div>
                 </div>
                 <div class="remove_cart"><span>Remove</span></div>
               </div>
             </div>
           </div>
 
-          <div class="cart_list_row flex-nowrap">
+          <div class="cart_list_row flex-nowrap" id="product3">
             <label class="checkbox_item"
               ><input type="checkbox" name="pw" /><span class="checkmark"></span
             ></label>
@@ -2329,20 +2327,58 @@
               <p class="productDetailsPrice">
                 Unite Total:
                 <span class="discountPrice"
-                  >$<span class="productToralPrice">1000</span></span
-                >
+                  >$<span class="productToralPrice"></span
+                ></span>
               </p>
               <div class="product_add_or_remove flex-nowrap">
                 <div class="counterManiContant">
-                  <button class="couterBtn dickrement">
+                  <div class="couterBtn dickrement" type="button">
                     <i class="fa fa-minus" aria-hidden="true"></i>
-                  </button>
-                  <div class="numberCount">
-                    <input type="text" readonly value="1" />
                   </div>
-                  <button class="couterBtn increment">
+                  <div class="numberCount">
+                    <input type="text" readonly value="1" name="quentite" />
+                  </div>
+                  <div class="couterBtn increment" type="button">
                     <i class="fa fa-plus" aria-hidden="true"></i>
-                  </button>
+                  </div>
+                </div>
+                <div class="remove_cart"><span>Remove</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cart_list_row flex-nowrap" id="product4">
+            <label class="checkbox_item"
+              ><input type="checkbox" name="pw" /><span class="checkmark"></span
+            ></label>
+            <div class="cart_photo">
+              <img src="assets/images/product-image/new_product2.png" alt="" />
+            </div>
+            <div class="product_cart_info">
+              <h5>IPS LCD Gaming Monitor</h5>
+              <p class="productDetailsPrice">
+                <span class="discountPrice"
+                  >$<span class="singalProduvtPriceValue">1000</span></span
+                >
+                <del>$1160</del>
+              </p>
+              <p class="productDetailsPrice">
+                Unite Total:
+                <span class="discountPrice"
+                  >$<span class="productToralPrice"></span
+                ></span>
+              </p>
+              <div class="product_add_or_remove flex-nowrap">
+                <div class="counterManiContant">
+                  <div class="couterBtn dickrement" type="button">
+                    <i class="fa fa-minus" aria-hidden="true"></i>
+                  </div>
+                  <div class="numberCount">
+                    <input type="text" readonly value="1" name="quentite" />
+                  </div>
+                  <div class="couterBtn increment" type="button">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </div>
                 </div>
                 <div class="remove_cart"><span>Remove</span></div>
               </div>
@@ -2351,13 +2387,16 @@
         </div>
 
         <div class="sub_total_area">
-          <div class="sub_total_box flex-nowrap align-center">
-            <strong>Sub Total</strong>
-            <span> <span class="cardAllProductTotalPrice">0</span> TK</span>
-          </div>
-          <div class="checkout_btn">
-            <button class="checkout">Checkout</button>
-          </div>
+          <form action="#">
+            <div class="sidbarHidenCard"></div>
+            <div class="sub_total_box flex-nowrap align-center">
+              <strong>Sub Total</strong>
+              <span> <span class="cardAllProductTotalPrice">0</span> TK</span>
+            </div>
+            <div class="checkout_btn">
+              <button class="checkout" type="submit">Checkout</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -2375,10 +2414,20 @@
           Are you sure you want to remove?
         </p>
         <div class="cartRemoveConfirmationBtn">
-          <button class="removeConfirm" type="button" value="remove" title="Remove Product">
+          <button
+            class="removeConfirm"
+            type="button"
+            value="remove"
+            title="Remove Product"
+          >
             Remove
           </button>
-          <button class="removeCancel" type="button" value="cancel" title="Cancel Confirmation">
+          <button
+            class="removeCancel"
+            type="button"
+            value="cancel"
+            title="Cancel Confirmation"
+          >
             Cancel
           </button>
         </div>
