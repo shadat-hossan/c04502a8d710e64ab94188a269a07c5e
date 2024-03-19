@@ -4012,3 +4012,15 @@ span.gaterthan {
       left: 170px;
     }
   }
+
+.category_product_area .View_allProduct,
+.flashSalesCard {
+  width: 100%;
+}
+
+.odv {}
+.omv { display: none !important; }
+@media screen and (max-width: 768px) {
+.odv {display: none !important;}
+.omv { display: block !important; }
+}

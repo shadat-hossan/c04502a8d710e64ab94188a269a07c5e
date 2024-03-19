@@ -2,9 +2,7 @@
 JavaScript. When the page finishes loading, the function inside `window.onload` will be executed. */
 window.onload = function () {
   if (window.onload) {
-    setTimeout(function () {
       document.getElementById("loadingMessage").style.display = "none";
-    }, 500);
   } else {
     document.getElementById("loadingMessage").style.display = "block";
   }

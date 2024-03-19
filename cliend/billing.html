@@ -160,24 +160,21 @@
                     ><div class="nav_small_icon">
                       <img src="assets/images/icon_home.svg" alt="" />
                     </div>
-                    Home</a
-                  >
+                    Home</a>
                 </li>
                 <li>
                   <a href="#"
                     ><div class="nav_small_icon">
                       <img src="assets/images/icon_shop.svg" alt="" />
                     </div>
-                    Shop</a
-                  >
+                    Shop</a>
                 </li>
                 <li>
                   <a href="offer.html"
                     ><div class="nav_small_icon">
                       <img src="assets/images/icon_offer.svg" alt="" />
                     </div>
-                    Your offer</a
-                  >
+                    Your offer</a>
                 </li>
                 <li>
                   <a href="#"
@@ -203,7 +200,7 @@
             >
               <h4>Shipping Address</h4>
               <div class="new_address_add">
-                <a class="btnOpenForm" href="javascript:void(0)"
+                <a class="opennewaddress" href="javascript:void(0)"
                   ><i class="fa fa-plus-square"></i>New Address</a
                 >
               </div>
@@ -211,7 +208,7 @@
 
             <div class="address_box_item flex-wrap">
               <div class="address_box_row">
-                <div class="edit_address btnOpenForm">Edit</div>
+                <div class="edit_address editaddress_pop">Edit</div>
                 <div class="address_box_line flex-wrap">
                   <p>Name:</p>
                   <p class="p-info">Jahangir Alam Uzzal</p>
@@ -250,108 +247,6 @@
                 rows="10"
                 placeholder="Place your order note"
               ></textarea>
-            </div>
-            <div class="billing_form_area form-popup-bg">
-              <div class="billing_form">
-                <div class="billing_filed_row flex-wrap">
-                  <div class="billing_filed">
-                    <label>First Name *</label>
-                    <input
-                      class="form-control"
-                      type="text"
-                      placeholder="Enter your first name"
-                      name=""
-                    />
-                  </div>
-                  <div class="billing_filed">
-                    <label>Last Name *</label>
-                    <input
-                      class="form-control"
-                      type="text"
-                      placeholder="Enter your last name"
-                      name=""
-                    />
-                  </div>
-                </div>
-                <div class="billing_filed_row flex-wrap">
-                  <div class="billing_filed">
-                    <label>Phone *</label>
-                    <input
-                      class="form-control"
-                      type="text"
-                      placeholder="Enter your phone number"
-                      name=""
-                    />
-                  </div>
-                  <div class="billing_filed">
-                    <label>Email Address</label>
-                    <input
-                      class="form-control"
-                      type="text"
-                      placeholder="Enter your email"
-                      name=""
-                    />
-                  </div>
-                </div>
-                <div class="billing_filed_row flex-wrap">
-                  <div class="billing_filed">
-                    <label>Country *</label>
-                    <select class="form-control">
-                      <option>Bangladesh</option>
-                    </select>
-                  </div>
-                  <div class="billing_filed">
-                    <label>City *</label>
-                    <select class="form-control">
-                      <option>Dhaka</option>
-                      <option>Mymensingh</option>
-                      <option>Sylhet</option>
-                      <option>Chattogram</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="billing_filed_row flex-wrap">
-                  <div class="billing_filed">
-                    <label>Area *</label>
-                    <select class="form-control">
-                      <option>Shyamoli</option>
-                      <option>Mirpur</option>
-                      <option>Khilkhet</option>
-                    </select>
-                  </div>
-                  <div class="billing_filed">
-                    <label>Street Address *</label>
-                    <input
-                      class="form-control"
-                      type="text"
-                      placeholder="Enter your street Address"
-                      name=""
-                    />
-                  </div>
-                </div>
-                <div class="billing_filed_row flex-wrap">
-                  <div class="billing_filed">
-                    <label>Postal Code *</label>
-                    <input
-                      class="form-control"
-                      type="text"
-                      placeholder="Enter your street Address"
-                      name=""
-                    />
-                  </div>
-                  <div class="billing_filed">
-                    <label>Location Type *</label>
-                    <select class="form-control">
-                      <option>Home</option>
-                      <option>Office</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form_submit_box flex-nowrap">
-                  <div class="btnCloseForm">Cancel</div>
-                  <button class="save_info">Save</button>
-                </div>
-              </div>
             </div>
           </div>
           <div class="cart_area_right">
@@ -422,6 +317,219 @@
         </div>
       </div>
     </form>
+
+
+    <div id="editmyaccount" class="billing_form_area form-popup-bg">
+      <div class="billing_form">
+        <form action="#">
+          <div class="billing_filed_row flex-wrap">
+            <div class="billing_filed">
+              <label>First Name *</label>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter your first name"
+                name=""
+              />
+            </div>
+            <div class="billing_filed">
+              <label>Last Name *</label>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter your last name"
+                name=""
+              />
+            </div>
+          </div>
+          <div class="billing_filed_row flex-wrap">
+            <div class="billing_filed">
+              <label>Phone *</label>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter your phone number"
+                name=""
+              />
+            </div>
+            <div class="billing_filed">
+              <label>Email Address</label>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter your email"
+                name=""
+              />
+            </div>
+          </div>
+          <div class="billing_filed_row flex-wrap">
+            <div class="billing_filed">
+              <label>Country *</label>
+              <select class="form-control">
+                <option>Bangladesh</option>
+              </select>
+            </div>
+            <div class="billing_filed">
+              <label>City *</label>
+              <select class="form-control">
+                <option>Dhaka</option>
+                <option>Mymensingh</option>
+                <option>Sylhet</option>
+                <option>Chattogram</option>
+              </select>
+            </div>
+          </div>
+          <div class="billing_filed_row flex-wrap">
+            <div class="billing_filed">
+              <label>Area *</label>
+              <select class="form-control">
+                <option>Shyamoli</option>
+                <option>Mirpur</option>
+                <option>Khilkhet</option>
+              </select>
+            </div>
+            <div class="billing_filed">
+              <label>Street Address *</label>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter your street Address"
+                name=""
+              />
+            </div>
+          </div>
+          <div class="billing_filed_row flex-wrap">
+            <div class="billing_filed">
+              <label>Postal Code *</label>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter your street Address"
+                name=""
+              />
+            </div>
+            <div class="billing_filed">
+              <label>Location Type *</label>
+              <select class="form-control">
+                <option>Home</option>
+                <option>Office</option>
+              </select>
+            </div>
+          </div>
+          <div class="form_submit_box flex-nowrap">
+            <div class="btnCloseForm">Cancel</div>
+            <button type="submit" class="save_info">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="newaddress" class="billing_form_area form-popup-bg">
+      <div class="billing_form">
+        <form action="#">
+          <div class="billing_filed_row flex-wrap">
+            <div class="billing_filed">
+              <label>First Name *</label>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter your first name"
+                name=""
+              />
+            </div>
+            <div class="billing_filed">
+              <label>Last Name *</label>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter your last name"
+                name=""
+              />
+            </div>
+          </div>
+          <div class="billing_filed_row flex-wrap">
+            <div class="billing_filed">
+              <label>Phone *</label>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter your phone number"
+                name=""
+              />
+            </div>
+            <div class="billing_filed">
+              <label>Email Address</label>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter your email"
+                name=""
+              />
+            </div>
+          </div>
+          <div class="billing_filed_row flex-wrap">
+            <div class="billing_filed">
+              <label>Country *</label>
+              <select class="form-control">
+                <option>Bangladesh</option>
+              </select>
+            </div>
+            <div class="billing_filed">
+              <label>City *</label>
+              <select class="form-control">
+                <option>Dhaka</option>
+                <option>Mymensingh</option>
+                <option>Sylhet</option>
+                <option>Chattogram</option>
+              </select>
+            </div>
+          </div>
+          <div class="billing_filed_row flex-wrap">
+            <div class="billing_filed">
+              <label>Area *</label>
+              <select class="form-control">
+                <option>Shyamoli</option>
+                <option>Mirpur</option>
+                <option>Khilkhet</option>
+              </select>
+            </div>
+            <div class="billing_filed">
+              <label>Street Address *</label>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter your street Address"
+                name=""
+              />
+            </div>
+          </div>
+          <div class="billing_filed_row flex-wrap">
+            <div class="billing_filed">
+              <label>Postal Code *</label>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter your street Address"
+                name=""
+              />
+            </div>
+            <div class="billing_filed">
+              <label>Location Type *</label>
+              <select class="form-control">
+                <option>Home</option>
+                <option>Office</option>
+              </select>
+            </div>
+          </div>
+          <div class="form_submit_box flex-nowrap">
+            <div class="btnCloseForm">Cancel</div>
+            <button type="submit" class="save_info">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
     <footer class="footer_area">
       <div class="footer center-content flex-nowrap">
         <div class="footer_widget">
@@ -446,14 +554,8 @@
         </div>
         <div class="footer_widget">
           <h4>Support</h4>
-          <p>
-            Nuruzzaman Road,<br />
-            Shyamoli, Dhaka.
-          </p>
-          <p>
-            <a href="mailto:info@saffroncorporation.com.bd "
-              >info@saffroncorporation.com.bd
-            </a>
+          <p>Nuruzzaman Road,<br /> Shyamoli, Dhaka.</p>
+          <p><a href="mailto:info@saffroncorporation.com.bd " >info@saffroncorporation.com.bd</a>
           </p>
           <p><a href="tel:+88-02-48113179">+88-02-48113179</a></p>
         </div>
