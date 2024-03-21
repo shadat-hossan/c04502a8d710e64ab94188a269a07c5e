@@ -3990,7 +3990,7 @@ span.gaterthan {
   position:relative;
   overflow:hidden;
 }
-.seller_reg_btn a::after{
+.seller_reg_btn a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -4020,7 +4020,14 @@ span.gaterthan {
 
 .odv {}
 .omv { display: none !important; }
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 767px) {
+.slide_info_area {
+  background-color: rgba(0, 0, 0, 0.3);
+}
 .odv {display: none !important;}
 .omv { display: block !important; }
+.slide_item > img {
+  height: auto; 
+}
 }
