@@ -394,48 +394,6 @@ $(document).ready(function () {
   });
 });
 
-// === exrta table desine (twitter.com/Shahada37834874)
-
-const allTotalPriceInput = document.querySelector(
-  "#TotalValueSomeResult #allTotalPrice input"
-);
-
-function updateTotalPrice() {
-  let totalPriceSome = 0;
-  document
-    .querySelectorAll("#priceCalco #productPrice input")
-    .forEach((item) => {
-      const { value: productPrice } = item;
-      const { value: productQuantiy } = item
-        .closest("tr")
-        .querySelector("#productQuantiy input");
-      const totalPriceInput = item
-        .closest("tr")
-        .querySelector("#totalPrice input");
-
-      const totalPriceMany = +productPrice * +productQuantiy;
-
-      totalPriceInput.value = totalPriceMany;
-      totalPriceSome += totalPriceMany;
-    });
-
-  if (allTotalPriceInput) {
-    allTotalPriceInput.value = totalPriceSome;
-  }
-}
-
-updateTotalPrice();
-document.querySelectorAll("#priceCalco #productPrice input").forEach((item) => {
-  item.addEventListener("input", updateTotalPrice);
-});
-
-// This is input Chinge Event
-document
-  .querySelectorAll("#priceCalco #productQuantiy input")
-  .forEach((item) => {
-    item.addEventListener("input", updateTotalPrice);
-  });
-
 // The Script is billing all Product price some return
 const cartListwrap = document.querySelectorAll(
   ".cart_list_item .cart_list_item_price"
