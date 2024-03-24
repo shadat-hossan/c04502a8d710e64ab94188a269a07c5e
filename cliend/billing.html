@@ -7,10 +7,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
     />
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
-    />
+    /> -->
     <link
       rel="icon"
       type="image/x-icon"
@@ -248,13 +248,16 @@
                 placeholder="Place your order note"
               ></textarea>
             </div>
+
           </div>
+
           <div class="cart_area_right">
             <h4>Order Total</h4>
             <div class="price_header flex-nowrap space-between w-100">
               <span>Product</span>
               <span>Price</span>
             </div>
+            <form action="#">
             <div class="cart_list_wrap">
               <div class="cart_list_item flex-nowrap space-between">
                 <span>1. IPS LCD Gaming Monitor</span>
@@ -288,7 +291,7 @@
                   type="text"
                   name=""
                 />
-                <input type="submit" value="Apply" name="" />
+                <input type="submit" value="Apply" />
               </div>
             </div>
             <div class="cart_list_item total_item flex-nowrap space-between">
@@ -299,6 +302,20 @@
                 ></strong
               >
             </div>
+
+            <div class="payment_info">
+              <h4>Online Payments</h4>
+              <div class="widget_checkbox">
+                <label class="checkbox_item"><input type="radio" name="payment" id="cashOnPayment" checked><span class="checkmark"></span><div class="payment_icon"><img src="assets/images/payment/cash-on-delivery.png" alt="" /></div> Cash on delivery</label>
+              </div>
+              <div class="widget_checkbox">
+                <label class="checkbox_item"><input type="radio" name="payment" id="bkashPayment"><span class="checkmark"></span><div class="payment_icon"><img src="assets/images/payment/bkash-logo.png" alt="" /></div>bkash payment</label>
+              </div>
+              <div class="widget_checkbox">
+                <label class="checkbox_item"><input type="radio" name="payment" id="credPayment"><span class="checkmark"></span><div class="payment_icon"><img src="assets/images/payment/card.png" alt="" /></div>Debit and credit card payment</label>
+              </div>
+            </div>
+
             <div class="widget_checkbox terms_conditions">
               <label class="checkbox_item"
                 ><input type="checkbox" name="asd" /><span
@@ -310,9 +327,9 @@
                 ></label
               >
             </div>
-            <div class="checkout_btn">
-              <button class="checkout">Place Order</button>
-            </div>
+            <div class="checkout_btn" id="orderFinalize">
+              <button type="submit" class="checkout">Place Order</button>
+            </form>
           </div>
         </div>
       </div>

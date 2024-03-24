@@ -421,3 +421,38 @@ if (bTotalItemValueWidthShipping) {
 
   bTotalItemValueWidthShipping.innerHTML = bTotalPrice;
 }
+
+const paymentInfoInput = document.querySelectorAll(".payment_info .checkbox_item input");
+const checkoutBtn = document.querySelector("#orderFinalize");
+
+console.log(checkoutBtn)
+
+const cashOn = document.createElement("button");
+cashOn.setAttribute("type", "submit");
+cashOn.setAttribute("class", "checkout");
+cashOn.innerHTML = "Place Order";
+
+const bkashPay = document.createElement("a");
+bkashPay.setAttribute("href", "payment.html");
+bkashPay.setAttribute("class", "checkout");
+bkashPay.innerHTML = "Go bkash";
+
+const cardPay = document.createElement("a");
+cardPay.setAttribute("href", "payment2.html");
+cardPay.setAttribute("class", "checkout");
+cardPay.innerHTML = "Go Card";
+
+paymentInfoInput.forEach(i =>{
+  i.addEventListener("click", function(e){
+    if(e.target.id == "cashOnPayment"){
+      checkoutBtn.innerHTML = ""; // Clear existing content
+      checkoutBtn.appendChild(cashOn); // Append cashOn button
+    } else if(e.target.id == "bkashPayment"){
+      checkoutBtn.innerHTML = ""; // Clear existing content
+      checkoutBtn.appendChild(bkashPay); // Append bkashPay link
+    } else if(e.target.id == "credPayment"){
+      checkoutBtn.innerHTML = ""; // Clear existing content
+      checkoutBtn.appendChild(cardPay); // Append cardPay link
+    }
+  })
+})
