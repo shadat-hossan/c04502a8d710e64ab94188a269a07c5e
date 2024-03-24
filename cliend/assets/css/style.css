@@ -4060,3 +4060,13 @@ span.gaterthan {
   justify-content: center;
   align-items: center;
 }
+
+.remove_cart { min-height: 36px; }
+.remove_button {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
