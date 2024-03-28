@@ -4031,3 +4031,42 @@ span.gaterthan {
   height: auto; 
 }
 }
+
+.payment_info {
+  padding-top: 25px;
+}
+.payment_info h4 {
+  font-size: 16px;
+  padding-bottom: 15px;
+  font-weight: 600;
+}
+.payment_info .checkmark {
+    border-radius: 50%;
+}
+.payment_icon {
+  width: 26px;
+  margin-right: 10px;
+}
+.payment_page {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  overflow: auto;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.remove_cart { min-height: 36px; }
+.remove_button {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
