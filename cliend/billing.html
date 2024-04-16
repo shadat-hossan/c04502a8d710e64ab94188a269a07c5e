@@ -191,7 +191,6 @@
         </div>
       </div>
     </div>
-    <form accept="#">
       <div class="cart_page_area">
         <div class="cart_page_box center-content flex-wrap">
           <div class="cart_area_left">
@@ -257,7 +256,7 @@
               <span>Product</span>
               <span>Price</span>
             </div>
-            <form action="#">
+            <form action="Shadart">
             <div class="cart_list_wrap">
               <div class="cart_list_item flex-nowrap space-between">
                 <span>1. IPS LCD Gaming Monitor</span>
@@ -280,7 +279,8 @@
             </div>
             <div class="cart_list_item flex-nowrap space-between">
               <span>(+) Shipping charge (Est. price, inside Dhaka)</span>
-              <strong class="cart_list_item_shipping">৳100</strong>
+              <strong >৳<small class="cart_list_item_shipping">00</small>
+                </strong>
             </div>
             <div class="coupon_code_area">
               <strong>Apply coupon code</strong>
@@ -333,7 +333,6 @@
           </div>
         </div>
       </div>
-    </form>
 
 
     <div id="editmyaccount" class="billing_form_area form-popup-bg">
@@ -773,6 +772,37 @@
     <script src="assets/js/jquery.fancybox.min.js"></script>
     <script src="assets/js/jquery-ui.min.js"></script>
     <script src="assets/js/cart.js"></script>
+
+
+    <script>
+      // The Script is billing all Product price some return
+const cartListwrap = document.querySelectorAll(
+  ".cart_list_item .cart_list_item_price"
+);
+var bTotalItem = document.querySelector(".total_item .total_item_value");
+var cartListItemShipping = document.querySelector(
+  ".cart_list_item .cart_list_item_shipping"
+);
+var bTotalItemValueWidthShipping = document.querySelector(
+  ".total_item_value_width_shipping"
+);
+
+if (bTotalItemValueWidthShipping) {
+  var bTotalPrice = 0;
+  cartListwrap.forEach(function (item) {
+    var itemProductPrice = parseInt(item.textContent.substring(1));
+    bTotalPrice += itemProductPrice;
+    bTotalItem.innerHTML = bTotalPrice;
+  });
+
+  var cartListItemShippingInt = parseInt(cartListItemShipping.textContent);
+  bTotalPrice += cartListItemShippingInt || 0;
+
+  bTotalItemValueWidthShipping.innerHTML = bTotalPrice;
+}
+    </script>
+
+
     <script>
       $(".allProduct").owlCarousel({
         loop: false,

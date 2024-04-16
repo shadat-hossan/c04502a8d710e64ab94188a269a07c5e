@@ -394,38 +394,12 @@ $(document).ready(function () {
   });
 });
 
-// The Script is billing all Product price some return
-const cartListwrap = document.querySelectorAll(
-  ".cart_list_item .cart_list_item_price"
+const paymentInfoInput = document.querySelectorAll(
+  ".payment_info .checkbox_item input"
 );
-var bTotalItem = document.querySelector(".total_item .total_item_value");
-var cartListItemShipping = document.querySelector(
-  ".cart_list_item .cart_list_item_shipping"
-);
-var bTotalItemValueWidthShipping = document.querySelector(
-  ".total_item_value_width_shipping"
-);
-
-if (bTotalItemValueWidthShipping) {
-  var bTotalPrice = 0;
-  cartListwrap.forEach(function (item) {
-    var itemProductPrice = parseInt(item.textContent.substring(1));
-    bTotalPrice += itemProductPrice;
-    bTotalItem.innerHTML = bTotalPrice;
-  });
-
-  var cartListItemShippingInt = parseInt(
-    cartListItemShipping.textContent.substring(1)
-  );
-  bTotalPrice += cartListItemShippingInt;
-
-  bTotalItemValueWidthShipping.innerHTML = bTotalPrice;
-}
-
-const paymentInfoInput = document.querySelectorAll(".payment_info .checkbox_item input");
 const checkoutBtn = document.querySelector("#orderFinalize");
 
-console.log(checkoutBtn)
+console.log(checkoutBtn);
 
 const cashOn = document.createElement("button");
 cashOn.setAttribute("type", "submit");
@@ -442,17 +416,17 @@ cardPay.setAttribute("href", "payment2.html");
 cardPay.setAttribute("class", "checkout");
 cardPay.innerHTML = "Go Card";
 
-paymentInfoInput.forEach(i =>{
-  i.addEventListener("click", function(e){
-    if(e.target.id == "cashOnPayment"){
+paymentInfoInput.forEach((i) => {
+  i.addEventListener("click", function (e) {
+    if (e.target.id == "cashOnPayment") {
       checkoutBtn.innerHTML = ""; // Clear existing content
       checkoutBtn.appendChild(cashOn); // Append cashOn button
-    } else if(e.target.id == "bkashPayment"){
+    } else if (e.target.id == "bkashPayment") {
       checkoutBtn.innerHTML = ""; // Clear existing content
       checkoutBtn.appendChild(bkashPay); // Append bkashPay link
-    } else if(e.target.id == "credPayment"){
+    } else if (e.target.id == "credPayment") {
       checkoutBtn.innerHTML = ""; // Clear existing content
       checkoutBtn.appendChild(cardPay); // Append cardPay link
     }
-  })
-})
+  });
+});
